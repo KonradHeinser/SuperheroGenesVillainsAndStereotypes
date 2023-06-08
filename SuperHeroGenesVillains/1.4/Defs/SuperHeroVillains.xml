@@ -7,7 +7,7 @@
         <description>There is little that sets this one out from other super powered individuals. Before the genes for further specializations were created, they were a silver a dozen, but now they are gradually becoming less common.</description>
         <inheritable>true</inheritable>
         <iconPath>HeroXenotypeIcon</iconPath>
-        <combatPowerFactor>10</combatPowerFactor>
+        <combatPowerFactor>7</combatPowerFactor>
         <factionlessGenerationWeight>0</factionlessGenerationWeight>
         <genes>
             <li>SuperHeroBase</li>
@@ -20,7 +20,7 @@
         <description>These super powered individuals may not be as skilled in combat as the others, but their intelligence and environmental analysis skills are unmatched.</description>
         <inheritable>true</inheritable>
         <iconPath>HeroXenotypeIcon</iconPath>
-        <combatPowerFactor>5</combatPowerFactor>
+        <combatPowerFactor>3</combatPowerFactor>
         <factionlessGenerationWeight>0</factionlessGenerationWeight>
         <genes>
             <li>SuperHeroBase</li>
@@ -43,7 +43,7 @@
 <!--in their bullets way is actually reference to Sabaton's "The White Death" song. The song tells the story of Simo Häyhä, a sniper who is believed to have over 500 kills in the span of the three and a half months that the Winter War lasted(Nov 1939-Mar 1940), getting half using a scopeless bolt-action rifle. This makes him one the deadliest snipers ever. Random fun fact for those who actually look at the code.-->
         <inheritable>true</inheritable>
         <iconPath>HeroXenotypeIcon</iconPath>
-        <combatPowerFactor>15</combatPowerFactor>
+        <combatPowerFactor>7</combatPowerFactor>
         <factionlessGenerationWeight>0</factionlessGenerationWeight>
         <genes>
             <li>SuperHeroBase</li>
@@ -64,7 +64,7 @@
         <description>One hit from these hulking individuals is often enough to take down most people. The second one is just to be sure.</description>
         <inheritable>true</inheritable>
         <iconPath>HeroXenotypeIcon</iconPath>
-        <combatPowerFactor>20</combatPowerFactor>
+        <combatPowerFactor>10</combatPowerFactor>
         <factionlessGenerationWeight>0</factionlessGenerationWeight>
         <genes>
             <li>SuperHeroBase</li>
@@ -86,7 +86,7 @@
         <description>There isn't much that can stop this super for good. The few scratches that do get through will likely be forgotten by the next day, and their genetics makes it easy for them to live for a thousand years, maybe more.</description>
         <inheritable>true</inheritable>
         <iconPath>HeroXenotypeIcon</iconPath>
-        <combatPowerFactor>20</combatPowerFactor>
+        <combatPowerFactor>10</combatPowerFactor>
         <factionlessGenerationWeight>0</factionlessGenerationWeight>
         <genes>
             <li>SuperHeroBase</li>
@@ -107,7 +107,7 @@
         <description>To most, this super is extremely difficult to keep track of. Scientists originally though the Super Speed gene created a limit that could not be passed, then someone enhanced the healing of an individual with that gene, pushing their heart, and their speed, one step further.</description>
         <inheritable>true</inheritable>
         <iconPath>HeroXenotypeIcon</iconPath>
-        <combatPowerFactor>20</combatPowerFactor>
+        <combatPowerFactor>10</combatPowerFactor>
         <factionlessGenerationWeight>0</factionlessGenerationWeight>
         <genes>
             <li>SuperHeroBase</li>
@@ -128,7 +128,7 @@
         <description>These are people who actually influence everyone around them, and they do so to such an extent that some nations and religions are believed to have come into existence because of the followers they gathered.</description>
         <inheritable>true</inheritable>
         <iconPath>HeroXenotypeIcon</iconPath>
-        <combatPowerFactor>5</combatPowerFactor>
+        <combatPowerFactor>3</combatPowerFactor>
         <factionlessGenerationWeight>0</factionlessGenerationWeight>
         <genes>
             <li>SuperHeroBase</li>
@@ -160,20 +160,20 @@
         <leaderTitle>boss</leaderTitle>
         <xenotypeSet Inherit="False">
             <xenotypeChances>
-                <SHGBasicSuper>.55</SHGBasicSuper>
+                <SHGBasicSuper>.1</SHGBasicSuper>
                 <SHGBrainiacSuper>.05</SHGBrainiacSuper>
-                <SHGDeadeyeSuper>.1</SHGDeadeyeSuper>
-                <SHGBruiserSuper>.1</SHGBruiserSuper>
-                <SHGImmortalSuper>.05</SHGImmortalSuper>
-                <SHGSpeedsterSuper>.1</SHGSpeedsterSuper>
+                <SHGDeadeyeSuper>.2</SHGDeadeyeSuper>
+                <SHGBruiserSuper>.2</SHGBruiserSuper>
+                <SHGImmortalSuper>.2</SHGImmortalSuper>
+                <SHGSpeedsterSuper>.2</SHGSpeedsterSuper>
                 <SHGInfluencerSuper>.05</SHGInfluencerSuper>
             </xenotypeChances>
         </xenotypeSet>
         <maxPawnCostPerTotalPointsCurve>
             <points>
                 <li>(175, 175)</li>
-                <li>(700, 350)</li>
-                <li>(1300, 800)</li>
+                <li>(700, 700)</li>
+                <li>(1300, 1300)</li>
                 <li>(100000, 10000)</li>
             </points>
         </maxPawnCostPerTotalPointsCurve>
