@@ -15,7 +15,7 @@
     <li>
       <packageId>SuperheroGenesBase.Mod</packageId>
       <displayName>Superhero Genes - Base</displayName>
-      <downloadUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2980061828</downloadUrl>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2980061828</steamWorkshopUrl>
     </li>
   </modDependencies>
 
