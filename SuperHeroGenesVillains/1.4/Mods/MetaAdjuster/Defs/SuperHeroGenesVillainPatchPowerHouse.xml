@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <XenotypeDef>
+        <defName>SHGDemigod</defName>
+        <label>SHG-powerhouse</label>
+        <description>There is little that can stop this individual outside of psychic abilities. Every part of this hero is unquestionably overwhelming, from their ability to process information far faster than any other to their ability to achieve physical feats that would leave most dead from the attempts alone. Those who find themselves enemy of this individual best pray that their preparations are enough, or that their end will be swift.</description>
+        <inheritable>true</inheritable>
+        <iconPath>HeroXenotypeIcon</iconPath>
+        <combatPowerFactor>100</combatPowerFactor>
+        <factionlessGenerationWeight>0</factionlessGenerationWeight>
+        <genes>
+            <li>SuperHeroBase</li>
+            <li>SuperIntelligence</li>
+            <li>SuperPerception</li>
+            <li>SuperDurability</li>
+            <li>SuperHealing</li>
+            <li>SuperPrecision</li>
+            <li>SuperSpeed</li>
+            <li>SuperStrength</li>
+            <li>SuperPersuasion</li>
+            <li>Body_Hulk</li>
+            <li>MlemMetaAdjustMax100</li>
+            <li>SuperGluttony</li>
+            <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">SHG_Flight</li>
+            <li MayRequire="Sov.Homelander">SHG_LaserImmune</li>
+            <li MayRequire="Sov.Homelander">SHG_LaserEyes</li>
+        </genes>
+    </XenotypeDef>
+</Defs>

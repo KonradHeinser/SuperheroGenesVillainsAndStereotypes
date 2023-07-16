@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!--Xenotypes-->
+    <XenotypeDef>
+        <defName>SHGBasicSuper</defName>
+        <label>SHG-basic super</label>
+        <description>There is little that sets this one out from other super powered individuals. Before the genes for further specializations were created, they were a silver a dozen, but now they are gradually becoming less common.</description>
+        <inheritable>true</inheritable>
+        <iconPath>HeroXenotypeIcon</iconPath>
+        <combatPowerFactor>7</combatPowerFactor>
+        <factionlessGenerationWeight>0</factionlessGenerationWeight>
+        <genes>
+            <li>SuperHeroBase</li>
+        </genes>
+    </XenotypeDef>
+
+    <XenotypeDef>
+        <defName>SHGBrainiacSuper</defName>
+        <label>SHG-brainiac</label>
+        <description>These super powered individuals may not be as skilled in combat as the others, but their intelligence and environmental analysis skills are unmatched.</description>
+        <inheritable>true</inheritable>
+        <iconPath>HeroXenotypeIcon</iconPath>
+        <combatPowerFactor>3</combatPowerFactor>
+        <factionlessGenerationWeight>0</factionlessGenerationWeight>
+        <genes>
+            <li>SuperHeroBase</li>
+            <li>SuperIntelligence</li>
+            <li>SuperPerception</li>
+            <li>UnsuperDurability</li>
+            <li>UnsuperHealing</li>
+            <li>UnsuperPrecision</li>
+            <li>UnsuperSpeed</li>
+            <li>UnsuperStrength</li>
+            <li>UnsuperPersuasion</li>
+            <li>Body_Thin</li>
+        </genes>
+    </XenotypeDef>
+
+    <XenotypeDef>
+        <defName>SHGDeadeyeSuper</defName>
+        <label>SHG-deadeye</label>
+        <description>Even if they lost an eye, heroes with these powers would still be able to hit most targets even if they were kilometers away. They may not excel in any other area, but that matters little to those in their bullets way.</description> 
+<!--in their bullets way is actually reference to Sabaton's "The White Death" song. The song tells the story of Simo Häyhä, a sniper who is believed to have over 500 kills in the span of the three and a half months that the Winter War lasted(Nov 1939-Mar 1940), getting half using a scopeless bolt-action rifle. This makes him one the deadliest snipers ever. Random fun fact for those who actually look at the code.-->
+        <inheritable>true</inheritable>
+        <iconPath>HeroXenotypeIcon</iconPath>
+        <combatPowerFactor>7</combatPowerFactor>
+        <factionlessGenerationWeight>0</factionlessGenerationWeight>
+        <genes>
+            <li>SuperHeroBase</li>
+            <li>SuperPrecision</li>
+            <li>SuperPerception</li>
+            <li>UnsuperDurability</li>
+            <li>UnsuperHealing</li>
+            <li>UnsuperIntelligence</li>
+            <li>UnsuperSpeed</li>
+            <li>UnsuperStrength</li>
+            <li>UnsuperPersuasion</li>
+            <li>SHG_Invisibility</li>
+        </genes>
+    </XenotypeDef>
+
+    <XenotypeDef>
+        <defName>SHGBruiserSuper</defName>
+        <label>SHG-bruiser</label>
+        <description>One hit from these hulking individuals is often enough to take down most people. The second one is just to be sure.</description>
+        <inheritable>true</inheritable>
+        <iconPath>HeroXenotypeIcon</iconPath>
+        <combatPowerFactor>10</combatPowerFactor>
+        <factionlessGenerationWeight>0</factionlessGenerationWeight>
+        <genes>
+            <li>SuperHeroBase</li>
+            <li>UnsuperIntelligence</li>
+            <li>UnsuperPerception</li>
+            <li>SuperDurability</li>
+            <li>UnsuperHealing</li>
+            <li>UnsuperPrecision</li>
+            <li>UnsuperSpeed</li>
+            <li>SuperStrength</li>
+            <li>UnsuperPersuasion</li>
+            <li>Body_Hulk</li>
+            <li>SHG_HeroicLeap</li>
+        </genes>
+    </XenotypeDef>
+
+    <XenotypeDef>
+        <defName>SHGImmortalSuper</defName>
+        <label>SHG-immortal</label>
+        <description>There isn't much that can stop this super for good. The few scratches that do get through will likely be forgotten by the next day, and their genetics makes it easy for them to live for a thousand years, maybe more.</description>
+        <inheritable>true</inheritable>
+        <iconPath>HeroXenotypeIcon</iconPath>
+        <combatPowerFactor>10</combatPowerFactor>
+        <factionlessGenerationWeight>0</factionlessGenerationWeight>
+        <genes>
+            <li>SuperHeroBase</li>
+            <li>UnsuperIntelligence</li>
+            <li>UnsuperPerception</li>
+            <li>SuperDurability</li>
+            <li>SuperHealing</li>
+            <li>UnsuperPrecision</li>
+            <li>UnsuperSpeed</li>
+            <li>UnsuperStrength</li>
+            <li>UnsuperPersuasion</li>
+        </genes>
+    </XenotypeDef>
+
+    <XenotypeDef>
+        <defName>SHGSpeedsterSuper</defName>
+        <label>SHG-speedster</label>
+        <description>To most, this super is extremely difficult to keep track of. Scientists originally though the Super Speed gene created a limit that could not be passed, then someone enhanced the healing of an individual with that gene, pushing their heart, and their speed, one step further.</description>
+        <inheritable>true</inheritable>
+        <iconPath>HeroXenotypeIcon</iconPath>
+        <combatPowerFactor>10</combatPowerFactor>
+        <factionlessGenerationWeight>0</factionlessGenerationWeight>
+        <genes>
+            <li>SuperHeroBase</li>
+            <li>UnsuperIntelligence</li>
+            <li>UnsuperPerception</li>
+            <li>UnsuperDurability</li>
+            <li>SuperHealing</li>
+            <li>UnsuperPrecision</li>
+            <li>SuperSpeed</li>
+            <li>UnsuperStrength</li>
+            <li>UnsuperPersuasion</li>
+        </genes>
+    </XenotypeDef>
+
+    <XenotypeDef>
+        <defName>SHGInfluencerSuper</defName>
+        <label>SHG-influencer</label>
+        <description>These are people who actually influence everyone around them, and they do so to such an extent that some nations and religions are believed to have come into existence because of the followers they gathered.</description>
+        <inheritable>true</inheritable>
+        <iconPath>HeroXenotypeIcon</iconPath>
+        <combatPowerFactor>3</combatPowerFactor>
+        <factionlessGenerationWeight>0</factionlessGenerationWeight>
+        <genes>
+            <li>SuperHeroBase</li>
+            <li>UnsuperIntelligence</li>
+            <li>SuperPerception</li>
+            <li>UnsuperDurability</li>
+            <li>UnsuperHealing</li>
+            <li>UnsuperPrecision</li>
+            <li>UnsuperSpeed</li>
+            <li>UnsuperStrength</li>
+            <li>SuperPersuasion</li>
+        </genes>
+    </XenotypeDef>
+
+    <!--Faction-->
+
+    <FactionDef ParentName="PirateBandBase">
+        <defName>SupervillainGang</defName>
+        <label>supervillain gang</label>
+        <description>A loose confederation of super-villains who've agreed to mostly fight outsiders instead of fighting each other. While a majority don't have any special characteristics beyond the super gene, some of their strongest members have extra powers that grant them the ability to wipe out colonies on their own.\n\nVillains care little about human life, and will often try to kill everyone they come across in their quest for world domination.\n\nWhen fights aren't going their way, they will often flee, abandoning allies in the process. They will also often return with more allies to kill those who resisted them in the past.</description>
+        <pawnSingular>villain</pawnSingular>
+        <pawnsPlural>villains</pawnsPlural>
+        <settlementGenerationWeight>1</settlementGenerationWeight>
+        <requiredCountAtGameStart>1</requiredCountAtGameStart>
+        <maxCountAtGameStart>1</maxCountAtGameStart>
+        <canMakeRandomly>true</canMakeRandomly>
+        <canSiege>true</canSiege>
+        <canStageAttacks>true</canStageAttacks>
+        <leaderTitle>boss</leaderTitle>
+        <xenotypeSet Inherit="False">
+            <xenotypeChances>
+                <SHGBasicSuper>.1</SHGBasicSuper>
+                <SHGBrainiacSuper>.05</SHGBrainiacSuper>
+                <SHGDeadeyeSuper>.2</SHGDeadeyeSuper>
+                <SHGBruiserSuper>.2</SHGBruiserSuper>
+                <SHGImmortalSuper>.2</SHGImmortalSuper>
+                <SHGSpeedsterSuper>.2</SHGSpeedsterSuper>
+                <SHGInfluencerSuper>.05</SHGInfluencerSuper>
+            </xenotypeChances>
+        </xenotypeSet>
+        <maxPawnCostPerTotalPointsCurve>
+            <points>
+                <li>(175, 175)</li>
+                <li>(700, 700)</li>
+                <li>(1300, 1300)</li>
+                <li>(100000, 10000)</li>
+            </points>
+        </maxPawnCostPerTotalPointsCurve>
+    </FactionDef>
+</Defs>
