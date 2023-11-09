@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <PawnKindDef Name="SHG_VillainBase" Abstract="True">
+        <race>Human</race>
+        <defaultFactionType>SuperVillainGang</defaultFactionType>
+        <chemicalAddictionChance>0.1</chemicalAddictionChance>
+        <invNutrition>2.55</invNutrition>
+        <itemQuality>Normal</itemQuality>
+        <backstoryCryptosleepCommonality>0.08</backstoryCryptosleepCommonality>
+        <maxGenerationAge>120</maxGenerationAge>
+        <combatEnhancingDrugsChance>0.15</combatEnhancingDrugsChance>
+        <combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount>
+        <biocodeWeaponChance>0.1</biocodeWeaponChance>
+        <initialWillRange>3~5</initialWillRange>
+        <initialResistanceRange>15~23</initialResistanceRange>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="SHG_VillainBase">
+        <defName>SHG_VillainLaborer</defName>
+        <label>villain laborer</label>
+        <combatPower>40</combatPower>
+        <maxGenerationAge>50</maxGenerationAge>
+        <styleItemTags>
+            <li>
+                <tag>Soldier</tag>
+                <baseWeight>1</baseWeight>
+                <weightFactor>1</weightFactor>
+            </li>
+        </styleItemTags>
+        <forceNormalGearQuality>true</forceNormalGearQuality>
+        <isFighter>false</isFighter>
+        <requiredWorkTags> <!-- Must be capable of labor, as this pawn kind is used in laborer quests. -->
+            <li>ManualDumb</li>
+            <li>ManualSkilled</li>
+            <li>Cleaning</li>
+            <li>Hauling</li>
+            <li>Mining</li>
+            <li>Firefighting</li>
+        </requiredWorkTags>
+        <apparelTags>
+            <li>IndustrialBasic</li>
+        </apparelTags>
+        <apparelMoney>200~1000</apparelMoney>
+        <gearHealthRange>1~1</gearHealthRange>
+        <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+        <initialWillRange>1~3</initialWillRange>
+        <initialResistanceRange>6~10</initialResistanceRange>
+        <xenotypeSet Inherit="False">
+            <xenotypeChances>
+                <SHG_RandomMundaneSuper>.10</SHG_RandomMundaneSuper>
+                <SHG_RandomSupportSuper>.15</SHG_RandomSupportSuper>
+                <SHG_RandomSummonerSuper>.05</SHG_RandomSummonerSuper>
+            </xenotypeChances>
+        </xenotypeSet>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="SHG_VillainBase" Name="SHG_VillainTrooperBase">
+        <defName>SHG_VillainTrooper</defName>
+        <label>villain trooper</label>
+        <combatPower>85</combatPower>
+        <gearHealthRange>0.7~3.2</gearHealthRange>
+        <apparelTags>
+            <li>IndustrialBasic</li>
+            <li>IndustrialAdvanced</li>
+            <li>IndustrialMilitaryBasic</li>
+            <li>IndustrialMilitaryAdvanced</li>
+            <li>BeltDefensePop</li>
+        </apparelTags>
+        <apparelMoney>1000~1500</apparelMoney>
+        <apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
+        <weaponMoney>330~650</weaponMoney>
+        <weaponTags>
+            <li>Gun</li>
+        </weaponTags>
+        <disallowedTraits>
+            <li>Brawler</li>
+        </disallowedTraits>
+        <combatEnhancingDrugsChance>0.05</combatEnhancingDrugsChance>
+        <combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount>
+        <inventoryOptions>
+            <skipChance>0.9</skipChance>
+            <subOptionsChooseOne>
+                <li>
+                    <thingDef>MedicineIndustrial</thingDef>
+                    <countRange>1</countRange>
+                </li>
+            </subOptionsChooseOne>
+        </inventoryOptions>
+        <skills>
+            <li>
+                <skill>Shooting</skill>
+                <range>4~14</range>
+            </li>
+        </skills>
+        <xenotypeSet Inherit="False">
+            <xenotypeChances>
+                <SHG_RandomSoldierSuper>.30</SHG_RandomSoldierSuper>
+                <SHG_RandomMundaneMancer>.20</SHG_RandomMundaneMancer>
+            </xenotypeChances>
+        </xenotypeSet>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="SHG_VillainTrooperBase">
+        <defName>SHG_VillainSniper</defName>
+        <label>villain sniper</label>
+        <combatPower>100</combatPower>
+        <weaponMoney>1000~1250</weaponMoney>
+        <weaponTags Inherit="False">
+            <li>SniperRifle</li>
+        </weaponTags>
+        <skills>
+            <li>
+                <skill>Shooting</skill>
+                <range>8~16</range>
+            </li>
+        </skills>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="SHG_VillainBase" Name="SHG_VillainSlasherBase">
+        <defName>SHG_VillainSlasher</defName>
+        <label>villain slasher</label>
+        <combatPower>85</combatPower>
+        <canBeSapper>true</canBeSapper>
+        <gearHealthRange>0.7~3.2</gearHealthRange>
+        <apparelTags>
+            <li>IndustrialBasic</li>
+            <li>IndustrialAdvanced</li>
+            <li>IndustrialMilitaryBasic</li>
+            <li>IndustrialMilitaryAdvanced</li>
+        </apparelTags>
+        <apparelRequired>
+            <li>Apparel_ShieldBelt</li>
+        </apparelRequired>
+        <apparelMoney>500~1000</apparelMoney>
+        <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+        <weaponMoney>200~500</weaponMoney>
+        <weaponTags>
+            <li>MedievalMeleeDecent</li>
+            <li>MedievalMeleeAdvanced</li>
+        </weaponTags>
+        <initialResistanceRange>19~29</initialResistanceRange>
+        <xenotypeSet Inherit="False">
+            <xenotypeChances>
+                <SHG_RandomSoldierSuper>.30</SHG_RandomSoldierSuper>
+                <SHG_RandomWarSuper>.20</SHG_RandomWarSuper>
+            </xenotypeChances>
+        </xenotypeSet>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="SHG_VillainBase" Name="SHG_BossBase">
+        <defName>SHG_VillainBoss</defName>
+        <label>boss</label>
+        <labelPlural>bosses</labelPlural>
+        <factionLeader>true</factionLeader>
+        <combatPower>160</combatPower>
+        <apparelTags>
+            <li>PrestigeCombatGear</li>
+        </apparelTags>
+        <apparelMoney>10000~12000</apparelMoney>
+        <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+        <titleRequired>SHG_VillainTier9</titleRequired>
+        <weaponMoney>1000~2000</weaponMoney>
+        <weaponTags>
+            <li>IndustrialGunAdvanced</li>
+        </weaponTags>
+        <disallowedTraits>
+            <li>Brawler</li>
+        </disallowedTraits>
+        <techHediffsMoney>1000~1200</techHediffsMoney>
+        <techHediffsTags>
+            <li>Advanced</li>
+            <li>ImplantEmpireCommon</li>
+        </techHediffsTags>
+        <techHediffsChance>1</techHediffsChance>
+        <xenotypeSet Inherit="False">
+            <xenotypeChances>
+                <SHG_RandomMundaneMancer>.20</SHG_RandomMundaneMancer>
+            </xenotypeChances>
+        </xenotypeSet>
+    </PawnKindDef>
+
+    <PawnKindDef ParentName="SHG_BossBase">
+        <defName>SHG_VillainTier9Villain</defName>
+        <label>tier 9 villain</label>
+        <labelPlural>tier 9 villains</labelPlural>
+        <factionLeader>false</factionLeader>
+    </PawnKindDef>
+
+</Defs>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <BackstoryDef Abstract="True" Name="SHG_VillainAdultBackstoryBase">
+        <slot>Adulthood</slot>
+        <spawnCategories><li>Villain</li></spawnCategories>
+    </BackstoryDef>
+
+    <BackstoryDef ParentName="SHG_VillainAdultBackstoryBase">
+        <defName>SHG_Villains_TragicExperiment</defName>
+        <title>tragic experiment</title>
+        <titleShort>experiment</titleShort>
+        <baseDesc>[PAWN_nameDef] volunteered for an experiment that was attempting to give all of the skills of a super-powered being into the head of a baseliner human. Unfortunately, the human brain was not intended to process information at the rate of a super, and everyone in the experiment either died, or became increasingly unstable.</baseDesc>
+        <skillGains>
+            <li><key>Shooting</key><value>1</value></li>
+            <li><key>Melee</key><value>1</value></li>
+            <li><key>Construction</key><value>1</value></li>
+            <li><key>Mining</key><value>1</value></li>
+            <li><key>Cooking</key><value>1</value></li>
+            <li><key>Plants</key><value>1</value></li>
+            <li><key>Animals</key><value>1</value></li>
+            <li><key>Crafting</key><value>1</value></li>
+            <li><key>Artistic</key><value>1</value></li>
+            <li><key>Medicine</key><value>1</value></li>
+            <li><key>Social</key><value>1</value></li>
+            <li><key>Intellectual</key><value>1</value></li>
+        </skillGains>
+        <forcedTraits>
+            <TooSmart>0</TooSmart>
+        </forcedTraits>
+    </BackstoryDef>
+
+    <BackstoryDef ParentName="SHG_VillainAdultBackstoryBase">
+        <defName>SHG_Villains_AbandonedLaboratoryExperiment</defName>
+        <title>abandoned lab experiment</title>
+        <titleShort>experiment</titleShort>
+        <baseDesc>[PAWN_nameDef] was part of an experiment to create an uncontrollable super-soldier with the intention of being dropped into an enemy encampment, where [PAWN_pronoun] would fight everyone around [PAWN_objective] until died, or killed everyone in the area. The experiment was abandoned due to ethical concerns, but [PAWN_nameDef] and the other experiments were not evacuated beforehand. [PAWN_nameDef] survived until the next ship arrived by eating the other experiments, and eventually had to flee the ship [PAWN_pronoun] was escaping on due to uncontrollable bloodlust.</baseDesc>
+        <skillGains>
+            <li><key>Melee</key><value>10</value></li>
+        </skillGains>
+        <forcedTraits>
+            <Bloodlust>0</Bloodlust>
+            <Cannibal>0</Cannibal>
+        </forcedTraits>
+    </BackstoryDef>
+
+    <BackstoryDef ParentName="SHG_VillainAdultBackstoryBase">
+        <defName>SHG_Villains_MadGenius</defName>
+        <title>mad genius</title>
+        <titleShort>genius</titleShort>
+        <baseDesc>[PAWN_nameDef] caught a glimpse of something extraordinary within an archotech structure. [PAWN_pronoun] became obsessed with it, spending every waking moment thinking of new ways to reach the pinnacle of science.</baseDesc>
+        <workDisables>
+            <li>Caring</li>
+            <li>Social</li>
+        </workDisables>
+        <skillGains>
+            <li><key>Intellectual</key><value>8</value></li>
+            <li><key>Crafting</key><value>4</value></li>
+        </skillGains>
+        <forcedTraits>
+            <Neurotic>1</Neurotic>
+        </forcedTraits>
+    </BackstoryDef>
+
+    <BackstoryDef ParentName="SHG_VillainAdultBackstoryBase">
+        <defName>SHG_Villains_ShadowyAssassin</defName>
+        <title>shadowy assassin</title>
+        <titleShort>assassin</titleShort>
+        <baseDesc>[PAWN_nameDef] was trained by a league of assassins to become a weapon that didn't even need to be nearby to kill a target. This training resulted in [PAWN_objective] having difficulties interacting with others in a less violent way.</baseDesc>
+        <workDisables>
+            <li>Caring</li>
+            <li>Social</li>
+        </workDisables>
+        <skillGains>
+            <li><key>Melee</key><value>5</value></li>
+            <li><key>Shooting</key><value>7</value></li>
+        </skillGains>
+    </BackstoryDef>
+
+    <BackstoryDef ParentName="SHG_VillainAdultBackstoryBase">
+        <defName>SHG_Villains_WorldEater</defName>
+        <title>world eater</title>
+        <titleShort>world eater</titleShort>
+        <baseDesc>[PAWN_nameDef] stumbled on an archotech structure that held within it an artifact with the schematics for a world ending weapon. Unfortunately for [PAWN_nameDef], just coming into contact with it permanently damaged [PAWN_possessive] brain, leaving [PAWN_objective] obsessed with finding a way to remember those schematics, or at the very least a way to create new ones.</baseDesc>
+        <workDisables>
+            <li>Caring</li>
+        </workDisables>
+        <skillGains>
+            <li><key>Intellectual</key><value>5</value></li>
+            <li><key>Shooting</key><value>5</value></li>
+            <li><key>Melee</key><value>5</value></li>
+            <li><key>Social</key><value>-5</value></li>
+        </skillGains>
+    </BackstoryDef>
+
+    <BackstoryDef ParentName="SHG_VillainAdultBackstoryBase">
+        <defName>SHG_Villains_MadScientist</defName>
+        <title>mad scientist</title>
+        <titleShort>scientist</titleShort>
+        <baseDesc>[PAWN_nameDef] has an obsession with discovering new things that would be classified as unhealthy. For [PAWN_nameDef], their work is all that matters, and just the idea of sitting still makes them even twitchier.</baseDesc>
+        <workDisables>
+            <li>Caring</li>
+            <li>Social</li>
+        </workDisables>
+        <skillGains>
+            <li><key>Intellectual</key><value>12</value></li>
+        </skillGains>
+        <forcedTraits>
+            <Neurotic>1</Neurotic>
+        </forcedTraits>
+    </BackstoryDef>
+
+    <BackstoryDef ParentName="SHG_VillainAdultBackstoryBase">
+        <defName>SHG_Villains_VengefulOne</defName>
+        <title>vengeful one</title>
+        <titleShort>vengeful</titleShort>
+        <baseDesc>[PAWN_nameDef] worked with a team of supers, and they worked quite well together despite how different [PAWN_pronoun] was from the rest of them. That all changed when some of the team decided to betray the everyone, leading to [PAWN_nameDef] beginning a quest of neverending vengence against the traitors who escaped. With most of [PAWN_possessive] teamates dead by the hands of those [PAWN_pronoun] thought of as friends, [PAWN_pronoun] vowed to never leave [PAWN_objective]self in a position where this could happen again.</baseDesc>
+        <skillGains>
+            <li><key>Melee</key><value>7</value></li>
+            <li><key>Shooting</key><value>7</value></li>
+        </skillGains>
+        <forcedTraits>
+            <Recluse>0</Recluse>
+        </forcedTraits>
+    </BackstoryDef>
+</Defs>
+
+<!-- Legend
+[PAWN_nameDef]
+[PAWN_possessive] His/Hers
+[PAWN_pronoun] He/She
+[PAWN_objective] Him/Her
+    -->

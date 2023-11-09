@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs> <!--Introduction quest-->
+    <HistoryEventDef>
+        <defName>SHG_VillainStart</defName>
+        <label>siding with villains</label>
+    </HistoryEventDef>
+
+    <IncidentDef ParentName="GiveQuestBase">
+        <defName>SHG_GiveQuest_VillainStart</defName>
+        <label>villainous beginnings</label>
+        <questScriptDef>SHG_VillainStart</questScriptDef>
+        <baseChance>0</baseChance> <!-- given by a special storyteller comp -->
+    </IncidentDef>
+
+    <QuestScriptDef>
+        <defName>SHG_VillainStart</defName>
+        <rootMinPoints>0</rootMinPoints>
+        <expireDaysRange>2</expireDaysRange>
+        <defaultChallengeRating>1</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <questNameRules>
+        <rulesStrings>
+            <li>questName->Picking sides</li>
+        </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+        <rulesStrings>
+            <li>questDescription->[asker_nameFull], [asker_titleIndef], has taken note of your colony after intercepting some of the Fallen Empire's communications, and would like to make you an offer that will show if you have what it takes to be a villain. [asker_pronoun] has been hunting the remnants of a platoon, and would like to move the ambush to a place not far from [map_definite], assuming you accept the offer.
+            \n[asker_nameFull] is mostly known for having a strange sense of honor, so [asker_pronoun] won't punish you for refusing to pick sides in this conflict. There is no doubt that the Empire would assume that your lack of intervention against [asker_factionName] means you are aligned with [asker_factionName], which will make the Empire your enemy if you allow the ambush to happen anywhere near your colony.
+            \n[asker_factionName] will also believe the same thing, and will not target you for attacks in the immediate future. This will also grant you [royalFavorReward] [asker_faction_royalFavorLabel], and the more [asker_faction_royalFavorLabel] a pawn accrues, the better permits [asker_factionName] will offer. The chosen pawn will be granted [asker_faction_royalFavorLabel] shortly after the raid arrives.
+            \nThe ambush will occur in about [raidDelayTicks_duration], meaning you will end up seeing some of the platoon remnants to your settlment to raid it for supplies. These remnants would likely include:\n\n[raid/raidPawnKinds]</li>
+        </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap" />
+                <li Class="QuestNode_GetWalkInSpot" />
+
+                <li Class="QuestNode_Set">
+                    <name>raidPoints</name>
+                    <value>$points</value>
+                </li>
+
+                <!-- Infamy reward to accepter -->
+                <li Class="QuestNode_RequireRoyalFavorFromFaction">
+                    <faction>SuperVillainGang</faction>
+                </li>
+
+                <li Class="QuestNode_Set">
+                    <name>royalFavorReward</name>
+                    <value>8</value>
+                </li>
+
+                <!-- Get asker -->
+                <li Class="QuestNode_GeneratePawn">
+                    <kindDef>SHG_VillainBoss</kindDef>
+                    <storeAs>asker</storeAs>
+                    <faction>SuperVillainGang</faction>
+                    <forbidAnyTitle>False</forbidAnyTitle>
+                </li>
+            
+                <!-- Empire becomes hostile -->
+                <li Class="QuestNode_ChangeFactionGoodwill">
+                    <faction>Empire</faction>
+                    <change>-100</change>
+                    <canSendLetter>false</canSendLetter>
+                    <canSendMessage>false</canSendMessage>
+                    <ensureHostile>true</ensureHostile>
+                    <reason>SHG_VillainStart</reason>
+                </li>
+
+                <!-- Villain Gang becomes less hostile -->
+                <li Class="QuestNode_ChangeFactionGoodwill">
+                    <faction>SuperVillainGang</faction>
+                    <change>100</change>
+                    <canSendLetter>false</canSendLetter>
+                    <canSendMessage>false</canSendMessage>
+                    <ensureHostile>false</ensureHostile>
+                    <reason>SHG_VillainStart</reason>
+                </li>
+                
+                <!-- Raid -->
+                <li Class="QuestNode_Set">
+                    <name>raidDelayTicks</name>
+                    <value>$(roundToTicksRough(randInt(50000, 60000)))</value>
+                </li>
+
+                <li Class="QuestNode_Delay">
+                    <delayTicks>$raidDelayTicks</delayTicks>
+                    <node Class="QuestNode_SubScript">
+                        <def>Util_Raid</def>
+                        <prefix>raid</prefix>
+                        <parms>
+                            <inSignal>$inSignal</inSignal>
+                            <map>$map</map>
+                            <enemyFaction>Empire</enemyFaction>
+                            <points>$raidPoints</points>
+                            <walkInSpot>$walkInSpot</walkInSpot>
+                            <customLetterLabel TKey="SHG_VillainStartLabel">{BASELABEL}: Platoon remnants</customLetterLabel>
+                            <customLetterText TKey="SHG_VillainStartText">{BASETEXT}\n\nThese are some of those platoon remnants that [../asker_nameFull] mentioned.</customLetterText>
+                        </parms>
+                    </node>
+                </li>
+
+                <li Class="QuestNode_Delay">
+                    <delayTicks>$($raidDelayTicks+300)</delayTicks>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_GiveRoyalFavorAndDevelopmentPoints">
+                                <giveToAccepter>true</giveToAccepter>
+                                <factionOf>$asker</factionOf>
+                                <amount>$royalFavorReward</amount>
+                                <isSingleReward>true</isSingleReward>
+                            </li>
+                            <li Class="QuestNode_End">
+                                <outcome>Success</outcome>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+
+    <!--End-game quest-->
+    <IncidentDef ParentName="GiveQuestBase">
+        <defName>SHG_GiveQuest_EndGame_ArmageddonClock</defName>
+        <label>armageddon clock</label>
+        <questScriptDef>SHG_EndGame_ArmageddonClock</questScriptDef>
+        <baseChance>0</baseChance> <!-- given by a special storyteller comp -->
+    </IncidentDef>
+
+    <HistoryEventDef>
+        <defName>SHG_VillainEnd</defName>
+        <label>started Armageddon</label>
+    </HistoryEventDef>
+
+    <GameConditionDef>
+        <defName>SHG_ArmageddonClock</defName>
+        <conditionClass>SuperHeroGenesBase.GameCondition_ArmageddonClock</conditionClass>
+        <label>armageddon</label>
+        <description>The clock is set, and when it goes off nothing will survive. The world will be flooded with a gas that kills all non-supers and greatly weakens any supers still on the planet. When the League of Villains land their fleet, they shall claim this world as their own.</description>
+        <letterText>The clock is ticking, and anyone still on the planet in 24 hours will die.</letterText>
+        <letterDef>NegativeEvent</letterDef>
+    </GameConditionDef>
+
+    <QuestScriptDef>
+        <defName>SHG_EndGame_ArmageddonClock</defName>
+        <defaultChallengeRating>5</defaultChallengeRating>
+        <isRootSpecial>true</isRootSpecial>
+        <questNameRules>
+            <rulesStrings>
+                <li>questName->Armageddon Clock</li>
+            </rulesStrings>
+        </questNameRules>
+        <questDescriptionRules>
+            <include>
+                <li>QuestHospitalityCommon</li>
+            </include>
+            <rulesStrings>
+                <li>questDescription->[intro]The [asker_faction_leaderTitle] of [asker_faction_name] has a plan for how to claim this world permanently for [asker_faction_name]. [asker_faction_name] has been collecting biological weapons in each of their settlements, and intend to place them in cities all over the world. What [asker_nameFull] needs from you is a distraction. [asker_pronoun] will stay in the colony for [shuttleDelayTicks_duration] to act as a distraction for the Empire, after which a shuttle will come to pick up everyone in the colony who doesn't want to die a painful death. 
+                \nBecoming a Tier 9 villain is difficult, usually requiring you complete a large number of quests for [asker_faction_name] that earn [asker_faction_royalFavorLabel]. This will likely take years upon years of work, but that delay may help give sufficient time to prepare for the bombardment of refined bovine waste the Empire will be sending your way.
+                \nTo make the bait believable, you must make 5 additional bedrooms befitting a Tier 9 villain. While it is best to keep the moods of your guests high, the [asker_faction_leaderTitle] knows that the ensuing conflict will make life difficult for everyone.
+                \nA lot of raids will come to try to kill the [asker_faction_leaderTitle], and will attack with great intensity. This quest is more than twice as hard as the Royal Ascent quest that the Empire offers, so you should probably have lot of supers and good defenses. In addition to there being more raids than Royal Ascent, your enemy is the Empire, who tend to be much better equipped than some random pirates.
+                \nThe [asker_faction_leaderTitle] will bring four other Tier 9 villains to make the bait more enticing and place them under your command. You must house these guards, but the [asker_faction_leaderTitle] will not complain if they are killed or unhappy.
+                \nYou must keep the visitors at [map_definite] and not send them anywhere else. If you fail this quest or migrate, you will have another chance at it later.</li>
+
+
+                <li>intro(sameQuestsCount==0)->It's time to kickstart this planet's final day!\n\n</li>
+                <li>intro(sameQuestsCount>=1)->You have another chance to help [asker_faction_name] destroy the world.\n\n</li>
+
+            </rulesStrings>
+        </questDescriptionRules>
+        <root Class="QuestNode_Sequence">
+            <nodes>
+                <li Class="QuestNode_GetMap" />
+
+                <!-- End if map removed before the quest is accepted -->
+                <li Class="QuestNode_End">
+                    <inSignal>map.MapRemoved</inSignal>
+                    <outcome>Fail</outcome>
+                    <signalListenMode>NotYetAcceptedOnly</signalListenMode>
+                </li>
+
+                <!-- For description -->
+                <li Class="QuestNode_GetSameQuestsCount">
+                    <storeAs>sameQuestsCount</storeAs>
+                </li>
+                
+                <!-- Explicitly set lodgersCount, as we don't use Hospitality_Util_DecideRandomLodgerCount -->
+                <li Class="QuestNode_Set">
+                    <name>lodgersCount</name>
+                    <value>1</value>
+                </li>
+
+                <!-- Get the boss -->
+                <li Class="QuestNode_GetPawn">
+                    <storeAs>asker</storeAs>
+                    <mustBeFactionLeader>true</mustBeFactionLeader>
+                    <mustBeOfKind>SHG_VillainBoss</mustBeOfKind>
+                    <ifWorldPawnThenMustBeFreeOrLeader>true</ifWorldPawnThenMustBeFreeOrLeader>
+                    <mustBeWorldPawn>true</mustBeWorldPawn> <!-- because we want to spawn him -->
+                </li>
+
+                <!-- Empire becomes hostile -->
+                <li Class="QuestNode_ChangeFactionGoodwill">
+                    <faction>Empire</faction>
+                    <change>-100</change>
+                    <canSendLetter>false</canSendLetter>
+                    <canSendMessage>false</canSendMessage>
+                    <ensureHostile>true</ensureHostile>
+                    <reason>SHG_VillainEnd</reason>
+                </li>
+
+                <!-- End if faction became hostile -->
+                <li Class="QuestNode_GetFaction">
+                    <storeAs>faction</storeAs>
+                    <ofPawn>$asker</ofPawn>
+                    <allowEnemy>false</allowEnemy>
+                    <allowNeutral>true</allowNeutral>
+                    <allowAlly>true</allowAlly>
+                </li>
+
+                <li Class="QuestNode_Letter">
+                    <inSignal>faction.BecameHostileToPlayer</inSignal>
+                    <label TKey="LetterLabelFactionBecameHostile">Quest failed: [resolvedQuestName]</label>
+                    <text TKey="LetterTextFactionBecameHostile">[faction_name] became hostile to you. </text>
+                </li>
+                <li Class="QuestNode_End">
+                    <inSignal>faction.BecameHostileToPlayer</inSignal>
+                    <outcome>Fail</outcome>
+                </li>
+
+                <li Class="QuestNode_End">
+                    <inSignal>faction.BecameHostileToPlayer</inSignal>
+                    <outcome>InvalidPreAcceptance</outcome>
+                    <signalListenMode>NotYetAcceptedOnly</signalListenMode>
+                </li>
+
+                <!-- Replace all of the boss's references with the new leader on death -->
+                <li Class="QuestNode_ReplaceLostLeaderReferences">
+                    <inSignal>asker.NoLongerFactionLeader</inSignal>
+                    <signalListenMode>NotYetAcceptedOnly</signalListenMode>
+                </li>
+
+                <!-- Add the asker themself to the lodgers list -->
+                <!-- The Boss needs to be first, otherwise certain letters won't properly display their name. -->
+                <li Class="QuestNode_AddToList">
+                    <name>lodgers</name>
+                    <value>$asker</value>
+                </li>
+
+                <!-- Get or generate the other tier 9 villains -->
+                <li Class="QuestNode_LoopCount">
+                    <loopCount>4</loopCount>
+                    <node Class="QuestNode_GeneratePawn">
+                        <faction>SuperVillainGang</faction>
+                        <kindDef>SHG_VillainTier9Villain</kindDef>
+                        <addToList>lodgers</addToList>
+                        <biocodeWeaponChance>1</biocodeWeaponChance>
+                        <biocodeApparelChance>1</biocodeApparelChance>
+                        <mustBeCapableOfViolence>true</mustBeCapableOfViolence>
+                        <allowPregnant>false</allowPregnant>
+                    </node>
+                </li>
+
+                <!-- Biocode asker's weapons (we took his reference manually, so we need to biocode his weapons manually) -->
+                <li Class="QuestNode_BiocodeWeapons">
+                    <pawns>$asker</pawns>
+                </li>
+
+                <!-- Add a home faction to lodgers -->
+                <li Class="QuestNode_ExtraFaction">
+                    <pawns>$lodgers</pawns>
+                    <faction>SuperVillainGang</faction>
+                    <factionType>HomeFaction</factionType>
+                    <inSignalRemovePawn>lodgers.RanWild</inSignalRemovePawn>
+                </li>
+
+                <!-- Lock their apparel -->
+                <li Class="QuestNode_SetAllApparelLocked">
+                    <pawns>$lodgers</pawns>
+                </li>
+                
+                <!-- Allow asker to issue decrees -->
+                <li Class="QuestNode_AllowDecreesForLodger">
+                    <lodger>$asker</lodger>
+                </li>
+
+                <!-- Make everyone leave on cleanup -->
+                <li Class="QuestNode_LeaveOnCleanup">
+                    <pawns>$lodgers</pawns>
+                    <sendStandardLetter>false</sendStandardLetter>
+                    <inSignalRemovePawn>lodgers.RanWild</inSignalRemovePawn>
+                </li>
+
+                <!-- Can only accept this quest if can satisfy all colonist and lodger bedroom requirements -->
+                <li Class="QuestNode_RequirementsToAcceptColonistWithTitle">
+                    <minimumTitle>SHG_VillainTier9</minimumTitle>
+                    <faction>SuperVillainGang</faction>
+                </li>
+
+                <!-- Can only accept this quest if can satisfy all colonist and lodger bedroom requirements -->
+                <li Class="QuestNode_RequirementsToAcceptBedroom">
+                    <pawns>$lodgers</pawns>
+                </li>        
+
+                <!-- Add reward info -->
+                <li Class="QuestNode_AddPassageOffworldReward">
+                    <inSignalChoiceUsed>pickupShipThing.Sent</inSignalChoiceUsed>
+                </li>
+                
+                <!-- Lodgers arrive by shuttle -->        
+                <li Class="QuestNode_SubScript">
+                    <def>Util_ArriveByDropPodsOrShuttle</def>
+                    <parms>
+                        <joiningPawns>$lodgers</joiningPawns>
+                        <arrivingPawns>$lodgers</arrivingPawns>
+                        <joinPlayer>true</joinPlayer>
+                        <customLetterLabel TKey="LetterLabelAskerArrived">[asker_faction_leaderTitle] arrived</customLetterLabel>
+                        <customLetterText TKey="LetterTextAskerArrived">The [asker_faction_leaderTitle] of [asker_faction_name], has arrived.\n\nNow that the everyone is here, it's time to hope that your defenses will be enough to withstand the Empire's onslaught.</customLetterText>
+                        <arrivingPawnsLabelDef TKey="ArrivingPawnsDefiniteLabel">[asker_nameDef]</arrivingPawnsLabelDef>
+                    </parms>
+                </li>
+
+                <!-- Asker died -->
+                <li Class="QuestNode_Signal">
+                    <inSignal>asker.Destroyed</inSignal>
+                    <inSignalDisable>pickupShipThing.SentWithExtraColonists</inSignalDisable>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_Letter">
+                                <label TKey="LetterLabelGuestDied">Guest died: {SUBJECT_definite}</label>
+                                <letterDef>NegativeEvent</letterDef>
+                                <text TKey="LetterTextGuestDied">{SUBJECT_definite}, who you were charged to protect, has died. [failLetterEndingCommon]</text>
+                                <signalListenMode>OngoingOrNotYetAccepted</signalListenMode>
+                            </li>
+                            <li Class="QuestNode_End">
+                                <outcome>Fail</outcome>
+                                <goodwillChangeAmount>-5</goodwillChangeAmount>
+                                <goodwillChangeFactionOf>$asker</goodwillChangeFactionOf>
+                                <goodwillChangeReason>QuestPawnLost</goodwillChangeReason>
+                                <signalListenMode>OngoingOrNotYetAccepted</signalListenMode>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+
+                <!-- Shuttle -->
+                <li Class="QuestNode_Set">
+                    <name>shuttleDelayTicks</name>
+                    <value>2500</value> <!--One quadrum 900000-->
+                </li>
+                <li Class="QuestNode_ShuttleDelay">
+                    <delayTicks>$shuttleDelayTicks</delayTicks>
+                    <lodgers>$asker</lodgers>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_SubScript">
+                                <def>Util_TransportShip_Pickup</def>
+                                <parms>
+                                    <leaveDelayTicks>$(3*60000)</leaveDelayTicks>
+                                    <requiredPawns>$asker</requiredPawns>
+                                    <acceptColonists>true</acceptColonists>
+                                    <overrideMass>999999999</overrideMass>
+                                </parms>
+                            </li>
+                            <li Class="QuestNode_InspectString">
+                                <targets>$asker</targets>
+                                <inspectString TKey="InspectStringDepartShuttle">Should depart on shuttle</inspectString>
+                            </li>
+                            <li Class="QuestNode_Letter">
+                                <label TKey="LetterLabelShuttleArrived">Shuttle arrived</label>
+                                <text TKey="LetterTextShuttleArrived">The shuttle has arrived to collect the [asker_faction_leaderTitle].\n\nAll of you can accompany the [asker_faction_leaderTitle] on the shuttle and travel to the Imperial flotilla to begin a new life.</text>
+                                <lookTargets>$pickupShipThing</lookTargets>
+                            </li>
+
+                            <!--Start armageddon-->
+                            <li Class="QuestNode_GameCondition">
+                                <inSignal>pickupShipThing.SentWithExtraColonists</inSignal>
+                                <gameCondition>SHG_ArmageddonClock</gameCondition>
+                                <targetWorld>True</targetWorld>
+                                <duration>60000</duration>
+                            </li>
+
+                            <!-- Win condition -->
+                            <li Class="QuestNode_EndGame">
+                                <inSignal>pickupShipThing.SentWithExtraColonists</inSignal>
+                                <signalListenMode>Always</signalListenMode>
+                                <introText TKey="SHG_VillainEndIntro">You've gone up to the orbital station that the [asker_faction_name] set up.</introText>
+                                <endingText TKey="SHG_VillainEndOutro">In 24 hours, the world will be engulfed in a transparent gas that will quickly kill everyone on the planet. It won't be a glorious victory, but it will be yours.</endingText>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+
+                <!-- - - - - -->
+                <!-- Threats -->
+                <!-- - - - - -->
+                
+                <li Class="QuestNode_Set">
+                    <name>enemyFaction</name>
+                    <value>Empire</value>
+                </li>
+                <li Class="QuestNode_ViolentQuestsAllowed">
+                    <node Class="QuestNode_GenerateThreats">
+                        <parms>
+                            <allowedThreats>Raids</allowedThreats>
+                            <onDays>1.0</onDays>
+                            <offDays>0.5</offDays>
+                            <minSpacingDays>0.04</minSpacingDays>
+                            <numIncidentsRange>2~4</numIncidentsRange>
+                            <currentThreatPointsFactor>2.0</currentThreatPointsFactor>
+                            <minThreatPoints>500</minThreatPoints>
+                        </parms>
+                    </node>          
+                </li>
+                
+                <!-- - - - - - - -  -->
+                <!-- End conditions -->
+                <!-- - - - - - - -  -->
+
+                <!-- Lodger arrested -->
+                <li Class="QuestNode_Signal">
+                    <inSignal>lodgers.Arrested</inSignal>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_Letter">
+                                <label TKey="LetterLabelGuestCaptured">Guest captured: {SUBJECT_definite}</label>
+                                <letterDef>NegativeEvent</letterDef>
+                                <text TKey="LetterTextGuestCaptured">{SUBJECT_definite}, who you were charged to protect, has been arrested. [failLetterEndingCommon]</text>
+                            </li>
+                            <li Class="QuestNode_End">
+                                <outcome>Fail</outcome>
+                                <goodwillChangeAmount>-5</goodwillChangeAmount>
+                                <goodwillChangeFactionOf>$asker</goodwillChangeFactionOf>
+                                <goodwillChangeReason>QuestPawnArrested</goodwillChangeReason>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+
+                <!-- Surgery violation -->
+                <li Class="QuestNode_Signal">
+                    <inSignal>lodgers.SurgeryViolation</inSignal>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_Letter">
+                                <label TKey="LetterLabelUnauthorizedSurgery">Unauthorized surgery: {SUBJECT_definite}</label>
+                                <letterDef>NegativeEvent</letterDef>
+                                <text TKey="LetterTextUnauthorizedSurgery">Unauthorized, violating surgery has been performed on {SUBJECT_definite}, who you were charged to protect. [failLetterEndingCommon]</text>
+                            </li>
+                            <li Class="QuestNode_End">
+                                <outcome>Fail</outcome>
+                                <goodwillChangeAmount>-5</goodwillChangeAmount>
+                                <goodwillChangeFactionOf>$asker</goodwillChangeFactionOf>
+                                <goodwillChangeReason>PerformedHarmfulSurgery</goodwillChangeReason>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+
+                <!-- Lodger's xenogerm absorbed -->
+                <li Class="QuestNode_Signal" MayRequire="Ludeon.RimWorld.Biotech">
+                    <inSignal>lodgers.XenogermAbsorbed</inSignal>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_Letter">
+                                <label>Xenogerm absorbed: {SUBJECT_definite}</label>
+                                <letterDef>NegativeEvent</letterDef>
+                                <text>{SUBJECT_definite}, who you were charged to protect, has had {SUBJECT_possessive} xenogerm forcibly absorbed. [failLetterEndingCommon]</text>
+                            </li>
+                            <li Class="QuestNode_End">
+                                <outcome>Fail</outcome>
+                                <goodwillChangeAmount>-5</goodwillChangeAmount>
+                                <goodwillChangeFactionOf>$asker</goodwillChangeFactionOf>
+                                <goodwillChangeReason>XenogermAbsorbed</goodwillChangeReason>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+
+                <!-- Lodger left map -->
+                <li Class="QuestNode_Signal">
+                    <inSignal>asker.LeftMap</inSignal>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_Letter">
+                                <label TKey="LetterLabelGuestLost">Guest lost: {SUBJECT_definite}</label>
+                                <letterDef>NegativeEvent</letterDef>
+                                <text TKey="LetterTextGuestLost">{SUBJECT_definite}, who you were charged to protect, has left the assigned settlement. [failLetterEndingCommon]</text>
+                            </li>
+                            <li Class="QuestNode_End">
+                                <outcome>Fail</outcome>
+                                <goodwillChangeAmount>-5</goodwillChangeAmount>
+                                <goodwillChangeFactionOf>$asker</goodwillChangeFactionOf>
+                                <goodwillChangeReason>QuestPawnLost</goodwillChangeReason>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+
+                <!-- Shuttle destroyed -->
+                <li Class="QuestNode_Signal">
+                    <inSignal>pickupShipThing.Destroyed</inSignal>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_Letter">
+                                <label TKey="LetterLabelShuttleDestroyed">Shuttle destroyed</label>
+                                <letterDef>NegativeEvent</letterDef>
+                                <text TKey="LetterTextShuttleDestroyed">The shuttle sent to collect the [asker_faction_leaderTitle] has been destroyed. [failLetterEndingCommon]</text>
+                            </li>
+                            <li Class="QuestNode_End">
+                                <outcome>Fail</outcome>
+                                <goodwillChangeAmount>-5</goodwillChangeAmount>
+                                <goodwillChangeFactionOf>$asker</goodwillChangeFactionOf>
+                                <goodwillChangeReason>ShuttleDestroyed</goodwillChangeReason>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+                
+                <!-- Asker ran wild -->
+                <li Class="QuestNode_Signal">
+                    <inSignal>asker.RanWild</inSignal>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_Letter">
+                                <label TKey="LetterLabelLodgerRanWild">Guest lost: {SUBJECT_definite}</label>
+                                <letterDef>NegativeEvent</letterDef>
+                                <text TKey="LetterTextLodgerRanWild">{SUBJECT_definite}, who you were charged to protect, has run wild. [failLetterEndingCommon]</text>
+                            </li>
+                            <li Class="QuestNode_End">
+                                <outcome>Fail</outcome>
+                                <goodwillChangeAmount>-5</goodwillChangeAmount>
+                                <goodwillChangeFactionOf>$asker</goodwillChangeFactionOf>
+                                <goodwillChangeReason>QuestPawnLost</goodwillChangeReason>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+
+                <!-- Shuttle sent away -->
+                <li Class="QuestNode_Signal">
+                    <inSignal>pickupShipThing.SentSatisfied</inSignal>
+                    <node Class="QuestNode_End">
+                        <outcome>Success</outcome>
+                        <sendStandardLetter>true</sendStandardLetter>
+                    </node>
+                </li>
+                <li Class="QuestNode_Signal">
+                    <inSignal>pickupShipThing.SentUnsatisfied</inSignal>
+                    <node Class="QuestNode_Sequence">
+                        <nodes>
+                            <li Class="QuestNode_Letter">
+                                <label TKey="LetterLabelShuttleSentUnsatisfied">Quest failed: [resolvedQuestName]</label>
+                                <letterDef>NegativeEvent</letterDef>
+                                <text TKey="LetterTextShuttleSentUnsatisfied">The shuttle sent to collect the [asker_faction_leaderTitle] has departed without [asker_objective]. [asker_pronoun] will now leave on foot. [failLetterEndingCommon]</text>
+                            </li>
+                            <li Class="QuestNode_End">
+                                <outcome>Fail</outcome>
+                                <goodwillChangeAmount>-5</goodwillChangeAmount>
+                                <goodwillChangeFactionOf>$asker</goodwillChangeFactionOf>
+                                <goodwillChangeReason>MemberMissedShuttle</goodwillChangeReason>
+                            </li>
+                        </nodes>
+                    </node>
+                </li>
+            </nodes>
+        </root>
+    </QuestScriptDef>
+
+</Defs>

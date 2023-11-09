@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- ============================= Trade permits received by titles ============================= -->
+
+    <RoyalTitlePermitDef>
+        <defName>SHG_Villain_TradeSettlement</defName>
+        <label>trade with settlements</label>
+    </RoyalTitlePermitDef>
+        
+    <RoyalTitlePermitDef>
+        <defName>SHG_Villain_TradeCaravan</defName>
+        <label>trade with caravans</label>
+    </RoyalTitlePermitDef>
+
+
+    <!-- ============================= Other permits ============================= -->
+
+    <RoyalTitlePermitDef Abstract="True" Name="SHG_VillainPermitBase">
+        <faction>SuperVillainGang</faction>
+        <permitPointCost>1</permitPointCost>
+        <cooldownDays>15</cooldownDays>
+        <royalAid>
+            <targetingRange>44.9</targetingRange>
+            <targetingRequireLOS>false</targetingRequireLOS>
+            <favorCost>10</favorCost>
+        </royalAid>
+    </RoyalTitlePermitDef>
+
+        <!--Support-->
+    
+    <RoyalTitlePermitDef ParentName="SHG_VillainPermitBase">
+        <defName>SHG_VillainFerromancersDrop</defName>
+        <label>ferromancer's drop</label>
+        <description>Call for a drop of 1000 steel and 100 plasteel.</description>
+        <minTitle>SHG_VillainTier1</minTitle>
+        <uiPosition>(0,0)</uiPosition>
+        <workerClass>RoyalTitlePermitWorker_DropResources</workerClass>
+        <usableOnWorldMap>true</usableOnWorldMap>
+        <royalAid>
+            <itemsToDrop>
+                <Steel>1000</Steel>
+                <Plasteel>100</Plasteel>
+            </itemsToDrop>
+        </royalAid>
+    </RoyalTitlePermitDef>
+
+    <RoyalTitlePermitDef ParentName="SHG_VillainPermitBase">
+        <defName>SHG_VillainGeomancersDrop</defName>
+        <label>geomancer's drop</label>
+        <description>Call for a drop of 30 components and 10 advanced components.</description>
+        <minTitle>SHG_VillainTier7</minTitle>
+        <uiPosition>(1,0)</uiPosition>
+        <workerClass>RoyalTitlePermitWorker_DropResources</workerClass>
+        <prerequisite>SHG_VillainFerromancersDrop</prerequisite>
+        <usableOnWorldMap>true</usableOnWorldMap>
+        <royalAid>
+            <itemsToDrop>
+                <ComponentIndustrial>30</ComponentIndustrial>
+                <ComponentSpacer>10</ComponentSpacer>
+            </itemsToDrop>
+        </royalAid>
+    </RoyalTitlePermitDef>
+
+    <RoyalTitlePermitDef ParentName="SHG_VillainPermitBase">
+        <defName>SHG_VillainChemistsDrop</defName>
+        <label>chemist's drop</label>
+        <description>Call for a drop of 30 herbal medicines, hops, smokeleaf leaves, and psychoid leaves.</description>
+        <minTitle>SHG_VillainTier4</minTitle>
+        <uiPosition>(0,1)</uiPosition>
+        <workerClass>RoyalTitlePermitWorker_DropResources</workerClass>
+        <usableOnWorldMap>true</usableOnWorldMap>
+        <royalAid>
+            <itemsToDrop>
+                <MedicineHerbal>30</MedicineHerbal>
+                <RawHops>30</RawHops>
+                <SmokeleafLeaves>30</SmokeleafLeaves>
+                <PsychoidLeaves>30</PsychoidLeaves>
+            </itemsToDrop>
+        </royalAid>
+    </RoyalTitlePermitDef>
+
+    <RoyalTitlePermitDef ParentName="SHG_VillainPermitBase">
+        <defName>SHG_VillainSuperCreatingPill</defName>
+        <label>super creating pill</label>
+        <description>Request a pill that allows for turning a non-super pawn into a super. If used on a pawn that already has the basic superhero gene, this item is wasted.</description>
+        <minTitle>SHG_VillainTier6</minTitle>
+        <uiPosition>(0,6)</uiPosition>
+        <workerClass>RoyalTitlePermitWorker_DropResources</workerClass>
+        <usableOnWorldMap>true</usableOnWorldMap>
+        <royalAid>
+            <itemsToDrop>
+                <SHG_SuperCreatingPill>1</SHG_SuperCreatingPill>
+            </itemsToDrop>
+        </royalAid>
+    </RoyalTitlePermitDef>
+
+    <RoyalTitlePermitDef ParentName="SHG_VillainPermitBase">
+        <defName>SHG_VillainCallTransportShuttle</defName>
+        <label>call transport shuttle</label>
+        <description>Call a shuttle for your own use. It will transport colonists, items, and animals anywhere you like within 70 world tiles.</description>
+        <workerClass>RoyalTitlePermitWorker_CallShuttle</workerClass>
+        <minTitle>SHG_VillainTier2</minTitle>
+        <usableOnWorldMap>true</usableOnWorldMap>
+        <uiPosition>(1,1)</uiPosition>
+    </RoyalTitlePermitDef>
+
+        <!--Give pawns-->
+    <RoyalTitlePermitDef ParentName="SHG_VillainPermitBase">
+        <defName>SHG_VillainCallLaborer</defName>
+        <label>request villain laborers</label>
+        <description>Call the League to request they send three laborers to assist your colony develop for 6 days. The expertise of the laborers is randomized, from intellectual to summoner to all-rounder.</description>
+        <workerClass>RoyalTitlePermitWorker_CallLaborers</workerClass>
+        <minTitle>SHG_VillainTier2</minTitle>
+        <uiPosition>(0,2)</uiPosition>
+        <royalAid>
+            <pawnKindDef>SHG_VillainLaborer</pawnKindDef>
+            <pawnCount>3</pawnCount>
+            <aidDurationDays>6</aidDurationDays>
+        </royalAid>
+    </RoyalTitlePermitDef>
+
+    <RoyalTitlePermitDef ParentName="SHG_VillainPermitBase">
+        <defName>SHG_VillainCallVillainTroopers</defName>
+        <label>request villain troopers</label>
+        <description>Call the League to request they send three troopers to assist you in the current battle.</description>
+        <workerClass>RoyalTitlePermitWorker_CallAid</workerClass>
+        <minTitle>SHG_VillainTier4</minTitle>
+        <uiPosition>(1,2)</uiPosition>
+        <royalAid>
+            <pawnKindDef>SHG_VillainTrooper</pawnKindDef>
+            <pawnCount>3</pawnCount>
+        </royalAid>
+    </RoyalTitlePermitDef>
+
+    <RoyalTitlePermitDef ParentName="SHG_VillainPermitBase">
+        <defName>SHG_VillainCallVillainSnipers</defName>
+        <label>request villain snipers</label>
+        <description>Call the League to request they send three snipers to assist you in the current battle.</description>
+        <workerClass>RoyalTitlePermitWorker_CallAid</workerClass>
+        <minTitle>SHG_VillainTier4</minTitle>
+        <uiPosition>(0,3)</uiPosition>
+        <royalAid>
+            <pawnKindDef>SHG_VillainSniper</pawnKindDef>
+            <pawnCount>3</pawnCount>
+        </royalAid>
+    </RoyalTitlePermitDef>
+
+    <RoyalTitlePermitDef ParentName="SHG_VillainPermitBase">
+        <defName>SHG_VillainCallVillainSlashers</defName>
+        <label>request villain slashers</label>
+        <description>Call the League to request they send three slashers to assist you in the current battle.</description>
+        <workerClass>RoyalTitlePermitWorker_CallAid</workerClass>
+        <minTitle>SHG_VillainTier4</minTitle>
+        <uiPosition>(1,3)</uiPosition>
+        <royalAid>
+            <pawnKindDef>SHG_VillainSlasher</pawnKindDef>
+            <pawnCount>3</pawnCount>
+        </royalAid>
+    </RoyalTitlePermitDef>
+
+        <!--Orbital Railgun-->
+    <RoyalTitlePermitDef ParentName="SHG_VillainPermitBase">
+        <defName>SHG_VillainCallOrbitalStrike</defName>
+        <label>orbital strike</label>
+        <description>Use one of the League's orbital railguns to cause massive damage to an area.</description>
+        <workerClass>RoyalTitlePermitWorker_OrbitalStrike</workerClass>
+        <minTitle>SHG_VillainTier3</minTitle>
+        <uiPosition>(0,4)</uiPosition>
+        <royalAid>
+            <targetingRange>66.9</targetingRange>
+            <radius>2.9</radius>
+            <explosionRadiusRange>7.9</explosionRadiusRange>
+            <explosionCount>1</explosionCount>
+            <intervalTicks>60</intervalTicks>
+            <warmupTicks>120</warmupTicks>
+        </royalAid>
+    </RoyalTitlePermitDef>
+
+    <RoyalTitlePermitDef ParentName="SHG_VillainPermitBase">
+        <defName>SHG_VillainOrbitalSalvo</defName>
+        <label>orbital salvo</label>
+        <description>Use six of the League's orbital railguns to cause six explosions in an area.</description>
+        <workerClass>RoyalTitlePermitWorker_OrbitalStrike</workerClass>
+        <minTitle>SHG_VillainTier6</minTitle>
+        <prerequisite>SHG_VillainCallOrbitalStrike</prerequisite>
+        <uiPosition>(0.71,5)</uiPosition>
+        <royalAid>
+            <favorCost>20</favorCost>
+            <targetingRange>66.9</targetingRange>
+            <radius>7.9</radius>
+            <explosionRadiusRange>7.9</explosionRadiusRange>
+            <explosionCount>6</explosionCount>
+            <intervalTicks>60</intervalTicks>
+            <warmupTicks>120</warmupTicks>
+        </royalAid>
+    </RoyalTitlePermitDef>
+    
+    <RoyalTitlePermitDef ParentName="SHG_VillainPermitBase">
+        <defName>SHG_VillainTargetedArmageddon</defName>
+        <label>targeted armageddon</label>
+        <description>Use all of the League's orbital railguns above the pawn's current position to cause twenty-four explosions in an area in rapid succession.</description>
+        <workerClass>RoyalTitlePermitWorker_OrbitalStrike</workerClass>
+        <minTitle>SHG_VillainTier9</minTitle>
+        <prerequisite>SHG_VillainOrbitalSalvo</prerequisite>
+        <uiPosition>(1.42,6)</uiPosition>
+        <royalAid>
+            <favorCost>30</favorCost>
+            <targetingRange>66.9</targetingRange>
+            <radius>12.9</radius>
+            <explosionRadiusRange>7.9</explosionRadiusRange>
+            <explosionCount>24</explosionCount>
+            <intervalTicks>30</intervalTicks>
+            <warmupTicks>120</warmupTicks>
+        </royalAid>
+    </RoyalTitlePermitDef>    
+</Defs>
