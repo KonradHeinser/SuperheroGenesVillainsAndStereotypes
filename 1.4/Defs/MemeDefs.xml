@@ -235,6 +235,31 @@
                 <li>Execution_DontCare</li>
             </li>
         </requireOne>
+        <generalRules>
+            <rulesStrings>
+                <li>memeAdjective->supreme</li>
+                <li>memeAdjective->high</li>
+                <li>memeAdjective->great</li>
+                <li>memeAdjective->foremost</li>
+                <li>memeAdjective->perfect</li>
+                <li>memeAdjective->prime</li>
+                <li>memeAdjective->strong</li>
+                <li>memeCreed->militia</li>
+                <li>memeCreed->legion</li>
+                <li>memeHyphenPrefix->super</li>
+                <li>memeConcept->war</li>
+                <li>memeConcept->violence</li>
+                <li>memeConcept->vengence</li>
+                <li>memeLeaderNoun->general</li>
+                <li>memeLeaderNoun->commander</li>
+                <li>memeLeaderNoun->marshal</li>
+                <li>memeLeaderNoun->fist</li>
+                <li>memeLeaderNoun->ruler</li>
+                <li>memeLeaderNoun->protector</li>
+                <li>memeLeaderNoun->warden</li>
+                <li>memeLeaderNoun->victor</li>
+            </rulesStrings>
+        </generalRules>
         <descriptionMaker>
             <rules>
                 <rulesStrings>

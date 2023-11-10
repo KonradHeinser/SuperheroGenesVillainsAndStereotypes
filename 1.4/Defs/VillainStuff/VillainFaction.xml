@@ -1,86 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <XenotypeDef>
-        <defName>SHG_RandomMundaneSuper</defName>
-        <label>mundane super</label>
-        <description>In terms of combat potential, this is one of the weakest supers out there. These supers tend to work better with their mind than their fists, and about a third of them don't even have any special genes beyond their basic superhero gene.</description>
-        <inheritable>true</inheritable>
-        <iconPath>HeroXenotypeIcon</iconPath>
-        <combatPowerFactor>2</combatPowerFactor>
-        <genes>
-            <li>SuperHeroBase</li>
-            <li>SHG_RandomMundaneSuper</li>
-        </genes>
-    </XenotypeDef>
-
-    <XenotypeDef>
-        <defName>SHG_RandomSoldierSuper</defName>
-        <label>super soldier</label>
-        <description>Generic super soldier created in mass. Each of them tend to specialize between melee and ranged combat, though if resources are scarce they are often still very deadly when not using their preferred weapons.</description>
-        <inheritable>true</inheritable>
-        <iconPath>Base/SuperheroGeneBase</iconPath>
-        <combatPowerFactor>5</combatPowerFactor>
-        <genes>
-            <li>SuperHeroBase</li>
-            <li>SHG_RandomSoldierSuper</li>
-        </genes>
-    </XenotypeDef>
-
-    <XenotypeDef>
-        <defName>SHG_RandomMundaneMancer</defName>
-        <label>mandane mancer</label>
-        <description>Usually referred to as just mancers, these people are able to create dangerous substances with ease, from exploding balls of fire to freezing bursts of ice.</description>
-        <inheritable>true</inheritable>
-        <iconPath>MancerIcon</iconPath>
-        <combatPowerFactor>7</combatPowerFactor>
-        <genes>
-            <li>SuperHeroBase</li>
-            <li>SHG_RandomMundaneMancer</li>
-        </genes>
-    </XenotypeDef>
-
-    <XenotypeDef>
-        <defName>SHG_RandomWarSuper</defName>
-        <label>war super</label>
-        <description>The generic label of "war super" was created to catch all those supers who specialized in combat, but didn't quite fit in with mancers. This label covers a wide range of supers, from pugulists and ninjas to hackers and druids.</description>
-        <inheritable>true</inheritable>
-        <iconPath>WarIcon</iconPath>
-        <combatPowerFactor>7</combatPowerFactor>
-        <genes>
-            <li>SuperHeroBase</li>
-            <li>SHG_RandomWarSuper</li>
-        </genes>
-    </XenotypeDef>
-
-    <XenotypeDef>
-        <defName>SHG_RandomSupportSuper</defName>
-        <label>support super</label>
-        <description>Support super is a generic term that was created to handle the various supporting archetypes, from the debilitating stunners and anti-heroes to the life saving medics and life bringers.</description>
-        <inheritable>true</inheritable>
-        <iconPath>SupportIcon</iconPath>
-        <combatPowerFactor>5</combatPowerFactor>
-        <genes>
-            <li>SuperHeroBase</li>
-            <li>SHG_RandomSupportSuper</li>
-        </genes>
-    </XenotypeDef>
-
-    <XenotypeDef>
-        <defName>SHG_RandomSummonerSuper</defName>
-        <label>summoner super</label>
-        <description>Summoners are one of the few supers who are never sent to the battlefield as their powers are much more suited to colony support. These people are capable of creating resources from what appears to be nothing by bringing resources from deep in the planet to the surface, or by infusing a plant with energy that allows them to grow even on stone.</description>
-        <inheritable>true</inheritable>
-        <iconPath>SummonerIcon</iconPath>
-        <combatPowerFactor>1</combatPowerFactor>
-        <canGenerateAsCombatant>false</canGenerateAsCombatant>
-        <genes>
-            <li>SuperHeroBase</li>
-            <li>SHG_RandomSummonerSuper</li>
-        </genes>
-    </XenotypeDef>
-
-    <!--Faction-->
-
     <RulePackDef>
         <defName>SHG_SuperVillainGang</defName>
         <rulePack>
@@ -93,14 +12,15 @@
     <FactionDef ParentName="FactionBase">
         <defName>SuperVillainGang</defName>
         <label>super-villain gang</label>
-        <description>A loose confederation of villains who've agreed to mostly fight outsiders instead of fighting each other.\n\nVillains care little about human life, and will often try to kill everyone they come across in their quest for world domination.\n\nWhen fights aren't going their way, they will often flee, abandoning allies in the process. They will also often return with more allies to kill those who resisted them in the past.\n\nWhile they will never truly match the cruelty of The Super Villain, their willingness to dispose of those they view as lesser beings makes them a threat regardless.\n\nVillains have their own type of honor called Infamy. Infamy is their measure of how dedicated you are to their cause. The more dedicated you are, the more willing they are to work with you. Unlike the Empire, they are willing to let people use the boons granted by permits more often, but becoming their enemy through overt action or a lack of support will result in a lack of support. The ranking system they use is the same as the threat levels assigned to them by the Hero Association. Tier 1 villains are the lowest, usually common soldiers, while Tier 9 villains are often believed to be planetary level threats.</description>
+        <description>A loose confederation of villains who've agreed to mostly fight outsiders instead of fighting each other.\n\nVillains care little about human life, and will often try to kill everyone they come across in their quest for world domination.\n\nWhile they will never truly match the cruelty of The Super Villain, their willingness to dispose of those they view as lesser beings makes them a threat regardless.\n\nVillains have their own type of honor called Infamy. Infamy is their measure of how dedicated you are to their cause. The more dedicated you are, the more willing they are to work with you. Unlike the Empire, they are willing to let people use the boons granted by permits more often, but becoming their enemy through overt action or a lack of support will result in a lack of support.\n\nThe ranking system they use is the same as the threat levels assigned to them by The Hero Association. Tier 1 villains are the lowest, usually common soldiers, while Tier 9 villains are often believed to be planetary level threats.</description>
         <pawnSingular>villain</pawnSingular>
         <pawnsPlural>villains</pawnsPlural>
         <categoryTag>SuperVillainGang</categoryTag>
         <settlementGenerationWeight>1</settlementGenerationWeight>
+        <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+        <configurationListOrderPriority>999</configurationListOrderPriority>
         <requiredCountAtGameStart>1</requiredCountAtGameStart>
         <maxCountAtGameStart>1</maxCountAtGameStart>
-        <canMakeRandomly>true</canMakeRandomly>
         <canSiege>true</canSiege>
         <canStageAttacks>true</canStageAttacks>
         <techLevel>Spacer</techLevel>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ScenarioDef>
+        <defName>SHG_VillainStart</defName>
+        <label>New Villains</label>
+        <description>The five of you had the perfect plan for world domination. The Empire was attempting to do another peace talk in one of there settlements, where many faction leaders would gather. The plan was to place explosives in the main building, get a bunch of their valuable resources onto a couple their shuttles, then with that money and the leaders blown up it'd be easy to bribe or kill the new faction leaders until enough factions were under your command.\n\nUnfortunately, someone ended up setting off the explosives before any of the leaders were in the building, meaning the factions are still too organized, and now angry, to take over that way.\n\nNote: This scenario makes everyone a permanent enemy except the League of Villains, including the Empire. This mean you will likely see far fewer quests, and will not have access to the Royal Ascent or Archonexus victories, nor any of the Empire's honor stuff. The League of Villains will initially be hostile, but giving them gifts or destroying the settlments of other factions will change this.</description>
+        <scenario>
+            <summary>Survive with your only potential ally being the local Villain Gang.</summary>
+            <playerFaction>
+                <def>PlayerFaction</def>
+                <factionDef>SHG_VillainStart</factionDef>
+            </playerFaction>
+            <parts>
+                <!-- Config pages -->
+                <li Class="ScenPart_ConfigPage_ConfigureStartingPawns_Xenotypes">
+                    <def>ConfigurePawnsXenotypes</def>
+                    <pawnChoiceCount>5</pawnChoiceCount>
+                    <customSummary>Start five adult supers, a mundane, a soldier, a mancer, a support, and a war super.</customSummary>
+                    <overrideKinds>
+                        <li>
+                            <xenotype>SHG_RandomMundaneSuper</xenotype>
+                            <pawnKind>SHG_VillainSniper</pawnKind>
+                        </li>
+                        <li>
+                            <xenotype>SHG_RandomSoldierSuper</xenotype>
+                            <pawnKind>SHG_VillainLaborer</pawnKind>
+                        </li>
+                        <li>
+                            <xenotype>SHG_RandomMundaneMancer</xenotype>
+                            <pawnKind>SHG_VillainTrooper</pawnKind>
+                        </li>
+                        <li>
+                            <xenotype>SHG_RandomSupportSuper</xenotype>
+                            <pawnKind>SHG_VillainLaborer</pawnKind>
+                        </li>
+                        <li>
+                            <xenotype>SHG_RandomWarSuper</xenotype>
+                            <pawnKind>SHG_VillainSlasher</pawnKind>
+                        </li>
+                    </overrideKinds>
+                    <xenotypeCounts>
+                        <li>
+                            <xenotype>SHG_RandomMundaneSuper</xenotype>
+                            <count>1</count>
+                            <description>a random mundane super</description>
+                            <requiredAtStart>true</requiredAtStart>
+                            <allowedDevelopmentalStages>Adult</allowedDevelopmentalStages>
+                        </li>
+                        <li>
+                            <xenotype>SHG_RandomSoldierSuper</xenotype>
+                            <count>1</count>
+                            <description>a random super soldier</description>
+                            <requiredAtStart>true</requiredAtStart>
+                            <allowedDevelopmentalStages>Adult</allowedDevelopmentalStages>
+                        </li>
+                        <li>
+                            <xenotype>SHG_RandomMundaneMancer</xenotype>
+                            <count>1</count>
+                            <description>a random mancer</description>
+                            <requiredAtStart>true</requiredAtStart>
+                            <allowedDevelopmentalStages>Adult</allowedDevelopmentalStages>
+                        </li>
+                        <li>
+                            <xenotype>SHG_RandomSupportSuper</xenotype>
+                            <count>1</count>
+                            <description>a random support super</description>
+                            <requiredAtStart>true</requiredAtStart>
+                            <allowedDevelopmentalStages>Adult</allowedDevelopmentalStages>
+                        </li>
+                        <li>
+                            <xenotype>SHG_RandomWarSuper</xenotype>
+                            <count>1</count>
+                            <description>a random war super</description>
+                            <requiredAtStart>true</requiredAtStart>
+                            <allowedDevelopmentalStages>Adult</allowedDevelopmentalStages>
+                        </li>
+                    </xenotypeCounts>
+                </li>
+
+                <!-- Player starting stuff spawn method-->
+                <li Class="ScenPart_PlayerPawnsArriveMethod">
+                    <def>PlayerPawnsArriveMethod</def>
+                    <method>DropPods</method>
+                    <visible>false</visible>
+                </li>
+
+                <!-- Player starting things -->
+
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>Jade</thingDef>
+                    <count>100</count>
+                </li>
+
+                <li Class="ScenPart_StartingThing_Defined">
+                    <def>StartingThing_Defined</def>
+                    <thingDef>MealSurvivalPack</thingDef>
+                    <count>50</count>
+                </li>
+
+                <!-- Scatter some things near player start -->
+
+                <li Class="ScenPart_ScatterThingsNearPlayerStart">
+                    <def>ScatterThingsNearPlayerStart</def>
+                    <thingDef>ShipChunk</thingDef>
+                    <allowRoofed>false</allowRoofed>
+                    <count>10</count>
+                    <visible>false</visible>
+                </li>
+
+                <li Class="ScenPart_ScatterThingsNearPlayerStart">
+                    <def>ScatterThingsNearPlayerStart</def>
+                    <thingDef>Steel</thingDef>
+                    <count>500</count>
+                </li>
+
+                <li Class="ScenPart_ScatterThingsNearPlayerStart">
+                    <def>ScatterThingsNearPlayerStart</def>
+                    <thingDef>Gold</thingDef>
+                    <count>200</count>
+                </li>
+
+                <li Class="ScenPart_ScatterThingsNearPlayerStart">
+                    <def>ScatterThingsNearPlayerStart</def>
+                    <thingDef>Silver</thingDef>
+                    <count>1000</count>
+                </li>   
+
+                <!-- Scatter some things anywhere -->
+                <li Class="ScenPart_ScatterThingsAnywhere">
+                    <def>ScatterThingsAnywhere</def>
+                    <thingDef>ShipChunk</thingDef>
+                    <allowRoofed>false</allowRoofed>
+                    <count>10</count>
+                    <visible>false</visible>
+                </li>
+
+                <!-- Game start dialog -->
+                <li Class="ScenPart_GameStartDialog">
+                    <def>GameStartDialog</def>
+                    <text>You've made an enemy of everyone, but at least you got some riches out of it.\n\nNow it's time to decide, move on to a new world, or try to take this one over again? The local villain gang may be willing to help if you can get the attention of their leaders somehow.</text>
+                    <closeSound>GameStartSting</closeSound>
+                </li>
+            </parts>
+        </scenario>
+    </ScenarioDef>
+
+    <FactionDef ParentName="PlayerFactionBase">
+        <defName>SHG_VillainStart</defName>
+        <label>independent villain gang</label>
+        <description>An independent gang of villains controlled by the player. On the run from almost every faction in the world after taking part in an attempted assassination plot while all their leaders were gathered.</description>
+        <isPlayer>true</isPlayer>
+        <basicMemberKind>Colonist</basicMemberKind>
+        <pawnSingular>colonist</pawnSingular>
+        <pawnsPlural>colonists</pawnsPlural>
+        <techLevel>Industrial</techLevel>
+        <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+        <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+        <allowedCultures><li>Astropolitan</li></allowedCultures>
+        <backstoryFilters>
+            <li>
+                <categories>
+                    <li>Villain</li>
+                </categories>
+            </li>
+        </backstoryFilters>
+        <factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
+        <startingResearchTags>
+            <li>ClassicStart</li>
+        </startingResearchTags>
+        <startingTechprintsResearchTags>
+            <li>ClassicStart</li>
+            <li>ClassicStartTechprints</li>
+        </startingTechprintsResearchTags>
+        <apparelStuffFilter>
+            <thingDefs>
+                <li>Synthread</li>
+            </thingDefs>
+        </apparelStuffFilter>
+        <permanentEnemyToEveryoneExcept>
+            <li>SuperVillainGang</li>
+        </permanentEnemyToEveryoneExcept>
+    </FactionDef>
+</Defs>
