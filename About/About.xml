@@ -2,7 +2,7 @@
 <ModMetaData>
   <name>Superhero Genes - Villains and Stereotypes</name>
   <author>alite</author>
-  <packageId>SuperheroGenesVillainsAndStereotypes.Mod</packageId>
+  <packageId>SuperheroGenes.Villains</packageId>
   <supportedVersions>
     <li>1.4</li>
   </supportedVersions>
@@ -27,9 +27,9 @@
   </loadAfter>
 
   <description>
-This mod adds two things, xenotypes containing the Basic Superhero Genes, and an always hostile supervillain gang that uses them. The xenotypes start with "SHG-" to indicate that they contain the SuperHero Gene, and only use the genes from the Superhero Genes mod.
+Villains and Stereotypes gives an enemy faction that uses the genes provided by [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2980061828]Superhero Genes[/url], and some xenotypes and gene randomizers that make it easier to quickly make a super. It also adds a new scenario that makes everyone other than the Villain faction permanently hostile, and a storyteller that increases the game difficulty a decent amount.
 
-WARNING: The super villains shouldn't start raiding until a while into the game, but they tend to be very deadly. For those familiar with the raid system, the weakest ones will start showing up at 175 raid points. For those not familiar with raid points, if pirates or tribals are arriving in groups of 3, you're probably going to start seeing some of the less combat focused villains.
+By default, the Super-villain Gang is hostile, but if you manage to turn them into an ally through quests, gifts, and good old fashion murder, you can rise through their ranks to gain access to a new end-game quest that ends with everyone in the world dying dramatically offscreen because seeing something that interesting onscreen would just be too exciting. You can increase your rank through quests similar to how you can rise in ranks with the Empire. Every tier after initiate gives a permit point that can be spent on special villain permits. These permits can be obtained through the normal permit menu. When you open the permit menu you will probably need to switch the faction you're looking at with the arrows in the upper left corner of the menu.
 
 [url=https://steamcommunity.com/id/alite/myworkshopfiles/?appid=294100]Easy link to all of my Rimworld mods[/url]
 [url=https://github.com/KonradHeinser/SuperheroGenesVillainsAndStereotypes][img]https://i.imgur.com/kTkpTOE.png[/img][/url]

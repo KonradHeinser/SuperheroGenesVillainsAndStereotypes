@@ -5,6 +5,16 @@
         <label>siding with villains</label>
     </HistoryEventDef>
 
+    <HistoryEventDef>
+        <defName>SHG_VillainStartSuccess</defName>
+        <label>empire remnants destroyed</label>
+    </HistoryEventDef>
+
+    <HistoryEventDef>
+        <defName>SHG_VillainStartRefused</defName>
+        <label>refused to side with villains</label>
+    </HistoryEventDef>
+
     <IncidentDef ParentName="GiveQuestBase">
         <defName>SHG_GiveQuest_VillainStart</defName>
         <label>villainous beginnings</label>
@@ -18,6 +28,8 @@
         <expireDaysRange>2</expireDaysRange>
         <defaultChallengeRating>1</defaultChallengeRating>
         <isRootSpecial>true</isRootSpecial>
+        <successHistoryEvent>SHG_VillainStartSuccess</successHistoryEvent>
+        <failedOrExpiredHistoryEvent>SHG_VillainStartRefused</failedOrExpiredHistoryEvent>
         <questNameRules>
         <rulesStrings>
             <li>questName->Picking sides</li>
