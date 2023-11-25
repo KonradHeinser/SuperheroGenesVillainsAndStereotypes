@@ -361,7 +361,7 @@
                 <!-- Shuttle -->
                 <li Class="QuestNode_Set">
                     <name>shuttleDelayTicks</name>
-                    <value>2500</value> <!--One quadrum 900000-->
+                    <value>900000</value> <!--One quadrum 900000-->
                 </li>
                 <li Class="QuestNode_ShuttleDelay">
                     <delayTicks>$shuttleDelayTicks</delayTicks>
