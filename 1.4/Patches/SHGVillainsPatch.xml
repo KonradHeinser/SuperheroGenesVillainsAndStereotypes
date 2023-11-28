@@ -87,4 +87,69 @@
         </value>
     </Operation>
 
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>medievalVillains</setting>
+        <active Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/PawnKindDef[defName="SHG_VillainTrooper"]/weaponTags</xpath>
+                    <value>
+                        <weaponTags>
+                            <li>NeolithicRangedDecent</li>
+                            <li>MedievalRanged</li>
+                            <li>MedievalRangedHeavy</li>
+                        </weaponTags>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/PawnKindDef[defName="SHG_VillainSniper"]/weaponTags</xpath>
+                    <value>
+                        <weaponTags Inherit="False">
+                            <li>NeolithicRangedChief</li>
+                            <li>MedievalRangedHeavy</li>
+                        </weaponTags>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/PawnKindDef[defName="SHG_VillainBoss"]/weaponTags</xpath>
+                    <value>
+                        <weaponTags>
+                            <li>NeolithicRangedChief</li>
+                            <li>MedievalRangedHeavy</li>
+                        </weaponTags>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/PawnKindDef[defName="SHG_VillainBoss"]/techHediffsChance</xpath>
+                    <value><techHediffsChance>0</techHediffsChance></value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/PawnKindDef[defName="SHG_VillainTrooper" or defName="SHG_VillainSlasher" or defName="SHG_VillainBoss"]/apparelTags</xpath>
+                    <value>
+                        <apparelTags>
+                            <li>MedievalMilitary</li>
+                            <li>MedievalArmorDecent</li>
+                        </apparelTags>
+                    </value>
+                </li>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/PawnKindDef[defName="SHG_VillainLaborer"]/apparelTags</xpath>
+                    <value>
+                        <apparelTags>
+                            <li>Neolithic</li>
+                            <li>Medieval</li>
+                        </apparelTags>
+                    </value>
+                </li>
+            </operations>
+        </active>
+    </Operation>
+
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>vengefulOne</setting>
+        <inactive Class="PatchOperationRemove">
+            <xpath>Defs/ScenarioDef[defName="SHG_TheVengefulOne"]/scenario/parts/li[@Class="ScenPart_ForcedHediff"]</xpath>
+        </inactive>
+    </Operation>
+
 </Patch>

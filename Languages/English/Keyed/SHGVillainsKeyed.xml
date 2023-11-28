@@ -2,5 +2,11 @@
 <LanguageData>
     <SHG_VillainEnd>Everything that was once living on this planet is dead, leaving it ripe for you and the other members of the League to claim.\n\nTo be honest I didn't expect anyone to wait this long, or to get to this point in general. I mean, I didn't even give you something nice to look at while you waited. Thank you for playing Rimworld with the Superhero Genes mod! Please make sure to give the mod a thumbs up in the workshop if you enjoyed it to make it more likely that others will have a chance to see the mod.\n\nIn the future I plan on giving a chance to save the world instead of only being able to destroy it with Superhero Genes - Hero Organization. Currently, I plan to make that mod include a faction that can oppose the League of Villains much like the Empire does now, and I hope some of the things that will be included in it will bring more entertainment to everyone.</SHG_VillainEnd>
 
+        <!--Settings stuff-->
+    <SHG_Villains_ModName>Superhero Genes - Villains and Stereotypes</SHG_Villains_ModName>
+    <SHG_MedievalVillains>    Medieval Villains (Restart Required)</SHG_MedievalVillains>
+    <SHG_MedievalVillainsDescription>Villains will only use equipment with a technology level of medieval or lower.</SHG_MedievalVillainsDescription>
+    <SHG_VengefulOne>    Vengeful One Hediff (Restart Required)</SHG_VengefulOne>
+    <SHG_VengefulOneDescription>While enabled, the "The Vengeful One" scenario gives a bonus to the pawn that sets their mental break threshold to always be the lowest possible value. While the hediff shows 0, there is always a small threshold that remains.</SHG_VengefulOneDescription>
 </LanguageData>
 
