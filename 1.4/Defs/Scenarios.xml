@@ -192,7 +192,7 @@
                 <!-- Game start dialog -->
                 <li Class="ScenPart_GameStartDialog">
                     <def>GameStartDialog</def>
-                    <text>Their betrayal stung. Both figuratively and literally with all the fire and acid they used to try to remove all trace of your existance. You survived with minimal long term damage thanks to a supply depot you set up that had plenty of food and supplies.\n\nUnfortunately, what you managed to take with you from the depot has long since dried up, and now you must choose once more. Will your quest for vengence start here, or is this just another place to forage more food.</text>
+                    <text>Their betrayal stung. Both figuratively and literally with all the fire and acid they used to try to remove all trace of your existance. You survived with minimal long term damage thanks to a supply depot you set up that had plenty of food and supplies.\n\nUnfortunately, what you managed to take with you from the depot has long since dried up, and now you must choose once more. Will your quest for vengence start here, or is this just another place to forage more food.\n\nIf you choose to settle here the nearby Villain Gang may take note of you, and if you play your cards right you may be able to use that.</text>
                     <closeSound>GameStartSting</closeSound>
                 </li>
             </parts>

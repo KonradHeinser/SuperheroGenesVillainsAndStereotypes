@@ -7,6 +7,7 @@
         <invNutrition>2.55</invNutrition>
         <itemQuality>Normal</itemQuality>
         <backstoryCryptosleepCommonality>0.08</backstoryCryptosleepCommonality>
+        <minGenerationAge>40</minGenerationAge>
         <maxGenerationAge>120</maxGenerationAge>
         <combatEnhancingDrugsChance>0.15</combatEnhancingDrugsChance>
         <combatEnhancingDrugsCount>0~2</combatEnhancingDrugsCount>

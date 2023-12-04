@@ -52,11 +52,11 @@
             </li>
             <li Class="StockGenerator_SingleDef">
                 <thingDef>PsychicAmplifier</thingDef>
-                <countRange>1~2</countRange>
+                <countRange>0~2</countRange>
             </li>
             <li Class="StockGenerator_SingleDef">
                 <thingDef>Mechlink</thingDef>
-                <countRange>1~2</countRange>
+                <countRange>-2~1</countRange>
             </li>
             <li Class="StockGenerator_Category">
                 <categoryDef>Textiles</categoryDef>
