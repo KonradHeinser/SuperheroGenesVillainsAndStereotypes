@@ -2,6 +2,7 @@
 <Defs>
     <GeneDef Name="RandomSuperGene" Abstract="True">
         <displayCategory>SHG_XenotypeRandomizer</displayCategory>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
         <prerequisite>SuperHeroBase</prerequisite>
         <biostatCpx>0</biostatCpx>
         <exclusionTags> <!--These tags are dedicated for randomizer genes-->
@@ -23,8 +24,8 @@
         <iconPath>HeroXenotypeIcon</iconPath>
         <description>Gives random generic super genes. This gives specific super genes, and then some unsuper and antisuper genes to balance the metabolic cost. This creates non-combatant, non-powered supers, with a 1/3 chance of having no effect:\n\n - Generic: Nothing added\n - Brainiac: Intelligence and Perception\n - Influencer: Persuasion and Perception\n\nMost super randomizers stop you from taking any super, unsuper, and antisuper genes. This randomizer does not block any other genes.</description>
         <modExtensions>
-			<li Class="VanillaGenesExpanded.GeneExtension">
-				<hediffToWholeBody>SHG_RandomMundaneSuper</hediffToWholeBody>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_RandomMundaneSuper</hediff></li></hediffsToApply>
 			</li>
 		</modExtensions>
     </GeneDef>
@@ -35,8 +36,8 @@
         <description>Gives random generic super genes. This gives specific super genes, and then some unsuper and antisuper genes to balance the metabolic cost. This creates generic soldier supers:\n\n - Deadeye: Precision and Perception\n - Bruiser: Strength and Durability\n - Immortal: Durability and Healing\n - Speedster: Speed and Healing\n\nThis randomizer doesn't block any genes outside of the basic super, unsuper, and antisuper genes.</description>
         <iconPath>Base/SuperheroGeneBase</iconPath>
         <modExtensions>
-			<li Class="VanillaGenesExpanded.GeneExtension">
-				<hediffToWholeBody>SHG_RandomSoldierSuper</hediffToWholeBody>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_RandomSoldierSuper</hediff></li></hediffsToApply>
 			</li>
 		</modExtensions>
     </GeneDef>
@@ -74,8 +75,8 @@
             <li>Archetypes_HydromancerWaterBurst</li>
         </exclusionTags>
         <modExtensions>
-			<li Class="VanillaGenesExpanded.GeneExtension">
-				<hediffToWholeBody>SHG_RandomMundaneMancer</hediffToWholeBody>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_RandomMundaneMancer</hediff></li></hediffsToApply>
 			</li>
 		</modExtensions>
     </GeneDef>
@@ -104,8 +105,8 @@
             <li>Archetypes_NinjaToxicBlast</li>
         </exclusionTags>
         <modExtensions>
-			<li Class="VanillaGenesExpanded.GeneExtension">
-				<hediffToWholeBody>SHG_RandomWarSuper</hediffToWholeBody>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_RandomWarSuper</hediff></li></hediffsToApply>
 			</li>
 		</modExtensions>
     </GeneDef>
@@ -145,8 +146,8 @@
             <li>Archetype_StunnerUntouchable</li>
         </exclusionTags>
         <modExtensions>
-			<li Class="VanillaGenesExpanded.GeneExtension">
-				<hediffToWholeBody>SHG_RandomSupportSuper</hediffToWholeBody>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_RandomSupportSuper</hediff></li></hediffsToApply>
 			</li>
 		</modExtensions>
     </GeneDef>
@@ -187,8 +188,8 @@
             <li>Archetype_MidasJade</li>
         </exclusionTags>
         <modExtensions>
-			<li Class="VanillaGenesExpanded.GeneExtension">
-				<hediffToWholeBody>SHG_RandomSummonerSuper</hediffToWholeBody>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_RandomSummonerSuper</hediff></li></hediffsToApply>
 			</li>
 		</modExtensions>
     </GeneDef>
