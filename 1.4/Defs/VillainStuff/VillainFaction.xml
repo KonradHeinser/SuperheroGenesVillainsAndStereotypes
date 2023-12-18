@@ -102,7 +102,7 @@
             <li>
                 <kindDef>Trader</kindDef>
                 <traders>
-                    <SHG_VillainSlasher>1</SHG_VillainSlasher>
+                    <SHG_VillainTrader>1</SHG_VillainTrader>
                 </traders>
                 <carriers>
                     <Muffalo>6</Muffalo>

@@ -168,6 +168,12 @@
         </xenotypeSet>
     </PawnKindDef>
 
+    <PawnKindDef ParentName="SHG_VillainSlasherBase">
+        <defName>SHG_VillainTrader</defName>
+        <label>villainous trader</label>
+        <trader>true</trader>
+    </PawnKindDef>
+
     <PawnKindDef ParentName="SHG_VillainBase" Name="SHG_BossBase">
         <defName>SHG_VillainBoss</defName>
         <label>boss</label>
