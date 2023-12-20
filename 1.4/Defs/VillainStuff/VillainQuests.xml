@@ -228,7 +228,7 @@
                 <li Class="QuestNode_GetFaction">
                     <storeAs>faction</storeAs>
                     <ofPawn>$asker</ofPawn>
-                    <allowEnemy>false</allowEnemy>
+                    <allowEnemy>true</allowEnemy>
                     <allowNeutral>true</allowNeutral>
                     <allowAlly>true</allowAlly>
                 </li>

@@ -161,6 +161,11 @@
                 <weaponTag>Bladelink</weaponTag>
                 <countRange>1</countRange>
             </li>
+            <li Class="StockGenerator_Tag">
+                <tradeTag>SHG_SuperPart</tradeTag>
+                <thingDefCountRange>1</thingDefCountRange>
+                <countRange>-1~2</countRange>
+            </li>
 
             <!-- Buildings -->
             <!-- none -->
@@ -344,6 +349,11 @@
             <tradeTag>ImplantEmpireRoyal</tradeTag>
             <thingDefCountRange>1~2</thingDefCountRange>
             <countRange>1~2</countRange>
+        </li>
+        <li Class="StockGenerator_Tag">
+            <tradeTag>SHG_SuperPart</tradeTag>
+            <thingDefCountRange>1</thingDefCountRange>
+            <countRange>-1~2</countRange>
         </li>
 
         <!-- Animals -->
