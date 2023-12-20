@@ -233,16 +233,6 @@
                     <allowAlly>true</allowAlly>
                 </li>
 
-                <li Class="QuestNode_Letter">
-                    <inSignal>faction.BecameHostileToPlayer</inSignal>
-                    <label TKey="LetterLabelFactionBecameHostile">Quest failed: [resolvedQuestName]</label>
-                    <text TKey="LetterTextFactionBecameHostile">[faction_name] became hostile to you. </text>
-                </li>
-                <li Class="QuestNode_End">
-                    <inSignal>faction.BecameHostileToPlayer</inSignal>
-                    <outcome>Fail</outcome>
-                </li>
-
                 <li Class="QuestNode_End">
                     <inSignal>faction.BecameHostileToPlayer</inSignal>
                     <outcome>InvalidPreAcceptance</outcome>
