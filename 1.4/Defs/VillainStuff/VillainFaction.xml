@@ -9,61 +9,37 @@
         </rulePack>
     </RulePackDef>
 
-    <FactionDef ParentName="FactionBase">
-        <defName>SuperVillainGang</defName>
-        <label>super-villain gang</label>
-        <description>A loose confederation of villains who've agreed to mostly fight outsiders instead of fighting each other.\n\nVillains care little about human life, and will often try to kill everyone they come across in their quest for world domination.\n\nWhile they will never truly match the cruelty of The Super Villain, their willingness to dispose of those they view as lesser beings makes them a threat regardless.\n\nVillains have their own type of honor called Infamy. Infamy is their measure of how dedicated you are to their cause. The more dedicated you are, the more willing they are to work with you. Unlike the Empire, they are willing to let people use the boons granted by permits more often, but becoming their enemy through overt action or a lack of support will result in a lack of support.\n\nThe ranking system they use is the same as the threat levels assigned to them by The Hero Association. Tier 1 villains are the lowest, usually common soldiers, while Tier 9 villains are often believed to be planetary level threats.</description>
-        <pawnSingular>villain</pawnSingular>
-        <pawnsPlural>villains</pawnsPlural>
-        <categoryTag>SuperVillainGang</categoryTag>
+    <ThingSetMakerDef Name="SHG_SuperLootPool">
+        <defName>SHG_RaidLootMaker</defName>
+        <root Class="ThingSetMaker_MarketValue">
+            <fixedParams>
+                <filter>
+                    <thingDefs>
+                        <li>Jade</li>
+                        <li>Uranium</li>
+                        <li>Plasteel</li>
+                        <li>ComponentIndustrial</li>
+                        <li>MealSurvivalPack</li>
+                    </thingDefs>
+                </filter>
+            </fixedParams>
+        </root>
+    </ThingSetMakerDef>
+
+    <FactionDef ParentName="FactionBase" Name="SuperFactionBase" Abstract="True">
         <settlementGenerationWeight>1</settlementGenerationWeight>
         <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
-        <configurationListOrderPriority>999</configurationListOrderPriority>
         <requiredCountAtGameStart>1</requiredCountAtGameStart>
         <maxCountAtGameStart>1</maxCountAtGameStart>
         <canSiege>true</canSiege>
         <canStageAttacks>true</canStageAttacks>
         <techLevel>Spacer</techLevel>
-        <factionNameMaker>SHG_SuperVillainGang</factionNameMaker>
+        <factionNameMaker>NamerFactionOutlander</factionNameMaker>
         <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
-        <factionIconPath>VillainFactionIcon</factionIconPath>
-        <settlementTexturePath>VillainFactionIcon</settlementTexturePath>
-        <royalFavorLabel>infamy</royalFavorLabel>
-        <royalFavorIconPath>VillainFactionIcon</royalFavorIconPath>
         <leaderForceGenerateNewPawn>true</leaderForceGenerateNewPawn>
-        <colorSpectrum>
-            <li>(0.93, 0.15, 0.12)</li>
-        </colorSpectrum>
-        <leaderTitle>boss</leaderTitle>
-        <naturalEnemy>true</naturalEnemy>
         <structureMemeWeights>
             <Structure_TheistEmbodied>1</Structure_TheistEmbodied>
         </structureMemeWeights>
-        <fixedLeaderKinds>
-            <li>SHG_VillainBoss</li>
-        </fixedLeaderKinds>
-        <royalTitleTags>
-            <li>SHG_VillainTitle</li>
-        </royalTitleTags>
-        <requiredMemes>
-            <li>SHG_SuperSupremacy</li>
-            <li>Loyalist</li>
-            <li>HumanPrimacy</li>
-            <li>Individualist</li>
-        </requiredMemes>
-        <royalTitleInheritanceWorkerClass>RoyalTitleInheritanceWorker</royalTitleInheritanceWorkerClass>
-        <royalTitleInheritanceRelations>
-            <li>Child</li>
-            <li>Spouse</li>
-            <li>Sibling</li>
-            <li>HalfSibling</li>
-            <li>Parent</li>
-            <li>Cousin</li>
-            <li>UncleOrAunt</li>
-            <li>Grandchild</li>
-            <li>GreatGrandchild</li>
-            <li>NephewOrNiece</li>
-        </royalTitleInheritanceRelations>
         <xenotypeSet Inherit="False">
             <xenotypeChances>
                 <SHG_RandomMundaneSuper>.10</SHG_RandomMundaneSuper>
@@ -74,6 +50,48 @@
                 <SHG_RandomSummonerSuper>.05</SHG_RandomSummonerSuper>
             </xenotypeChances>
         </xenotypeSet>
+        <allowedCultures><li>Astropolitan</li></allowedCultures>
+        <raidLootMaker>SHG_RaidLootMaker</raidLootMaker>
+        <raidCommonalityFromPointsCurve>
+            <points>
+                <li>(0, 1)</li> <!--Constant 1 at all points levels-->
+            </points>
+        </raidCommonalityFromPointsCurve>
+        <maxPawnCostPerTotalPointsCurve>
+            <points>
+                <li>(175, 175)</li>
+                <li>(700, 700)</li>
+                <li>(1300, 1300)</li>
+                <li>(100000, 10000)</li>
+            </points>
+        </maxPawnCostPerTotalPointsCurve>
+        <apparelStuffFilter>
+            <stuffCategoriesToAllow>
+                <li>Metallic</li>
+                <li>Fabric</li>
+            </stuffCategoriesToAllow>
+        </apparelStuffFilter>
+        <allowedArrivalTemperatureRange>-10~45</allowedArrivalTemperatureRange>
+    </FactionDef>
+
+    <FactionDef ParentName="SuperFactionBase" Name="VillainFactionBase" Abstract="True">
+        <factionIconPath>VillainFactionIcon</factionIconPath>
+        <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+        <factionNameMaker>NamerFactionPirate</factionNameMaker>
+        <pawnSingular>villain</pawnSingular>
+        <pawnsPlural>villains</pawnsPlural>
+        <colorSpectrum>
+            <li>(0.93, 0.39, 0.32)</li>
+            <li>(0.35, 0.90, 0.57)</li>
+            <li>(0.25, 0.66, 0.94)</li>
+            <li>(0.98, 0.75, 0.37)</li>
+            <li>(0.97, 0.62, 0.52)</li>
+          </colorSpectrum>
+          <leaderTitle>boss</leaderTitle>
+        <naturalEnemy>true</naturalEnemy>
+        <fixedLeaderKinds>
+            <li>SHG_VillainBoss</li>
+        </fixedLeaderKinds>
         <backstoryFilters>
             <li>
                 <categories>
@@ -81,14 +99,12 @@
                 </categories>
             </li>
         </backstoryFilters>
-        <baseTraderKinds>
-            <li>SHG_VillainBase</li>
-        </baseTraderKinds>
-        <caravanTraderKinds>
-            <li>SHG_VillainCaravan</li>
-        </caravanTraderKinds>
-        <allowedCultures><li>Astropolitan</li></allowedCultures>
-        <raidLootMaker>SHG_RaidLootMaker</raidLootMaker>
+        <requiredMemes>
+            <li>SHG_SuperSupremacy</li>
+            <li>Loyalist</li>
+            <li>HumanPrimacy</li>
+            <li>Individualist</li>
+        </requiredMemes>
         <pawnGroupMakers>
             <li>
                 <kindDef>Combat</kindDef>
@@ -126,42 +142,60 @@
                 </options>
             </li>
         </pawnGroupMakers>
-        <raidCommonalityFromPointsCurve>
-            <points>
-                <li>(0, 1)</li> <!--Constant 1 at all points levels-->
-            </points>
-        </raidCommonalityFromPointsCurve>
-        <maxPawnCostPerTotalPointsCurve>
-            <points>
-                <li>(175, 175)</li>
-                <li>(700, 700)</li>
-                <li>(1300, 1300)</li>
-                <li>(100000, 10000)</li>
-            </points>
-        </maxPawnCostPerTotalPointsCurve>
-        <apparelStuffFilter>
-            <stuffCategoriesToAllow>
-                <li>Metallic</li>
-                <li>Fabric</li>
-            </stuffCategoriesToAllow>
-        </apparelStuffFilter>
-        <allowedArrivalTemperatureRange>-10~45</allowedArrivalTemperatureRange>
     </FactionDef>
 
-    <ThingSetMakerDef Name="SHG_SuperLootPool">
-        <defName>SHG_RaidLootMaker</defName>
-        <root Class="ThingSetMaker_MarketValue">
-            <fixedParams>
-                <filter>
-                    <thingDefs>
-                        <li>Jade</li>
-                        <li>Uranium</li>
-                        <li>Plasteel</li>
-                        <li>ComponentIndustrial</li>
-                        <li>MealSurvivalPack</li>
-                    </thingDefs>
-                </filter>
-            </fixedParams>
-        </root>
-    </ThingSetMakerDef>
+    <FactionDef ParentName="VillainFactionBase">
+        <defName>MinorSuperVillainGang</defName>
+        <label>minor super-villain gang</label>
+        <description>A small group of villains who've agreed to mostly fight outsiders instead of fighting each other.\n\nVillains care little about human life, and will often try to kill everyone they come across in their quest for world domination.\n\nWhile they will never truly match the cruelty of The Super Villain, their willingness to dispose of those they view as lesser beings makes them a threat regardless.\n\nThis group of villains choose not to side with the League of Villains when the confederation was forming, and the league wouldn't mind seeing them permanently disappear. Their villainous nature has also left them at odds with just about everyone in the world, making them a good target for making everyone happy.</description>
+        <categoryTag>MinorSuperVillainGang</categoryTag>
+        <maxConfigurableAtWorldCreation>99</maxConfigurableAtWorldCreation>
+        <requiredCountAtGameStart>0</requiredCountAtGameStart>
+        <maxCountAtGameStart>99</maxCountAtGameStart>
+        <settlementGenerationWeight>0.4</settlementGenerationWeight>
+        <configurationListOrderPriority>998</configurationListOrderPriority>
+        <baseTraderKinds>
+            <li>SHG_MinorVillainBase</li>
+        </baseTraderKinds>
+        <caravanTraderKinds>
+            <li>SHG_MinorVillainCaravan</li>
+        </caravanTraderKinds>
+    </FactionDef>
+
+    <FactionDef ParentName="VillainFactionBase">
+        <defName>SuperVillainGang</defName>
+        <label>super-villain gang</label>
+        <description>A loose confederation of villains who've agreed to mostly fight outsiders instead of fighting each other.\n\nVillains care little about human life, and will often try to kill everyone they come across in their quest for world domination.\n\nWhile they will never truly match the cruelty of The Super Villain, their willingness to dispose of those they view as lesser beings makes them a threat regardless.\n\nVillains have their own type of honor called Infamy. Infamy is their measure of how dedicated you are to their cause. The more dedicated you are, the more willing they are to work with you. Unlike the Empire, they are willing to let people use the boons granted by permits more often, but becoming their enemy through overt action or a lack of support will result in a lack of support.\n\nThe ranking system they use is the same as the threat levels assigned to them by The Hero Association. Tier 1 villains are the lowest, usually common soldiers, while Tier 9 villains are often believed to be planetary level threats.</description>
+        <categoryTag>SuperVillainGang</categoryTag>
+        <configurationListOrderPriority>999</configurationListOrderPriority>
+        <factionNameMaker>SHG_SuperVillainGang</factionNameMaker>
+        <settlementTexturePath>VillainFactionIcon</settlementTexturePath>
+        <royalFavorLabel>infamy</royalFavorLabel>
+        <royalFavorIconPath>VillainFactionIcon</royalFavorIconPath>
+        <colorSpectrum Inherit="False">
+            <li>(0.93, 0.15, 0.12)</li>
+        </colorSpectrum>
+        <royalTitleTags>
+            <li>SHG_VillainTitle</li>
+        </royalTitleTags>
+        <royalTitleInheritanceWorkerClass>RoyalTitleInheritanceWorker</royalTitleInheritanceWorkerClass>
+        <royalTitleInheritanceRelations>
+            <li>Child</li>
+            <li>Spouse</li>
+            <li>Sibling</li>
+            <li>HalfSibling</li>
+            <li>Parent</li>
+            <li>Cousin</li>
+            <li>UncleOrAunt</li>
+            <li>Grandchild</li>
+            <li>GreatGrandchild</li>
+            <li>NephewOrNiece</li>
+        </royalTitleInheritanceRelations>
+        <baseTraderKinds>
+            <li>SHG_VillainBase</li>
+        </baseTraderKinds>
+        <caravanTraderKinds>
+            <li>SHG_VillainCaravan</li>
+        </caravanTraderKinds>
+    </FactionDef>
 </Defs>

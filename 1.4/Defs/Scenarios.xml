@@ -233,6 +233,7 @@
         </apparelStuffFilter>
         <permanentEnemyToEveryoneExcept>
             <li>SuperVillainGang</li>
+            <li>MinorSuperVillainGang</li>
         </permanentEnemyToEveryoneExcept>
     </FactionDef>
 
