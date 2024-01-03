@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/AchievementsExpanded.AchievementDef/tracker[@Class="AchievementsExpanded.KillTracker"]/instigatorFactionDefs/li[text()=PlayerColony]</xpath>
+        <match Class="PatchOperationReplace">
+            <xpath>Defs/AchievementsExpanded.AchievementDef/tracker[@Class="AchievementsExpanded.KillTracker"]/instigatorFactionDefs/li[text()=PlayerColony]</xpath>
+            <value>
+                <li>PlayerColony</li>
+                <li>SHG_VillainStart</li>
+            </value>
+        </match>
+    </Operation>
+</Patch>
