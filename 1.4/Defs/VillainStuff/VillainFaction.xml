@@ -38,7 +38,7 @@
         <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
         <leaderForceGenerateNewPawn>true</leaderForceGenerateNewPawn>
         <structureMemeWeights>
-            <Structure_TheistEmbodied>1</Structure_TheistEmbodied>
+            <Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistEmbodied>
         </structureMemeWeights>
         <xenotypeSet Inherit="False">
             <xenotypeChances>
@@ -100,10 +100,10 @@
             </li>
         </backstoryFilters>
         <requiredMemes>
-            <li>SHG_SuperSupremacy</li>
-            <li>Loyalist</li>
-            <li>HumanPrimacy</li>
-            <li>Individualist</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">SHG_SuperSupremacy</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Individualist</li>
         </requiredMemes>
         <pawnGroupMakers>
             <li>

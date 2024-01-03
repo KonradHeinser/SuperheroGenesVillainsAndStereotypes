@@ -4,5 +4,7 @@
 		<li>/</li>
 		<li>1.4</li>
         <li IfModActive="Mlem.MetaAdjuster">1.4/Mods/MetaAdjuster</li>
+		<li IfModActive="Ludeon.Rimworld.Royalty">1.4/Royalty</li>
+		<li IfModActive="Ludeon.Rimworld.Ideology">1.4/Ideology</li>
 	</v1.4>
 </loadFolders>

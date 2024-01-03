@@ -199,7 +199,7 @@
             <li Class="StockGenerator_Slaves">
                 <respectPopulationIntent>false</respectPopulationIntent>
                 <countRange>2~4</countRange>
-                <slaveKindDef>Slave_Empire</slaveKindDef>
+                <slaveKindDef MayRequire="Ludeon.Rimworld.Royalty">Slave_Empire</slaveKindDef>
             </li>
 
             <!-- Animals -->
@@ -246,7 +246,7 @@
     <TraderKindDef ParentName="SuperTrader_SettlmentBase">
         <defName>SHG_VillainBase</defName>
         <faction>SuperVillainGang</faction>
-        <permitRequiredForTrading>SHG_Villain_TradeSettlement</permitRequiredForTrading>
+        <permitRequiredForTrading MayRequire="Ludeon.Rimworld.Royalty">SHG_Villain_TradeSettlement</permitRequiredForTrading>
     </TraderKindDef>
 
     <TraderKindDef Name="SuperTrader_CaravanBase">
@@ -395,10 +395,10 @@
     <TraderKindDef ParentName="SuperTrader_CaravanBase">
         <defName>SHG_VillainCaravan</defName>
         <faction>SuperVillainGang</faction>
-        <permitRequiredForTrading>SHG_Villain_TradeCaravan</permitRequiredForTrading>
+        <permitRequiredForTrading MayRequire="Ludeon.Rimworld.Royalty">SHG_Villain_TradeCaravan</permitRequiredForTrading>
     </TraderKindDef>
 
-    <TraderKindDef>
+    <TraderKindDef MayRequire="Ludeon.Rimworld.Royalty">
         <defName>SHG_Villain_TributeCollector</defName>
         <label>villainous loyalty administrator</label>
         <requestable>False</requestable>

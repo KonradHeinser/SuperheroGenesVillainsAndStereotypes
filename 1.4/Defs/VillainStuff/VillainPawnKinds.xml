@@ -185,7 +185,7 @@
         </apparelTags>
         <apparelMoney>10000~12000</apparelMoney>
         <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
-        <titleRequired>SHG_VillainTier9</titleRequired>
+        <titleRequired MayRequire="Ludeon.Rimworld.Royalty">SHG_VillainTier9</titleRequired>
         <weaponMoney>1000~2000</weaponMoney>
         <weaponTags>
             <li>IndustrialGunAdvanced</li>
