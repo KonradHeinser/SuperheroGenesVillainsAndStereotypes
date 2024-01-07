@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase">
+		<defName>SHG_Villains_FeelingSuperhuman</defName>
+		<label>Feeling Superhuman</label>
+		<description>"And as the tables turn, I'm feeling superhuman."\nSuperhuman by Gavin Dunne</description>
+		<tracker Class="AchievementsExpanded.KillTracker">
+			<raceDef>Human</raceDef>
+			<count>10</count>
+			<factionDefs>
+				<li>MinorSuperVillainGang</li>
+				<li>SuperVillainGang</li>
+			</factionDefs>
+		</tracker>
+		<texPath>Base/SuperheroGeneBase</texPath>
+		<points>25</points>
+	</AchievementsExpanded.AchievementDef>
+
+	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase">
 		<defName>SHG_Villains_LeagueDestroyer</defName>
 		<label>League Destroyer</label>
 		<description>Destroy 5 bases belonging to the League of Villains. Your opinion of them is quite apparent.</description>
