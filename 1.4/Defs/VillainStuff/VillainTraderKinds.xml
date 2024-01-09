@@ -396,31 +396,5 @@
         <defName>SHG_VillainCaravan</defName>
         <faction>SuperVillainGang</faction>
         <permitRequiredForTrading MayRequire="Ludeon.Rimworld.Royalty">SHG_Villain_TradeCaravan</permitRequiredForTrading>
-    </TraderKindDef>
-
-    <TraderKindDef MayRequire="Ludeon.Rimworld.Royalty">
-        <defName>SHG_Villain_TributeCollector</defName>
-        <label>villainous loyalty administrator</label>
-        <requestable>False</requestable>
-        <commonality>1</commonality>
-        <category>TributeCollector</category>
-        <tradeCurrency>Favor</tradeCurrency>
-        <faction>SuperVillainGang</faction>
-        <hideThingsNotWillingToTrade>True</hideThingsNotWillingToTrade>
-        <stockGenerators>
-            <!-- Buying -->
-            <li Class="StockGenerator_BuySlaves" />
-            <li Class="StockGenerator_BuySingleDef">
-                <thingDef>Jade</thingDef>
-            </li>
-            <li Class="StockGenerator_BuySingleDef">
-                <thingDef>Uranium</thingDef>
-            </li>
-            <li Class="StockGenerator_Category" MayRequire="HonorableOrgans.Mod">
-                <categoryDef>BodyPartsNatural</categoryDef>
-            </li>
-        </stockGenerators>
-    </TraderKindDef>
-
-
+    </TraderKindDef>    
 </Defs>

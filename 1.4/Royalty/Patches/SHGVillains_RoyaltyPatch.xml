@@ -84,6 +84,17 @@
                     <li>Ludeon.RimWorld.Royalty</li>
                 </enableIfAnyModActive>
             </li>
+            <li Class="StorytellerCompProperties_FactionInteraction">
+                <incident>SHG_Villain_CaravanArrivalTributeCollector</incident>
+                <minDaysPassed>10</minDaysPassed>
+                <baseIncidentsPerYear>4</baseIncidentsPerYear>
+                <minSpacingDays>15</minSpacingDays>
+                <minWealth>20000</minWealth>
+                <allowedTargetTags>
+                    <li>Map_PlayerHome</li>
+                </allowedTargetTags>
+            </li>
+
         </value>
     </Operation>
 </Patch>
