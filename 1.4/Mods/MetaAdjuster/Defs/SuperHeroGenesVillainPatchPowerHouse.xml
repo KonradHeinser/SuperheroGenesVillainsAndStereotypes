@@ -22,8 +22,8 @@
             <li>MlemMetaAdjustMax100</li>
             <li>SuperGluttony</li>
             <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">SHG_Flight</li>
-            <li MayRequire="Sov.Homelander">SHG_LaserImmune</li>
-            <li MayRequire="Sov.Homelander">SHG_LaserEyes</li>
+            <li>SHG_LaserImmune</li>
+            <li>SHG_LaserEyes</li>
         </genes>
     </XenotypeDef>
 </Defs>
