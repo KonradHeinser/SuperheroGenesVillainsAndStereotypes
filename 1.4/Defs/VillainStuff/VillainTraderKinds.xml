@@ -86,6 +86,12 @@
                 <totalPriceRange>700~1500</totalPriceRange>
             </li>
 
+            <li Class="StockGenerator_Tag">
+                <tradeTag>SHG_ResourceItem</tradeTag>
+                <thingDefCountRange>1~2</thingDefCountRange>
+                <countRange>5~10</countRange>
+            </li>
+
             <!-- Techprints -->
             <li Class="StockGenerator_Techprints">
                 <countChances>
