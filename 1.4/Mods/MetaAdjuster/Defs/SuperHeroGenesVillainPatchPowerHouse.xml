@@ -23,7 +23,7 @@
             <li>SuperGluttony</li>
             <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">SHG_Flight</li>
             <li>SHG_LaserImmune</li>
-            <li>SHG_LaserEyes</li>
+            <li>SHG_NewLaserEyes</li>
         </genes>
     </XenotypeDef>
 </Defs>
