@@ -388,4 +388,32 @@
             </li>
         </comps>
     </HediffDef>
+
+    <HediffDef ParentName="SHG_XenotypeRandomizerHediff">
+        <defName>SHG_RandomMutation</defName>       
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet">
+                <alwaysRemovedGenes>
+                    <li>SHG_RandomMutation</li>
+                </alwaysRemovedGenes>
+                <geneSets>
+                    <li><geneSet /><weightOfGeneSet>87</weightOfGeneSet></li>
+                    <li><geneSet><li>SHG_DoubleHearted</li></geneSet></li>
+                    <li><geneSet><li>SHG_SuperPsychicPotential</li></geneSet></li>
+                    <li><geneSet><li>SHG_SuperDenseBones</li></geneSet></li>
+                    <li><geneSet><li>SHG_Blindsight</li></geneSet></li>
+                    <li><geneSet><li>SHG_GhostlyPresence</li></geneSet></li>
+                    <li><geneSet><li>SHG_Prey</li></geneSet></li>
+                    <li><geneSet><li>SHG_Predator</li></geneSet></li>
+                    <li><geneSet><li>SHG_AdrenalineJunkie</li></geneSet></li>
+                    <li><geneSet><li>SHG_Berserker</li></geneSet></li>
+                    <li><geneSet><li>SHG_MadGenius</li></geneSet></li>
+                    <li><geneSet><li>SHG_Technophile</li></geneSet></li>
+                    <li><geneSet><li>SHG_Naturalist</li></geneSet></li>
+                    <li><geneSet><li>SHG_HALK</li></geneSet></li>
+                </geneSets>
+            </li>
+        </comps>
+    </HediffDef>
+
 </Defs>

@@ -5,6 +5,9 @@
         <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
         <prerequisite>SuperHeroBase</prerequisite>
         <biostatCpx>0</biostatCpx>
+        <customEffectDescriptions>
+            <li>Due to weird inheritance issues, the randomizer cannot be inherited, though the genes created by it can.</li>
+        </customEffectDescriptions>
         <exclusionTags> <!--These tags are dedicated for randomizer genes-->
             <li>RandomDurability</li>
             <li>RandomHealing</li>
@@ -190,6 +193,24 @@
         <modExtensions>
 			<li Class="SuperHeroGenesBase.SHGExtension">
 				<hediffsToApply><li><hediff>SHG_RandomSummonerSuper</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperMutationsBase">
+        <defName>SHG_RandomMutation</defName>
+        <label>potential mutation</label>
+        <description>Gives a chance for the super to have a random mutation. Each mutation has a 1% chance to be active, leaving an 87% chance that this gene will do absolutely nothing.</description>
+        <displayCategory>SHG_XenotypeRandomizer</displayCategory>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <iconPath>MutationIcon</iconPath>
+        <customEffectDescriptions>
+            <li>Due to weird inheritance issues, the randomizer cannot be inherited, though the gene created by it can.</li>
+            <li>Because the chances of each mutation are low, this is only incompatible with the other mutations, and not any extraneous genes individual mutations are incompatible with. This may result in some genes being disabled after a mutation is selected.</li>
+        </customEffectDescriptions>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_RandomMutation</hediff></li></hediffsToApply>
 			</li>
 		</modExtensions>
     </GeneDef>

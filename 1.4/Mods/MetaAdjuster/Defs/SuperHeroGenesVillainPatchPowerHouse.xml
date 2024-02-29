@@ -24,6 +24,7 @@
             <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">SHG_Flight</li>
             <li>SHG_LaserImmune</li>
             <li>SHG_NewLaserEyes</li>
+            <li>SHG_DoubleHearted</li>
         </genes>
     </XenotypeDef>
 </Defs>

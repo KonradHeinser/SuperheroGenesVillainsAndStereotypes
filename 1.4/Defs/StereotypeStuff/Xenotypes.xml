@@ -10,6 +10,7 @@
         <genes>
             <li>SuperHeroBase</li>
             <li>SHG_RandomMundaneSuper</li>
+            <li>SHG_RandomMutation</li>
         </genes>
     </XenotypeDef>
 
@@ -23,6 +24,7 @@
         <genes>
             <li>SuperHeroBase</li>
             <li>SHG_RandomSoldierSuper</li>
+            <li>SHG_RandomMutation</li>
         </genes>
     </XenotypeDef>
 
@@ -36,6 +38,7 @@
         <genes>
             <li>SuperHeroBase</li>
             <li>SHG_RandomMundaneMancer</li>
+            <li>SHG_RandomMutation</li>
         </genes>
     </XenotypeDef>
 
@@ -49,6 +52,7 @@
         <genes>
             <li>SuperHeroBase</li>
             <li>SHG_RandomWarSuper</li>
+            <li>SHG_RandomMutation</li>
         </genes>
     </XenotypeDef>
 
@@ -62,6 +66,7 @@
         <genes>
             <li>SuperHeroBase</li>
             <li>SHG_RandomSupportSuper</li>
+            <li>SHG_RandomMutation</li>
         </genes>
     </XenotypeDef>
 
@@ -76,6 +81,7 @@
         <genes>
             <li>SuperHeroBase</li>
             <li>SHG_RandomSummonerSuper</li>
+            <li>SHG_RandomMutation</li>
         </genes>
     </XenotypeDef>
 </Defs>
