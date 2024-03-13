@@ -1,0 +1,1155 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <RoyalTitleDef Abstract="True" Name="SHG_VillainTitle" >
+        <tags>
+            <li>SHG_VillainTitle</li>
+        </tags>
+        <awardThought>GainedTitle</awardThought>
+        <lostThought>LostTitle</lostThought>
+        <permitPointsAwarded>1</permitPointsAwarded> <!--Initiate is the only title that doesn't give a point. Players receive up to 9 points.-->
+        <commonality>1</commonality> <!--The Super Villain and Initiates aren't found in the wild. Tier 8 and 9 have reduced commonality.-->
+        <awardWorkerClass>RoyalTitleAwardWorker_Instant</awardWorkerClass> <!--All titles are granted instantly. Villains have no need for pretentious ceremonies when there's no hero to traumatize or subjects to "inspire".-->
+    </RoyalTitleDef>
+
+    <RoyalTitleDef ParentName="SHG_VillainTitle">
+        <defName>SHG_VillainInitiate</defName>
+        <label>initiate</label>
+        <description>This is the first tier that the League of Villains recognizes. At this rank, the pawn isn't recognized as a true villain yet, but they have a foot in the door.</description>
+        <seniority>0</seniority>
+        <favorCost>1</favorCost>
+        <changeHeirQuestPoints>1000</changeHeirQuestPoints>
+        <permitPointsAwarded>0</permitPointsAwarded>
+        <commonality>0</commonality>
+    </RoyalTitleDef>
+
+    <!-- ============== Empire titles - Player gettable psycaster ============================= -->
+
+    <RoyalTitleDef ParentName="SHG_VillainTitle">
+        <defName>SHG_VillainTier1</defName>
+        <label>tier 1 villain</label>
+        <description>Tier 1 villains are barely worth noting by most organizations. These are often the generic troopers that the League uses as cannon fodder.</description>
+        <seniority>100</seniority>
+        <favorCost>3</favorCost>
+        <changeHeirQuestPoints>1000</changeHeirQuestPoints>
+    </RoyalTitleDef>
+
+    <RoyalTitleDef ParentName="SHG_VillainTitle">
+        <defName>SHG_VillainTier2</defName>
+        <label>tier 2 villain</label>
+        <description>Tier 2 villains are little better than Tier 1 in the League's eyes. Small gangs of Tier 1 villains may be lead by a Tier 2, but they have little to offer beyond that.</description>
+        <seniority>200</seniority>
+        <favorCost>6</favorCost>
+        <minExpectation>Moderate</minExpectation>
+        <changeHeirQuestPoints>1200</changeHeirQuestPoints>
+        <recruitmentResistanceOffset>10</recruitmentResistanceOffset>
+        <canBeInherited>True</canBeInherited>
+        <disabledWorkTags>
+            <li>Cleaning</li>
+        </disabledWorkTags>
+        <requiredApparel>
+            <li>
+                <bodyPartGroupsMatchAny>
+                    <li>Torso</li>
+                </bodyPartGroupsMatchAny>
+                <requiredTags>
+                    <li>RoyalTier2</li>
+                </requiredTags>
+                <allowedTags>
+                    <li>Cape</li>
+                    <li>PrestigeCombatGear</li>
+                    <li>Psychic</li>
+                    <li>Mechlord</li>
+                </allowedTags>
+            </li>
+            <li>
+                <bodyPartGroupsMatchAny>
+                    <li>UpperHead</li>
+                    <li>FullHead</li>
+                </bodyPartGroupsMatchAny>
+                <requiredTags>
+                    <li>RoyalTier2</li>
+                </requiredTags>
+                <allowedTags>
+                    <li>PrestigeCombatGear</li>
+                    <li>Psychic</li>
+                    <li>Mechlord</li>
+                </allowedTags>
+            </li>
+        </requiredApparel>
+        <throneRoomRequirements>
+            <li Class="RoomRequirement_HasAssignedThroneAnyOf">
+                <things>
+                    <li>Throne</li>
+                    <li>GrandThrone</li>
+                </things>
+            </li>
+            <li Class="RoomRequirement_Area">
+                <area>24</area>
+            </li>
+            <li Class="RoomRequirement_TerrainWithTags">
+                <labelKey>RoomRequirementAllFloored</labelKey>
+                <tags>
+                    <li>Floor</li>
+                    <li>FineFloor</li>
+                </tags>
+            </li>
+            <li Class="RoomRequirement_ThingAnyOfCount">
+                <things>
+                    <li>Brazier</li>
+                    <li MayRequire="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Ideology">DarklightBrazier</li>
+                </things>
+                <count>2</count>
+            </li>
+            <li Class="RoomRequirement_AllThingsAnyOfAreGlowing">
+                <labelKey>RoomRequirementAllBraziersMustBeLit</labelKey>
+                <things>
+                    <li>Brazier</li>
+                    <li MayRequire="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Ideology">DarklightBrazier</li>
+                </things>
+            </li>
+            <li Class="RoomRequirement_ForbiddenBuildings">
+                <labelKey>RoomRequirementNoProductionFacilities</labelKey>
+                <buildingTags><li>Production</li></buildingTags>
+            </li>
+            <li Class="RoomRequirement_ForbiddenBuildings">
+                <labelKey>RoomRequirementNoBeds</labelKey>
+                <buildingTags><li>Bed</li></buildingTags>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology" Class="RoomRequirement_ForbidAltars">
+                <labelKey>RoomRequirementNoAltars</labelKey>
+            </li>
+            <li Class="RoomRequirement_ForbiddenBuildings" MayRequire="Ludeon.RimWorld.Biotech">
+                <labelKey>RoomRequirementNoBiotechBuildings</labelKey>
+                <buildingTags><li>Biotech</li></buildingTags>
+            </li>
+        </throneRoomRequirements>
+        <bedroomRequirements>
+            <li Class="RoomRequirement_Area">
+                <area>16</area>
+            </li>
+            <li Class="RoomRequirement_TerrainWithTags">
+                <labelKey>RoomRequirementAllFloored</labelKey>
+                <tags>
+                    <li>Floor</li>
+                    <li>FineFloor</li>
+                </tags>
+            </li>
+            <li Class="RoomRequirement_ThingAnyOf">
+                <disablingPrecepts>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">SlabBed_Preferred</li>
+                </disablingPrecepts>
+                <things>
+                    <li>DoubleBed</li>
+                    <li>RoyalBed</li>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">DeathrestCasket</li>
+                </things>
+            </li>
+            <li Class="RoomRequirement_ForbiddenBuildings">
+                <labelKey>RoomRequirementNoProductionFacilities</labelKey>
+                <buildingTags><li>Production</li></buildingTags>
+            </li>
+            <li Class="RoomRequirement_ForbiddenBuildings" MayRequire="Ludeon.RimWorld.Biotech">
+                <labelKey>RoomRequirementNoBiotechBuildings</labelKey>
+                <buildingTags><li>Biotech</li></buildingTags>
+            </li>
+        </bedroomRequirements>
+        <foodRequirement>
+            <minQuality>MealSimple</minQuality>
+            <allowedTypes>Processed, Liquor</allowedTypes>
+            <allowedDefs>
+                <li>Ambrosia</li>
+                <li>Milk</li>
+                <li>RawBerries</li>
+            </allowedDefs>
+        </foodRequirement>
+    </RoyalTitleDef>
+
+    <RoyalTitleDef ParentName="SHG_VillainTitle">
+        <defName>SHG_VillainTier3</defName>
+        <label>tier 3 villain</label>
+        <description>Tier 3 villains have made enough of a name for themselves to receive support from the league to not just start small raids, but take part in raids against larger settlements. While they are still relegated to leading small squads, the League is beginning to take note of their achievements.</description>
+        <seniority>300</seniority>
+        <favorCost>10</favorCost>
+        <minExpectation>High</minExpectation>
+        <changeHeirQuestPoints>1600</changeHeirQuestPoints>
+        <recruitmentResistanceOffset>25</recruitmentResistanceOffset>
+        <canBeInherited>True</canBeInherited>
+        <decreeMtbDays>-1</decreeMtbDays> <!-- disabled -->
+        <decreeMentalBreakCommonality>2</decreeMentalBreakCommonality>
+        <decreeTags>
+            <li>All</li>
+        </decreeTags>
+        <disabledWorkTags>
+            <li>ManualDumb</li>
+        </disabledWorkTags>
+        <permits>
+            <li>SHG_Villain_TradeSettlement</li>
+            <li>SHG_Villain_TradeCaravan</li>
+        </permits>
+        <requiredApparel>
+            <li>
+                <bodyPartGroupsMatchAny>
+                    <li>Torso</li>
+                </bodyPartGroupsMatchAny>
+                <requiredTags>
+                    <li>RoyalTier2</li>
+                </requiredTags>
+                <allowedTags>
+                    <li>Cape</li>
+                    <li>PrestigeCombatGear</li>
+                    <li>Psychic</li>
+                    <li>Mechlord</li>
+                </allowedTags>
+            </li>
+            <li>
+                <bodyPartGroupsMatchAny>
+                    <li>UpperHead</li>
+                    <li>FullHead</li>
+                </bodyPartGroupsMatchAny>
+                <requiredTags>
+                    <li>RoyalTier2</li>
+                </requiredTags>
+                <allowedTags>
+                    <li>PrestigeCombatGear</li>
+                    <li>Psychic</li>
+                    <li>Mechlord</li>
+                </allowedTags>
+            </li>
+        </requiredApparel>
+        <throneRoomRequirements>
+            <li Class="RoomRequirement_HasAssignedThroneAnyOf">
+                <things>
+                    <li>Throne</li>
+                    <li>GrandThrone</li>
+                </things>
+            </li>
+            <li Class="RoomRequirement_Area">
+                <area>30</area>
+            </li>
+            <li Class="RoomRequirement_Impressiveness">
+                <impressiveness>60</impressiveness>
+            </li>
+            <li Class="RoomRequirement_TerrainWithTags">
+                <labelKey>RoomRequirementAllFloored</labelKey>
+                <tags>
+                    <li>Floor</li>
+                    <li>FineFloor</li>
+                </tags>
+            </li>
+            <li Class="RoomRequirement_ThingAnyOfCount">
+                <things>
+                    <li>Brazier</li>
+                    <li MayRequire="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Ideology">DarklightBrazier</li>
+                </things>
+                <count>2</count>
+            </li>
+            <li Class="RoomRequirement_ThingCount">
+                <thingDef>Column</thingDef>
+                <count>2</count>
+            </li>
+            <li Class="RoomRequirement_ThingAnyOf">
+                <things>
+                    <li>Harp</li>
+                    <li>Harpsichord</li>
+                    <li>Piano</li>
+                </things>
+            </li>
+            <li Class="RoomRequirement_AllThingsAnyOfAreGlowing">
+                <labelKey>RoomRequirementAllBraziersMustBeLit</labelKey>
+                <things>
+                    <li>Brazier</li>
+                    <li MayRequire="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Ideology">DarklightBrazier</li>
+                </things>
+            </li>
+            <li Class="RoomRequirement_ForbiddenBuildings">
+                <labelKey>RoomRequirementNoProductionFacilities</labelKey>
+                <buildingTags><li>Production</li></buildingTags>
+            </li>
+            <li Class="RoomRequirement_ForbiddenBuildings">
+                <labelKey>RoomRequirementNoBeds</labelKey>
+                <buildingTags><li>Bed</li></buildingTags>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology" Class="RoomRequirement_ForbidAltars">
+                <labelKey>RoomRequirementNoAltars</labelKey>
+            </li>
+            <li Class="RoomRequirement_ForbiddenBuildings" MayRequire="Ludeon.RimWorld.Biotech">
+                <labelKey>RoomRequirementNoBiotechBuildings</labelKey>
+                <buildingTags><li>Biotech</li></buildingTags>
+            </li>
+        </throneRoomRequirements>
+        <bedroomRequirements>
+            <li Class="RoomRequirement_Area">
+                <area>24</area>
+            </li>
+            <li Class="RoomRequirement_Impressiveness">
+                <impressiveness>40</impressiveness>
+            </li>
+            <li Class="RoomRequirement_TerrainWithTags">
+                <labelKey>RoomRequirementAllFloored</labelKey>
+                <tags>
+                    <li>Floor</li>
+                    <li>FineFloor</li>
+                </tags>
+            </li>
+            <li Class="RoomRequirement_ThingAnyOf">
+                <disablingPrecepts>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">SlabBed_Preferred</li>
+                </disablingPrecepts>
+                <things>
+                    <li>DoubleBed</li>
+                    <li>RoyalBed</li>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">DeathrestCasket</li>
+                </things>
+            </li>
+            <li Class="RoomRequirement_Thing">
+                <thingDef>EndTable</thingDef>
+            </li>
+            <li Class="RoomRequirement_Thing">
+                <thingDef>Dresser</thingDef>
+            </li>
+            <li Class="RoomRequirement_ForbiddenBuildings">
+                <labelKey>RoomRequirementNoProductionFacilities</labelKey>
+                <buildingTags><li>Production</li></buildingTags>
+            </li>
+            <li Class="RoomRequirement_ForbiddenBuildings" MayRequire="Ludeon.RimWorld.Biotech">
+                <labelKey>RoomRequirementNoBiotechBuildings</labelKey>
+                <buildingTags><li>Biotech</li></buildingTags>
+            </li>
+        </bedroomRequirements>
+        <foodRequirement>
+            <minQuality>MealFine</minQuality>
+            <allowedTypes>Processed, Liquor</allowedTypes>
+            <allowedDefs>
+                <li>Ambrosia</li>
+                <li>Milk</li>
+                <li>RawBerries</li>
+            </allowedDefs>
+        </foodRequirement>
+    </RoyalTitleDef>
+
+    <RoyalTitleDef ParentName="SHG_VillainTitle">
+        <defName>SHG_VillainTier4</defName>
+        <label>tier 4 villain</label>
+        <description>Tier 4 villains have finally surpassed the small-time villain limitations. Now they aren't just some small gang to send on tasks, but a trusted ally that may be able to receive small gangs to them for support in battle.</description>
+        <seniority>400</seniority>
+        <favorCost>15</favorCost>
+        <minExpectation>SkyHigh</minExpectation>
+        <requiredMinimumApparelQuality>Normal</requiredMinimumApparelQuality>
+        <changeHeirQuestPoints>2200</changeHeirQuestPoints>
+        <recruitmentResistanceOffset>40</recruitmentResistanceOffset>
+        <canBeInherited>True</canBeInherited>
+        <decreeMtbDays>-1</decreeMtbDays> <!-- disabled -->
+        <decreeMentalBreakCommonality>4</decreeMentalBreakCommonality>
+        <decreeTags>
+            <li>All</li>
+        </decreeTags>
+        <disabledJoyKinds>
+            <li>Gaming_Dexterity</li>
+        </disabledJoyKinds>
+        <disabledWorkTags>
+            <li>ManualDumb</li>
+            <li>PlantWork</li>
+            <li>Mining</li>
+        </disabledWorkTags>
+        <permits>
+            <li>SHG_Villain_TradeSettlement</li>
+            <li>SHG_Villain_TradeCaravan</li>
+        </permits>
+        <requiredApparel>
+            <li>
+                <bodyPartGroupsMatchAny>
+                    <li>Torso</li>
+                </bodyPartGroupsMatchAny>
+                <requiredTags>
+                    <li>RoyalTier2</li>
+                </requiredTags>
+                <allowedTags>
+                    <li>Cape</li>
+                    <li>PrestigeCombatGear</li>
+                    <li>Psychic</li>
+                    <li>Mechlord</li>
+                </allowedTags>
+            </li>
+            <li>
+                <bodyPartGroupsMatchAny>
+                    <li>UpperHead</li>
+                    <li>FullHead</li>
+                </bodyPartGroupsMatchAny>
+                <requiredTags>
+                    <li>RoyalTier2</li>
+                </requiredTags>
+                <allowedTags>
+                    <li>PrestigeCombatGear</li>
+                    <li>Psychic</li>
+                    <li>Mechlord</li>
+                </allowedTags>
+            </li>
+        </requiredApparel>
+        <throneRoomRequirements>
+            <li Class="RoomRequirement_HasAssignedThroneAnyOf">
+                <things>
+                    <li>Throne</li>
+                    <li>GrandThrone</li>
+                </things>
+            </li>
+            <li Class="RoomRequirement_Area">
+                <area>40</area>
+            </li>
+            <li Class="RoomRequirement_Impressiveness">
+                <impressiveness>90</impressiveness>
+            </li>
+            <li Class="RoomRequirement_TerrainWithTags">
+                <labelKey>RoomRequirementAllFloored</labelKey>
+                <tags>
+                    <li>Floor</li>
+                    <li>FineFloor</li>
+                </tags>
+            </li>
+            <li Class="RoomRequirement_ThingAnyOfCount">
+                <things>
+                    <li>Brazier</li>
+                    <li MayRequire="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Ideology">DarklightBrazier</li>
+                </things>
+                <count>2</count>
+            </li>
+            <li Class="RoomRequirement_ThingCount">
+                <thingDef>Column</thingDef>
+                <count>4</count>
+            </li>
+            <li Class="RoomRequirement_ThingAnyOf">
+                <things>
+                    <li>Harp</li>
+                    <li>Harpsichord</li>
+                    <li>Piano</li>
+                </things>
+            </li>
+            <li Class="RoomRequirement_AllThingsAnyOfAreGlowing">
+                <labelKey>RoomRequirementAllBraziersMustBeLit</labelKey>
+                <things>
+                    <li>Brazier</li>
+                    <li MayRequire="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Ideology">DarklightBrazier</li>
+                </things>
+            </li>
+            <li Class="RoomRequirement_ForbiddenBuildings">
+                <labelKey>RoomRequirementNoProductionFacilities</labelKey>
+                <buildingTags><li>Production</li></buildingTags>
+            </li>
+            <li Class="RoomRequirement_ForbiddenBuildings">
+                <labelKey>RoomRequirementNoBeds</labelKey>
+                <buildingTags><li>Bed</li></buildingTags>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology" Class="RoomRequirement_ForbidAltars">
+                <labelKey>RoomRequirementNoAltars</labelKey>
+            </li>
+            <li Class="RoomRequirement_ForbiddenBuildings" MayRequire="Ludeon.RimWorld.Biotech">
+                <labelKey>RoomRequirementNoBiotechBuildings</labelKey>
+                <buildingTags><li>Biotech</li></buildingTags>
+            </li>
+        </throneRoomRequirements>
+        <bedroomRequirements>
+            <li Class="RoomRequirement_Area">
+                <area>24</area>
+            </li>
+            <li Class="RoomRequirement_Impressiveness">
+                <impressiveness>50</impressiveness>
+            </li>
+            <li Class="RoomRequirement_TerrainWithTags">
+                <labelKey>RoomRequirementAllFloored</labelKey>
+                <tags>
+                    <li>Floor</li>
+                    <li>FineFloor</li>
+                </tags>
+            </li>
+            <li Class="RoomRequirement_ThingAnyOf">
+                <disablingPrecepts>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">SlabBed_Preferred</li>
+                </disablingPrecepts>
+                <things>
+                    <li>DoubleBed</li>
+                    <li>RoyalBed</li>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">DeathrestCasket</li>
+                </things>
+            </li>
+            <li Class="RoomRequirement_Thing">
+                <thingDef>EndTable</thingDef>
+            </li>
+            <li Class="RoomRequirement_Thing">
+                <thingDef>Dresser</thingDef>
+            </li>
+            <li Class="RoomRequirement_ForbiddenBuildings">
+                <labelKey>RoomRequirementNoProductionFacilities</labelKey>
+                <buildingTags><li>Production</li></buildingTags>
+            </li>
+            <li Class="RoomRequirement_ForbiddenBuildings" MayRequire="Ludeon.RimWorld.Biotech">
+                <labelKey>RoomRequirementNoBiotechBuildings</labelKey>
+                <buildingTags><li>Biotech</li></buildingTags>
+            </li>
+        </bedroomRequirements>
+        <foodRequirement>
+            <minQuality>MealFine</minQuality>
+            <allowedTypes>Processed, Liquor</allowedTypes>
+            <allowedDefs>
+                <li>Ambrosia</li>
+                <li>Milk</li>
+                <li>RawBerries</li>
+            </allowedDefs>
+        </foodRequirement>
+        <grantedAbilities><li>Speech</li></grantedAbilities>
+        <speechCooldown>1200000</speechCooldown>
+    </RoyalTitleDef>
+
+    <RoyalTitleDef ParentName="SHG_VillainTitle">
+        <defName>SHG_VillainTier5</defName>
+        <label>tier 5 villain</label>
+        <description>Tier 5 villains have firmly entrenched their position as a notable villain, and the League is willing to provide even more support to the villain's plans in hopes that a new high tier villain is in the making.</description>
+        <seniority>500</seniority>
+        <favorCost>21</favorCost>
+        <minExpectation>Noble</minExpectation>
+        <requiredMinimumApparelQuality>Normal</requiredMinimumApparelQuality>
+        <changeHeirQuestPoints>2800</changeHeirQuestPoints>
+        <recruitmentResistanceOffset>60</recruitmentResistanceOffset>
+        <canBeInherited>True</canBeInherited>
+        <suppressIdleAlert>true</suppressIdleAlert>
+        <decreeMtbDays>-1</decreeMtbDays> <!-- disabled -->
+        <decreeMentalBreakCommonality>8</decreeMentalBreakCommonality>
+        <decreeTags>
+            <li>All</li>
+        </decreeTags>
+        <disabledWorkTags>
+            <li>ManualDumb</li>
+            <li>ManualSkilled</li>
+            <li>PlantWork</li>
+            <li>Mining</li>
+        </disabledWorkTags>
+        <permits>
+            <li>SHG_Villain_TradeSettlement</li>
+            <li>SHG_Villain_TradeCaravan</li>
+        </permits>
+        <requiredApparel>
+            <li>
+                <bodyPartGroupsMatchAny>
+                    <li>Torso</li>
+                </bodyPartGroupsMatchAny>
+                <requiredTags>
+                    <li>RoyalTier2</li>
+                </requiredTags>
+                <allowedTags>
+                    <li>Cape</li>
+                    <li>PrestigeCombatGear</li>
+                    <li>Psychic</li>
+                    <li>Mechlord</li>
+                </allowedTags>
+            </li>
+            <li>
+                <bodyPartGroupsMatchAny>
+                    <li>Torso</li>
+                </bodyPartGroupsMatchAny>
+                <requiredTags>
+                    <li>RoyalTier5</li>
+                </requiredTags>
+                <allowedTags>
+                    <li>PrestigeCombatGear</li>
+                    <li>Psychic</li>
+                    <li>Mechlord</li>
+                </allowedTags>
+            </li>
+            <li>
+                <bodyPartGroupsMatchAny>
+                    <li>UpperHead</li>
+                    <li>FullHead</li>
+                </bodyPartGroupsMatchAny>
+                <requiredTags>
+                    <li>RoyalTier5</li>
+                </requiredTags>
+                <allowedTags>
+                    <li>PrestigeCombatGear</li>
+                    <li>Psychic</li>
+                    <li>Mechlord</li>
+                </allowedTags>
+            </li>
+        </requiredApparel>
+        <throneRoomRequirements>
+            <li Class="RoomRequirement_HasAssignedThroneAnyOf">
+                <things><li>GrandThrone</li></things>
+            </li>
+            <li Class="RoomRequirement_Area">
+                <area>60</area>
+            </li>
+            <li Class="RoomRequirement_Impressiveness">
+                <impressiveness>120</impressiveness>
+            </li>
+            <li Class="RoomRequirement_TerrainWithTags">
+                <labelKey>RoomRequirementAllFineFloored</labelKey>
+                <tags>
+                    <li>FineFloor</li>
+                </tags>
+            </li>
+            <li Class="RoomRequirement_ThingAnyOfCount">
+                <things>
+                    <li>Brazier</li>
+                    <li MayRequire="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Ideology">DarklightBrazier</li>
+                </things>
+                <count>2</count>
+            </li>
+            <li Class="RoomRequirement_ThingCount">
+                <thingDef>Column</thingDef>
+                <count>4</count>
+            </li>
+            <li Class="RoomRequirement_ThingCount">
+                <thingDef>Drape</thingDef>
+                <count>2</count>
+            </li>
+            <li Class="RoomRequirement_ThingAnyOf">
+                <things>
+                    <li>Harpsichord</li>
+                    <li>Piano</li>
+                </things>
+            </li>
+            <li Class="RoomRequirement_AllThingsAnyOfAreGlowing">
+                <labelKey>RoomRequirementAllBraziersMustBeLit</labelKey>
+                <things>
+                    <li>Brazier</li>
+                    <li MayRequire="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Ideology">DarklightBrazier</li>
+                </things>
+            </li>
+            <li Class="RoomRequirement_ForbiddenBuildings">
+                <labelKey>RoomRequirementNoProductionFacilities</labelKey>
+                <buildingTags><li>Production</li></buildingTags>
+            </li>
+            <li Class="RoomRequirement_ForbiddenBuildings">
+                <labelKey>RoomRequirementNoBeds</labelKey>
+                <buildingTags><li>Bed</li></buildingTags>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology" Class="RoomRequirement_ForbidAltars">
+                <labelKey>RoomRequirementNoAltars</labelKey>
+            </li>
+            <li Class="RoomRequirement_ForbiddenBuildings" MayRequire="Ludeon.RimWorld.Biotech">
+                <labelKey>RoomRequirementNoBiotechBuildings</labelKey>
+                <buildingTags><li>Biotech</li></buildingTags>
+            </li>
+        </throneRoomRequirements>
+        <bedroomRequirements>
+            <li Class="RoomRequirement_Area">
+                <area>30</area>
+            </li>
+            <li Class="RoomRequirement_Impressiveness">
+                <impressiveness>70</impressiveness>
+            </li>
+            <li Class="RoomRequirement_TerrainWithTags">
+                <labelKey>RoomRequirementAllFloored</labelKey>
+                <tags>
+                    <li>Floor</li>
+                    <li>FineFloor</li>
+                </tags>
+            </li>
+            <li Class="RoomRequirement_ThingAnyOf">
+                <disablingPrecepts>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">SlabBed_Preferred</li>
+                </disablingPrecepts>
+                <things>
+                    <li>RoyalBed</li>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">DeathrestCasket</li>
+                </things>
+            </li>
+            <li Class="RoomRequirement_Thing">
+                <thingDef>EndTable</thingDef>
+            </li>
+            <li Class="RoomRequirement_Thing">
+                <thingDef>Dresser</thingDef>
+            </li>
+            <li Class="RoomRequirement_ThingCount">
+                <thingDef>Drape</thingDef>
+                <count>1</count>
+            </li>
+            <li Class="RoomRequirement_ForbiddenBuildings">
+                <labelKey>RoomRequirementNoProductionFacilities</labelKey>
+                <buildingTags><li>Production</li></buildingTags>
+            </li>
+            <li Class="RoomRequirement_ForbiddenBuildings" MayRequire="Ludeon.RimWorld.Biotech">
+                <labelKey>RoomRequirementNoBiotechBuildings</labelKey>
+                <buildingTags><li>Biotech</li></buildingTags>
+            </li>
+        </bedroomRequirements>
+        <foodRequirement>
+            <minQuality>MealLavish</minQuality>
+            <allowedTypes>Processed, Liquor</allowedTypes>
+            <allowedDefs>
+                <li>Ambrosia</li>
+                <li>Milk</li>
+                <li>RawBerries</li>
+                <li>InsectJelly</li>
+            </allowedDefs>
+        </foodRequirement>
+        <grantedAbilities><li>Speech</li></grantedAbilities>
+        <speechCooldown>900000</speechCooldown>
+    </RoyalTitleDef>
+
+    <RoyalTitleDef ParentName="SHG_VillainTitle">
+        <defName>SHG_VillainTier6</defName>
+        <label>tier 6 villain</label>
+        <description>Tier 6 villains are often recognized by the path of destruction they left behind them on their rise. Should they be so inclined, they can call on multiple of the League's orbital railguns at the same time, create a salvo of destruction that further consolidates their status as an agent of death.</description>
+        <seniority>600</seniority>
+        <favorCost>28</favorCost>
+        <minExpectation>Royal</minExpectation>
+        <requiredMinimumApparelQuality>Normal</requiredMinimumApparelQuality>
+        <changeHeirQuestPoints>3500</changeHeirQuestPoints>
+        <recruitmentResistanceOffset>75</recruitmentResistanceOffset>
+        <canBeInherited>True</canBeInherited>
+        <suppressIdleAlert>true</suppressIdleAlert>
+        <decreeMtbDays>-1</decreeMtbDays> <!-- disabled -->
+        <decreeMentalBreakCommonality>12</decreeMentalBreakCommonality>
+        <decreeTags>
+            <li>All</li>
+        </decreeTags>
+        <disabledWorkTags>
+            <li>ManualDumb</li>
+            <li>ManualSkilled</li>
+            <li>PlantWork</li>
+            <li>Mining</li>
+            <li>Animals</li>
+        </disabledWorkTags>
+        <permits>
+            <li>SHG_Villain_TradeSettlement</li>
+            <li>SHG_Villain_TradeCaravan</li>
+        </permits>
+        <requiredApparel>
+            <li>
+                <bodyPartGroupsMatchAny>
+                    <li>Torso</li>
+                </bodyPartGroupsMatchAny>
+                <requiredTags>
+                    <li>RoyalTier2</li>
+                </requiredTags>
+                <allowedTags>
+                    <li>Cape</li>
+                    <li>PrestigeCombatGear</li>
+                    <li>Psychic</li>
+                    <li>Mechlord</li>
+                </allowedTags>
+            </li>
+            <li>
+                <bodyPartGroupsMatchAny>
+                    <li>Torso</li>
+                </bodyPartGroupsMatchAny>
+                <requiredTags>
+                    <li>RoyalTier5</li>
+                </requiredTags>
+                <allowedTags>
+                    <li>Cape</li>
+                    <li>PrestigeCombatGear</li>
+                    <li>Psychic</li>
+                    <li>Mechlord</li>
+                </allowedTags>
+            </li>
+            <li>
+                <bodyPartGroupsMatchAny>
+                    <li>Torso</li>
+                </bodyPartGroupsMatchAny>
+                <requiredTags>
+                    <li>RoyalTier6</li>
+                </requiredTags>
+                <allowedTags>
+                    <li>Cape</li>
+                    <li>PrestigeCombatGear</li>
+                    <li>Psychic</li>
+                    <li>Mechlord</li>
+                </allowedTags>
+            </li>
+            <li>
+                <bodyPartGroupsMatchAny>
+                    <li>UpperHead</li>
+                    <li>FullHead</li>
+                </bodyPartGroupsMatchAny>
+                <requiredTags>
+                    <li>RoyalTier5</li>
+                </requiredTags>
+                <allowedTags>
+                    <li>PrestigeCombatGear</li>
+                    <li>Psychic</li>
+                    <li>Mechlord</li>
+                </allowedTags>
+            </li>
+        </requiredApparel>
+        <throneRoomRequirements>
+            <li Class="RoomRequirement_HasAssignedThroneAnyOf">
+                <things><li>GrandThrone</li></things>
+            </li>
+            <li Class="RoomRequirement_Area">
+                <area>80</area>
+            </li>
+            <li Class="RoomRequirement_Impressiveness">
+                <impressiveness>160</impressiveness>
+            </li>
+            <li Class="RoomRequirement_TerrainWithTags">
+                <labelKey>RoomRequirementAllFineFloored</labelKey>
+                <tags>
+                    <li>FineFloor</li>
+                </tags>
+            </li>
+            <li Class="RoomRequirement_ThingAnyOfCount">
+                <things>
+                    <li>Brazier</li>
+                    <li MayRequire="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Ideology">DarklightBrazier</li>
+                </things>
+                <count>2</count>
+            </li>
+            <li Class="RoomRequirement_ThingCount">
+                <thingDef>Column</thingDef>
+                <count>6</count>
+            </li>
+            <li Class="RoomRequirement_ThingCount">
+                <thingDef>Drape</thingDef>
+                <count>2</count>
+            </li>
+            <li Class="RoomRequirement_Thing">
+                <thingDef>Piano</thingDef>
+            </li>
+            <li Class="RoomRequirement_AllThingsAnyOfAreGlowing">
+                <labelKey>RoomRequirementAllBraziersMustBeLit</labelKey>
+                <things>
+                    <li>Brazier</li>
+                    <li MayRequire="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Ideology">DarklightBrazier</li>
+                </things>
+            </li>
+            <li Class="RoomRequirement_ForbiddenBuildings">
+                <labelKey>RoomRequirementNoProductionFacilities</labelKey>
+                <buildingTags><li>Production</li></buildingTags>
+            </li>
+            <li Class="RoomRequirement_ForbiddenBuildings">
+                <labelKey>RoomRequirementNoBeds</labelKey>
+                <buildingTags><li>Bed</li></buildingTags>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology" Class="RoomRequirement_ForbidAltars">
+                <labelKey>RoomRequirementNoAltars</labelKey>
+            </li>
+            <li Class="RoomRequirement_ForbiddenBuildings" MayRequire="Ludeon.RimWorld.Biotech">
+                <labelKey>RoomRequirementNoBiotechBuildings</labelKey>
+                <buildingTags><li>Biotech</li></buildingTags>
+            </li>
+        </throneRoomRequirements>
+        <bedroomRequirements>
+            <li Class="RoomRequirement_Area">
+                <area>30</area>
+            </li>
+            <li Class="RoomRequirement_Impressiveness">
+                <impressiveness>80</impressiveness>
+            </li>
+            <li Class="RoomRequirement_TerrainWithTags">
+                <labelKey>RoomRequirementAllFineFloored</labelKey>
+                <tags>
+                    <li>FineFloor</li>
+                </tags>
+            </li>
+            <li Class="RoomRequirement_ThingAnyOf">
+                <disablingPrecepts>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">SlabBed_Preferred</li>
+                </disablingPrecepts>
+                <things>
+                    <li>RoyalBed</li>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">DeathrestCasket</li>
+                </things>
+            </li>
+            <li Class="RoomRequirement_Thing">
+                <thingDef>EndTable</thingDef>
+            </li>
+            <li Class="RoomRequirement_Thing">
+                <thingDef>Dresser</thingDef>
+            </li>
+            <li Class="RoomRequirement_ThingCount">
+                <thingDef>Drape</thingDef>
+                <count>1</count>
+            </li>
+            <li Class="RoomRequirement_ForbiddenBuildings">
+                <labelKey>RoomRequirementNoProductionFacilities</labelKey>
+                <buildingTags><li>Production</li></buildingTags>
+            </li>
+            <li Class="RoomRequirement_ForbiddenBuildings" MayRequire="Ludeon.RimWorld.Biotech">
+                <labelKey>RoomRequirementNoBiotechBuildings</labelKey>
+                <buildingTags><li>Biotech</li></buildingTags>
+            </li>
+        </bedroomRequirements>
+        <foodRequirement>
+            <minQuality>MealLavish</minQuality>
+            <allowedTypes>Processed, Liquor</allowedTypes>
+            <allowedDefs>
+                <li>Ambrosia</li>
+                <li>Milk</li>
+                <li>RawBerries</li>
+                <li>InsectJelly</li>
+            </allowedDefs>
+        </foodRequirement>
+        <grantedAbilities><li>Speech</li></grantedAbilities>
+        <speechCooldown>600000</speechCooldown>
+    </RoyalTitleDef>
+
+    <!-- ============== Villain titles - High tier ============================= -->
+
+
+    <RoyalTitleDef Abstract="True" Name="SHG_VillainTitleHighTier" ParentName="SHG_VillainTitle" >
+        <minExpectation>Royal</minExpectation>
+        <requiredMinimumApparelQuality>Normal</requiredMinimumApparelQuality>
+        <suppressIdleAlert>true</suppressIdleAlert>
+        <changeHeirQuestPoints>4000</changeHeirQuestPoints>
+        <disabledWorkTags>
+            <li>Commoner</li>
+        </disabledWorkTags>
+        <permits>
+            <li>SHG_Villain_TradeSettlement</li>
+            <li>SHG_Villain_TradeCaravan</li>
+        </permits>
+        <decreeTags>
+            <li>All</li>
+        </decreeTags>
+        <requiredApparel>
+            <li>
+                <bodyPartGroupsMatchAny>
+                    <li>Torso</li>
+                </bodyPartGroupsMatchAny>
+                <requiredTags>
+                    <li>RoyalTier2</li>
+                </requiredTags>
+                <allowedTags>
+                    <li>PrestigeCombatGear</li>
+                    <li>Psychic</li>
+                    <li>Mechlord</li>
+                </allowedTags>
+            </li>
+            <li>
+                <bodyPartGroupsMatchAny>
+                    <li>Torso</li>
+                </bodyPartGroupsMatchAny>
+                <requiredTags>
+                    <li>RoyalTier5</li>
+                </requiredTags>
+                <allowedTags>
+                    <li>PrestigeCombatGear</li>
+                    <li>Psychic</li>
+                    <li>Mechlord</li>
+                </allowedTags>
+            </li>
+            <li>
+                <bodyPartGroupsMatchAny>
+                    <li>Torso</li>
+                </bodyPartGroupsMatchAny>
+                <requiredTags>
+                    <li>RoyalTier6</li>
+                </requiredTags>
+                <allowedTags>
+                    <li>PrestigeCombatGear</li>
+                    <li>Psychic</li>
+                    <li>Mechlord</li>
+                </allowedTags>
+            </li>
+        </requiredApparel>
+        <throneRoomRequirements>
+            <li Class="RoomRequirement_HasAssignedThroneAnyOf">
+                <things><li>GrandThrone</li></things>
+            </li>
+            <li Class="RoomRequirement_Area">
+                <area>80</area>
+            </li>
+            <li Class="RoomRequirement_Impressiveness">
+                <impressiveness>160</impressiveness>
+            </li>
+            <li Class="RoomRequirement_TerrainWithTags">
+                <labelKey>RoomRequirementAllFineFloored</labelKey>
+                <tags>
+                    <li>FineFloor</li>
+                </tags>
+            </li>
+            <li Class="RoomRequirement_ThingAnyOfCount">
+                <things>
+                    <li>Brazier</li>
+                    <li MayRequire="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Ideology">DarklightBrazier</li>
+                </things>
+                <count>2</count>
+            </li>
+            <li Class="RoomRequirement_ThingCount">
+                <thingDef>Column</thingDef>
+                <count>6</count>
+            </li>
+            <li Class="RoomRequirement_Thing">
+                <thingDef>Piano</thingDef>
+            </li>
+            <li Class="RoomRequirement_AllThingsAnyOfAreGlowing">
+                <labelKey>RoomRequirementAllBraziersMustBeLit</labelKey>
+                <things>
+                    <li>Brazier</li>
+                    <li MayRequire="Ludeon.RimWorld.Royalty,Ludeon.RimWorld.Ideology">DarklightBrazier</li>
+                </things>
+            </li>
+            <li Class="RoomRequirement_ForbiddenBuildings">
+                <labelKey>RoomRequirementNoProductionFacilities</labelKey>
+                <buildingTags><li>Production</li></buildingTags>
+            </li>
+            <li Class="RoomRequirement_ForbiddenBuildings">
+                <labelKey>RoomRequirementNoBeds</labelKey>
+                <buildingTags><li>Bed</li></buildingTags>
+            </li>
+            <li MayRequire="Ludeon.RimWorld.Ideology" Class="RoomRequirement_ForbidAltars">
+                <labelKey>RoomRequirementNoAltars</labelKey>
+            </li>
+            <li Class="RoomRequirement_ForbiddenBuildings" MayRequire="Ludeon.RimWorld.Biotech">
+                <labelKey>RoomRequirementNoBiotechBuildings</labelKey>
+                <buildingTags><li>Biotech</li></buildingTags>
+            </li>
+        </throneRoomRequirements>
+        <bedroomRequirements>
+            <li Class="RoomRequirement_Area">
+                <area>30</area>
+            </li>
+            <li Class="RoomRequirement_Impressiveness">
+                <impressiveness>80</impressiveness>
+            </li>
+            <li Class="RoomRequirement_TerrainWithTags">
+                <labelKey>RoomRequirementAllFineFloored</labelKey>
+                <tags>
+                    <li>FineFloor</li>
+                </tags>
+            </li>
+            <li Class="RoomRequirement_ThingAnyOf">
+                <disablingPrecepts>
+                    <li MayRequire="Ludeon.RimWorld.Ideology">SlabBed_Preferred</li>
+                </disablingPrecepts>
+                <things>
+                    <li>RoyalBed</li>
+                    <li MayRequire="Ludeon.RimWorld.Biotech">DeathrestCasket</li>
+                </things>
+            </li>
+            <li Class="RoomRequirement_Thing">
+                <thingDef>EndTable</thingDef>
+            </li>
+            <li Class="RoomRequirement_Thing">
+                <thingDef>Dresser</thingDef>
+            </li>
+            <li Class="RoomRequirement_ThingCount">
+                <thingDef>Drape</thingDef>
+                <count>1</count>
+            </li>
+            <li Class="RoomRequirement_ForbiddenBuildings">
+                <labelKey>RoomRequirementNoProductionFacilities</labelKey>
+                <buildingTags><li>Production</li></buildingTags>
+            </li>
+            <li Class="RoomRequirement_ForbiddenBuildings" MayRequire="Ludeon.RimWorld.Biotech">
+                <labelKey>RoomRequirementNoBiotechBuildings</labelKey>
+                <buildingTags><li>Biotech</li></buildingTags>
+            </li>
+        </bedroomRequirements>
+        <foodRequirement>
+            <minQuality>MealLavish</minQuality>
+            <allowedTypes>Processed, Liquor</allowedTypes>
+            <allowedDefs>
+                <li>Ambrosia</li>
+                <li>Milk</li>
+                <li>RawBerries</li>
+                <li>InsectJelly</li>
+            </allowedDefs>
+        </foodRequirement>
+        <grantedAbilities><li>Speech</li></grantedAbilities>
+        <speechCooldown>400000</speechCooldown>
+    </RoyalTitleDef>
+
+    <RoyalTitleDef ParentName="SHG_VillainTitleHighTier">
+        <defName>SHG_VillainTier7</defName>
+        <label>tier 7 villain</label>
+        <description>An individual often spends years of their life accruing enough infamy to reach this status, but now that they have reached it there is no question in anyone's mind. This is the first high rank of high tier villain, and the League often spares no expense supporting them.</description>
+        <seniority>700</seniority>
+        <commonality>0.6</commonality>
+        <recruitmentResistanceOffset>125</recruitmentResistanceOffset>
+        <favorCost>36</favorCost>
+        <requiredApparel>
+            <li>
+                <bodyPartGroupsMatchAny>
+                    <li>UpperHead</li>
+                    <li>FullHead</li>
+                </bodyPartGroupsMatchAny>
+                <requiredTags>
+                    <li>RoyalTier6</li>
+                </requiredTags>
+                <allowedTags>
+                    <li>PrestigeCombatGear</li>
+                    <li>Psychic</li>
+                    <li>Mechlord</li>
+                </allowedTags>
+            </li>
+        </requiredApparel>
+    </RoyalTitleDef>
+
+    <RoyalTitleDef ParentName="SHG_VillainTitleHighTier">
+        <defName>SHG_VillainTier8</defName>
+        <label>tier 8 villain</label>
+        <description>Tier 8 villains often gain their status by leveling multiple settlements for resources. Many leaders become nervous when a tier 8 villain is nearby, and usually try to increase the number of soldier they have nearby to ward against invasion.</description>
+        <seniority>800</seniority>
+        <commonality>0.3</commonality>
+        <recruitmentResistanceOffset>150</recruitmentResistanceOffset>
+        <favorCost>45</favorCost>
+        <requiredApparel>
+            <li>
+                <bodyPartGroupsMatchAny>
+                    <li>UpperHead</li>
+                    <li>FullHead</li>
+                </bodyPartGroupsMatchAny>
+                <requiredTags>
+                    <li>RoyalTier6</li>
+                </requiredTags>
+                <allowedTags>
+                    <li>PrestigeCombatGear</li>
+                    <li>Psychic</li>
+                    <li>Mechlord</li>
+                </allowedTags>
+            </li>
+        </requiredApparel>
+    </RoyalTitleDef>
+
+    <RoyalTitleDef ParentName="SHG_VillainTitleHighTier">
+        <defName>SHG_VillainTier9</defName>
+        <label>tier 9 villain</label>
+        <description>The highest tier a villain can be assigned, often limited to those commonly believed to be planetary threats. By this point entire armies may be raised to kill them, and the League of Villains allow the pawn to tap into the entire orbital network to use their strongest ability, Targeted Armageddon.</description>
+        <seniority>900</seniority>
+        <commonality>0.1</commonality>
+        <recruitmentResistanceOffset>200</recruitmentResistanceOffset>
+        <favorCost>55</favorCost>
+        <requiredApparel>
+            <li>
+                <bodyPartGroupsMatchAny>
+                    <li>UpperHead</li>
+                    <li>FullHead</li>
+                </bodyPartGroupsMatchAny>
+                <requiredTags>
+                    <li>RoyalTier7</li>
+                </requiredTags>
+                <allowedTags>
+                    <li>PrestigeCombatGear</li>
+                    <li>Psychic</li>
+                    <li>Mechlord</li>
+                </allowedTags>
+            </li>
+        </requiredApparel>
+    </RoyalTitleDef>
+
+    <!-- The Super Villain should never appear in the game in any way, it's just here for completeness on UI lists etc. -->
+    <RoyalTitleDef ParentName="SHG_VillainTitleHighTier">
+        <defName>SHG_TheSuperVillain</defName>
+        <label>the super villain</label>
+        <description>Whether The Super Villain is still alive is up for debate, but should The Super Villain grace the League of Villains with his presence, he will become the unquestionable leader of the League, and all shall fear his name once more.</description>
+        <seniority>1000</seniority>
+        <commonality>0</commonality>
+        <requiredApparel>
+            <li>
+                <bodyPartGroupsMatchAny>
+                    <li>UpperHead</li>
+                    <li>FullHead</li>
+                </bodyPartGroupsMatchAny>
+                <requiredTags>
+                    <li>RoyalTier7</li>
+                </requiredTags>
+                <allowedTags>
+                    <li>PrestigeCombatGear</li>
+                    <li>Psychic</li>
+                    <li>Mechlord</li>
+                </allowedTags>
+            </li>
+        </requiredApparel>
+    </RoyalTitleDef>
+</Defs>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Uranium"]/statBases/RoyalFavorValue</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="Uranium"]/statBases</xpath>
+            <value>
+                <RoyalFavorValue>0.009</RoyalFavorValue>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/ThingDef[defName="Jade"]/statBases/RoyalFavorValue</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>/Defs/ThingDef[defName="Jade"]/statBases</xpath>
+            <value>
+                <RoyalFavorValue>0.0075</RoyalFavorValue>
+            </value>
+        </nomatch>
+    </Operation>
+
+    <Operation Class="PatchOperationReplace">
+        <xpath>Defs/ResearchProjectDef/heldByFactionCategoryTags/li[text()="Empire"]</xpath>
+        <value>
+            <li>Empire</li>
+            <li>SuperVillainGang</li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/QuestScriptDef[defName="Util_ChooseRandomQuestLodgerKind"]/root/nodes/li/node/choices</xpath>
+        <value>
+            <li>
+                <factionDef>SuperVillainGang</factionDef>
+                <pawnKinds>
+                    <li>SHG_VillainLaborer</li>
+                </pawnKinds>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/QuestScriptDef[defName="Util_ChooseRandomQuestHelperKind"]/root/nodes/li/choices</xpath>
+        <value>
+            <li>
+                <factionDef>SuperVillainGang</factionDef>
+                <pawnKinds>
+                    <li>SHG_VillainTrooper</li>
+                    <li>SHG_VillainSniper</li>
+                    <li>SHG_VillainSlasher</li>
+                </pawnKinds>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/QuestScriptDef[defName="Mission_BanditCamp"]/root/factionsToDrawLeaderFrom</xpath>
+        <value><li>SuperVillainGang</li></value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/StorytellerDef[@Name="BaseStoryteller"]/comps</xpath>
+        <value>
+            <li Class="StorytellerCompProperties_SingleOnceFixed">
+                <fireAfterDaysPassed>12</fireAfterDaysPassed>
+                <incident>SHG_GiveQuest_VillainStart</incident>
+                <skipIfOnExtremeBiome>false</skipIfOnExtremeBiome>
+                <allowedTargetTags>
+                    <li>World</li>
+                </allowedTargetTags>
+                <enableIfAnyModActive>
+                    <li>Ludeon.RimWorld.Royalty</li>
+                </enableIfAnyModActive>
+            </li>
+            <li Class="StorytellerCompProperties_RefiringUniqueQuest">
+                <minDaysPassed>60</minDaysPassed>
+                <refireEveryDays>30</refireEveryDays>
+                <incident>SHG_GiveQuest_EndGame_ArmageddonClock</incident>
+                <allowedTargetTags>
+                    <li>World</li>
+                </allowedTargetTags>
+                <enableIfAnyModActive>
+                    <li>Ludeon.RimWorld.Royalty</li>
+                </enableIfAnyModActive>
+            </li>
+            <li Class="StorytellerCompProperties_FactionInteraction">
+                <incident>SHG_Villain_CaravanArrivalTributeCollector</incident>
+                <minDaysPassed>10</minDaysPassed>
+                <baseIncidentsPerYear>4</baseIncidentsPerYear>
+                <minSpacingDays>15</minSpacingDays>
+                <minWealth>20000</minWealth>
+                <allowedTargetTags>
+                    <li>Map_PlayerHome</li>
+                </allowedTargetTags>
+            </li>
+
+        </value>
+    </Operation>
+</Patch>

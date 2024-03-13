@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/PreceptDef[defName="SHG_SupersSupremacy"]/comps</xpath>
+        <value>
+            <li Class="PreceptComp_DevelopmentPoints" MayRequire="Ludeon.Rimworld.Royalty">
+                <eventDef>SHG_VillainStartSuccess</eventDef>
+                <points>5</points>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/PreceptDef[defName="SHG_SupersDisliked"]/comps</xpath>
+        <value>
+            <li Class="PreceptComp_DevelopmentPoints" MayRequire="Ludeon.Rimworld.Royalty">
+                <eventDef>SHG_VillainStartRefused</eventDef>
+                <points>2</points>
+            </li>
+        </value>
+    </Operation>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/PreceptDef[defName="SHG_SupersReviled"]/comps</xpath>
+        <value>
+            <li Class="PreceptComp_DevelopmentPoints" MayRequire="Ludeon.Rimworld.Royalty">
+                <eventDef>SHG_VillainStartRefused</eventDef>
+                <points>5</points>
+            </li>
+        </value>
+    </Operation>
+</Patch>

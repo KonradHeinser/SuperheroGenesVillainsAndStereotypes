@@ -8,4 +8,12 @@
 		<li IfModActive="Ludeon.Rimworld.Royalty">1.4/Royalty</li>
 		<li IfModActive="Ludeon.Rimworld.Ideology">1.4/Ideology</li>
 	</v1.4>
+	<v1.5>
+		<li>/</li>
+		<li>1.5</li>
+        <li IfModActive="Mlem.MetaAdjuster">1.5/Mods/MetaAdjuster</li>
+		<li IfModActive="vanillaexpanded.achievements">1.5/Mods/VAE</li>
+		<li IfModActive="Ludeon.Rimworld.Royalty">1.5/Royalty</li>
+		<li IfModActive="Ludeon.Rimworld.Ideology">1.5/Ideology</li>
+	</v1.5>
 </loadFolders>
