@@ -17,10 +17,10 @@
             <li>Violent</li>
         </requiredWorkTags>
         <skillGains>
-            <li><key>Medicine</key><value>2</value></li>
-            <li><key>Intellectual</key><value>5</value></li>
-            <li><key>Melee</key><value>3</value></li>
-            <li><key>Social</key><value>-4</value></li>
+            <Medicine>2</Medicine>
+            <Intellectual>5</Intellectual>
+            <Melee>3</Melee>
+            <Social>-4</Social>
         </skillGains>
     </BackstoryDef>
 
@@ -33,9 +33,9 @@
             <li>Violent</li>
         </requiredWorkTags>
         <skillGains>
-            <li><key>Plants</key><value>2</value></li>
-            <li><key>Melee</key><value>2</value></li>
-            <li><key>Animals</key><value>2</value></li>
+            <Plants>2</Plants>
+            <Melee>2</Melee>
+            <Animals>2</Animals>
         </skillGains>
     </BackstoryDef>
 
@@ -45,8 +45,8 @@
         <titleShort>genius</titleShort>
         <baseDesc>There was something wrong with [PAWN_nameDef]'s brain from birth. [PAWN_pronoun] was always twitchy, and had an obsession with learning new things that resulted in them becoming alientated by [PAWN_possessive] peers.</baseDesc>
         <skillGains>
-            <li><key>Intellectual</key><value>10</value></li>
-            <li><key>Social</key><value>-4</value></li>
+            <Intellectual>10</Intellectual>
+            <Social>-4</Social>
         </skillGains>
         <forcedTraits>
             <TooSmart>0</TooSmart>
@@ -59,10 +59,10 @@
         <titleShort>assassin</titleShort>
         <baseDesc>[PAWN_nameDef] was raised from birth to be the ultimate killing machine. [PAWN_pronoun] was trained to turn everything around [PAWN_objective] into a weapon, including people.</baseDesc>
         <skillGains>
-            <li><key>Social</key><value>4</value></li>
-            <li><key>Melee</key><value>4</value></li>
-            <li><key>Shooting</key><value>4</value></li>
-            <li><key>Artistic</key><value>-6</value></li>
+            <Social>4</Social>
+            <Melee>4</Melee>
+            <Shooting>4</Shooting>
+            <Artistic>-6</Artistic>
         </skillGains>
     </BackstoryDef>
 
@@ -76,10 +76,10 @@
             <li>Caring</li>
         </workDisables>
         <skillGains>
-            <li><key>Artistic</key><value>4</value></li>
-            <li><key>Crafting</key><value>4</value></li>
-            <li><key>Melee</key><value>4</value></li>
-            <li><key>Social</key><value>-6</value></li>
+            <Artistic>4</Artistic>
+            <Crafting>4</Crafting>
+            <Melee>4</Melee>
+            <Social>-6</Social>
         </skillGains>
     </BackstoryDef>
 
@@ -89,9 +89,9 @@
         <titleShort>apprentice</titleShort>
         <baseDesc>[PAWN_nameDef] spent large amounts of time in [PAWN_possessive] neighbor's lab as an assistant. While there, [PAWN_pronoun] assisted with many unethical experiments, usually on unwilling subjects. When the scientist ended up being arrested, [PAWN_nameDef] decided to start performing [PAWN_possessive] own experiments in secret, experiments that were just as unethical as the ones [PAWN_pronoun] performed as an assistant.</baseDesc>
         <skillGains>
-            <li><key>Intellectual</key><value>5</value></li>
-            <li><key>Medicine</key><value>5</value></li>
-            <li><key>Social</key><value>-4</value></li>
+            <Intellectual>5</Intellectual>
+            <Medicine>5</Medicine>
+            <Social>-4</Social>
         </skillGains>
     </BackstoryDef>
 
@@ -101,9 +101,9 @@
         <titleShort>betrayed</titleShort>
         <baseDesc>[PAWN_nameDef] had a hero [PAWN_pronoun] adored. [PAWN_pronoun] knew about every heroic deed their hero did, every power they had, and every team [PAWN_possessive] hero was on. One day though, [PAWN_possessive] hero did something that shattered the illusion of greatness, and [PAWN_pronoun] realized that heroes were just people abusing their powers to gain adoring fans. After realizing this, [PAWN_nameDef] decided to play the villain, to do everything [PAWN_pronoun] could to reveal the hypocracy of heroes.</baseDesc>
         <skillGains>
-            <li><key>Intellectual</key><value>2</value></li>
-            <li><key>Melee</key><value>2</value></li>
-            <li><key>Shooting</key><value>2</value></li>
+            <Intellectual>2</Intellectual>
+            <Melee>2</Melee>
+            <Shooting>2</Shooting>
         </skillGains>
     </BackstoryDef>
 </Defs>
