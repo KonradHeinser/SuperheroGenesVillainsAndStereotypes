@@ -21,7 +21,7 @@
             <li>Body_Hulk</li>
             <li>MlemMetaAdjustMax100</li>
             <li>SuperGluttony</li>
-            <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">SHG_Flight</li>
+            <li>SHG_Flight</li>
             <li>SHG_LaserImmune</li>
             <li>SHG_NewLaserEyes</li>
             <li>SHG_DoubleHearted</li>
