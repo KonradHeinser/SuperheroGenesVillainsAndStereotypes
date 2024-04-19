@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
     <Operation Class="PatchOperationConditional">
-        <xpath>Defs/VREAndroids.AndroidConvertableGenesDef</xpath>
+        <xpath>Defs/VREAndroids.AndroidConvertableGenesDef/genesBlacklist</xpath>
         <match Class="PatchOperationAdd">
             <xpath>Defs/VREAndroids.AndroidConvertableGenesDef/genesBlacklist</xpath>
             <value>
@@ -12,7 +12,7 @@
     </Operation>
 
     <Operation Class="PatchOperationConditional">
-        <xpath>Defs/AlphaGenes.WretchBlacklistDef</xpath>
+        <xpath>Defs/AlphaGenes.WretchBlacklistDef/blackListedDefNameStrings</xpath>
         <match Class="PatchOperationAdd">
             <xpath>Defs/AlphaGenes.WretchBlacklistDef/blackListedDefNameStrings</xpath>
             <value>
