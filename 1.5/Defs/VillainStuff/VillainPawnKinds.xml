@@ -149,6 +149,12 @@
             <li>IndustrialMilitaryBasic</li>
             <li>IndustrialMilitaryAdvanced</li>
         </apparelTags>
+        <skills>
+            <li>
+                <skill>Melee</skill>
+                <range>4~14</range>
+            </li>
+        </skills>
         <apparelRequired>
             <li>Apparel_ShieldBelt</li>
         </apparelRequired>
@@ -187,6 +193,16 @@
         <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
         <titleRequired MayRequire="Ludeon.Rimworld.Royalty">SHG_VillainTier9</titleRequired>
         <weaponMoney>1000~2000</weaponMoney>
+        <skills>
+            <li>
+                <skill>Shooting</skill>
+                <range>15~20</range>
+            </li>
+            <li>
+                <skill>Melee</skill>
+                <range>15~20</range>
+            </li>
+        </skills>
         <weaponTags>
             <li>IndustrialGunAdvanced</li>
         </weaponTags>
