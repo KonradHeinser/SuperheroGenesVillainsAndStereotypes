@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-    <RulePackDef>
-        <defName>SHG_SuperVillainGang</defName>
-        <rulePack>
-            <rulesStrings>
-                <li>r_name->The League of Villains</li>
-            </rulesStrings>
-        </rulePack>
-    </RulePackDef>
-
     <ThingSetMakerDef Name="SHG_SuperLootPool">
         <defName>SHG_RaidLootMaker</defName>
         <root Class="ThingSetMaker_MarketValue">
@@ -37,9 +28,6 @@
         <factionNameMaker>NamerFactionOutlander</factionNameMaker>
         <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
         <leaderForceGenerateNewPawn>true</leaderForceGenerateNewPawn>
-        <structureMemeWeights>
-            <Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistEmbodied>
-        </structureMemeWeights>
         <xenotypeSet Inherit="False">
             <xenotypeChances>
                 <SHG_RandomMundaneSuper>.10</SHG_RandomMundaneSuper>
@@ -86,8 +74,8 @@
             <li>(0.25, 0.66, 0.94)</li>
             <li>(0.98, 0.75, 0.37)</li>
             <li>(0.97, 0.62, 0.52)</li>
-          </colorSpectrum>
-          <leaderTitle>boss</leaderTitle>
+        </colorSpectrum>
+        <leaderTitle>boss</leaderTitle>
         <naturalEnemy>true</naturalEnemy>
         <fixedLeaderKinds>
             <li>SHG_VillainBoss</li>
@@ -99,12 +87,43 @@
                 </categories>
             </li>
         </backstoryFilters>
+        <fixedIdeo>true</fixedIdeo>
+        <ideoName>Super Villain Followers</ideoName>
+        <ideoDescription>Followers of the individual commonly called "The Super Villain" know there are only two acceptable paths for lesser humans, subjugation and death. One day, The Super Villain will return, and on that day all supers will truly begin their path towards their gloriously bloody Utopia.</ideoDescription>
+        <structureMemeWeights>
+            <Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">1</Structure_TheistEmbodied>
+        </structureMemeWeights>
+        <deityPresets>
+            <li>
+                <nameType>
+                    <name>The Super Villain</name>
+                    <type>The First Villain</type>
+                </nameType>
+                <gender>Male</gender>
+                <iconPath>UI/Deities/DeityGeneric</iconPath>
+            </li>
+        </deityPresets>
         <requiredMemes>
             <li MayRequire="Ludeon.RimWorld.Ideology">SHG_SuperSupremacy</li>
             <li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
             <li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
             <li MayRequire="Ludeon.RimWorld.Ideology">Individualist</li>
         </requiredMemes>
+        <disallowedPrecepts>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Skullspike_Disapproved</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">OrganUse_Abhorrent</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">OrganUse_HorribleNoSell</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">OrganUse_HorribleSellOK</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Horrible</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Disapproved</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Standard</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Approved</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Respected</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Exalted</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Charity_Essential</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Charity_Important</li>
+            <li MayRequire="Ludeon.RimWorld.Ideology">Charity_Worthwhile</li>
+        </disallowedPrecepts>
         <pawnGroupMakers>
             <li>
                 <kindDef>Combat</kindDef>
@@ -168,7 +187,7 @@
         <description>A loose confederation of villains who've agreed to mostly fight outsiders instead of fighting each other.\n\nVillains care little about human life, and will often try to kill everyone they come across in their quest for world domination.\n\nWhile they will never truly match the cruelty of The Super Villain, their willingness to dispose of those they view as lesser beings makes them a threat regardless.\n\nVillains have their own type of honor called Infamy. Infamy is their measure of how dedicated you are to their cause. The more dedicated you are, the more willing they are to work with you. Unlike the Empire, they are willing to let people use the boons granted by permits more often, but becoming their enemy through overt action or a lack of support will result in a lack of support.\n\nThe ranking system they use is the same as the threat levels assigned to them by The Hero Association. Tier 1 villains are the lowest, usually common soldiers, while Tier 9 villains are often believed to be planetary level threats.</description>
         <categoryTag>SuperVillainGang</categoryTag>
         <configurationListOrderPriority>999</configurationListOrderPriority>
-        <factionNameMaker>SHG_SuperVillainGang</factionNameMaker>
+        <fixedName>The League of Villains</fixedName>
         <settlementTexturePath>VillainFactionIcon</settlementTexturePath>
         <royalFavorLabel>infamy</royalFavorLabel>
         <royalFavorIconPath>VillainFactionIcon</royalFavorIconPath>
