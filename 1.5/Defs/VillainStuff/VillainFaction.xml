@@ -172,7 +172,7 @@
         <requiredCountAtGameStart>0</requiredCountAtGameStart>
         <maxCountAtGameStart>99</maxCountAtGameStart>
         <settlementGenerationWeight>0.4</settlementGenerationWeight>
-        <configurationListOrderPriority>998</configurationListOrderPriority>
+        <configurationListOrderPriority>991</configurationListOrderPriority>
         <baseTraderKinds>
             <li>SHG_MinorVillainBase</li>
         </baseTraderKinds>
