@@ -244,7 +244,7 @@
                             <li>AntisuperIntelligence</li>
                         </geneSet>
                     </li>
-                    <li MayRequire="OskarPotocki.VanillaFactionsExpanded.Core"> <!--Phantom-->
+                    <li> <!--Phantom-->
                         <geneSet>
                             <li>SHG_Archetypes_Phantom</li>
                             <li>UnsuperPerception</li>
