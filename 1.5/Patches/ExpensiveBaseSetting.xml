@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>expensiveBase</setting>
+        <active Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/HediffDef[defName="SHG_RandomMundaneSuper" or defName="SHG_RandomSoldierSuper" or defName="SHG_RandomMundaneMancer" or defName="SHG_RandomWarSuper" or defName="SHG_RandomSupportSuper"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet"]</xpath>
+                    <value>
+                        <alwaysAddedGenes>
+                            <li>SHG_Flaw_SuperRecluse</li>
+                        </alwaysAddedGenes>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/HediffDef[defName="SHG_RandomMundaneSuper"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet"]/geneSets/li[1]/geneSet</xpath>
+                    <value>
+                        <li>UnsuperPersuasion</li>
+                        <li>AntisuperPersuasion</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/HediffDef[defName="SHG_RandomMundaneSuper"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet"]/geneSets/li[2]/geneSet</xpath>
+                    <value>
+                        <li>UnsuperPersuasion</li>
+                        <li>AntisuperPersuasion</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/HediffDef[defName="SHG_RandomMundaneSuper"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet"]/geneSets/li[3]/geneSet</xpath>
+                    <value>
+                        <li>AntisuperPrecision</li>
+                        <li>UnsuperHealing</li>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/HediffDef[defName="SHG_RandomSoldierSuper"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet"]/geneSets/li[1]/geneSet</xpath>
+                    <value>
+                        <li>UnsuperDurability</li>
+                        <li>AntisuperPersuasion</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/HediffDef[defName="SHG_RandomSoldierSuper"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet"]/geneSets/li[2]/geneSet</xpath>
+                    <value>
+                        <li>AntisuperIntelligence</li>
+                        <li>UnsuperSpeed</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/HediffDef[defName="SHG_RandomSoldierSuper"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet"]/geneSets/li[3]/geneSet</xpath>
+                    <value>
+                        <li>UnsuperPerception</li>
+                        <li>AntisuperPrecision</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/HediffDef[defName="SHG_RandomSoldierSuper"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet"]/geneSets/li[4]/geneSet</xpath>
+                    <value>
+                        <li>UnsuperStrength</li>
+                        <li>AntisuperPersuasion</li>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/HediffDef[defName="SHG_RandomMundaneMancer"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet"]/geneSets/li[1]/geneSet</xpath>
+                    <value>
+                        <li>UnsuperPrecision</li>
+                        <li>AntisuperPrecision</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/HediffDef[defName="SHG_RandomMundaneMancer"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet"]/geneSets/li[2]/geneSet</xpath>
+                    <value>
+                        <li>UnsuperStrength</li>
+                        <li>AntisuperStrength</li>
+                        <li>UnsuperSpeed</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/HediffDef[defName="SHG_RandomMundaneMancer"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet"]/geneSets/li[3]/geneSet</xpath>
+                    <value>
+                        <li>AntisuperStrength</li>
+                        <li>AntisuperIntelligence</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/HediffDef[defName="SHG_RandomMundaneMancer"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet"]/geneSets/li[4]/geneSet</xpath>
+                    <value>
+                        <li>UnsuperIntelligence</li>
+                        <li>AntisuperIntelligence</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/HediffDef[defName="SHG_RandomMundaneMancer"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet"]/geneSets/li[5]/geneSet</xpath>
+                    <value>
+                        <li>AntisuperSpeed</li>
+                        <li>UnsuperPerception</li>
+                        <li>AntisuperPerception</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/HediffDef[defName="SHG_RandomMundaneMancer"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet"]/geneSets/li[6]/geneSet</xpath>
+                    <value>
+                        <li>UnsuperPersuasion</li>
+                        <li>AntisuperPersuasion</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/HediffDef[defName="SHG_RandomMundaneMancer"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet"]/geneSets/li[7]/geneSet</xpath>
+                    <value>
+                        <li>AntisuperDurability</li>
+                        <li>AntisuperStrength</li>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/HediffDef[defName="SHG_RandomWarSuper"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet"]/geneSets/li[1]/geneSet</xpath>
+                    <value>
+                        <li>UnsuperPersuasion</li>
+                        <li>AntisuperPersuasion</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/HediffDef[defName="SHG_RandomWarSuper"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet"]/geneSets/li[2]/geneSet</xpath>
+                    <value>
+                        <li>UnsuperPersuasion</li>
+                        <li>AntisuperPersuasion</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/HediffDef[defName="SHG_RandomWarSuper"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet"]/geneSets/li[3]/geneSet</xpath>
+                    <value>
+                        <li>UnsuperPersuasion</li>
+                        <li>AntisuperPersuasion</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/HediffDef[defName="SHG_RandomWarSuper"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet"]/geneSets/li[4]/geneSet</xpath>
+                    <value>
+                        <li>UnsuperPersuasion</li>
+                        <li>AntisuperPersuasion</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/HediffDef[defName="SHG_RandomWarSuper"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet"]/geneSets/li[5]/geneSet</xpath>
+                    <value>
+                        <li>UnsuperPersuasion</li>
+                        <li>AntisuperPersuasion</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/HediffDef[defName="SHG_RandomWarSuper"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet"]/geneSets/li[6]/geneSet</xpath>
+                    <value>
+                        <li>UnsuperIntelligence</li>
+                        <li>AntisuperIntelligence</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/HediffDef[defName="SHG_RandomWarSuper"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet"]/geneSets/li[7]/geneSet</xpath>
+                    <value>
+                        <li>UnsuperPerception</li>
+                        <li>UnsuperPrecision</li>
+                        <li>AntisuperIntelligence</li>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/HediffDef[defName="SHG_RandomSupportSuper"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet"]/geneSets/li[1]/geneSet</xpath>
+                    <value>
+                        <li>UnsuperPrecision</li>
+                        <li>AntisuperPrecision</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/HediffDef[defName="SHG_RandomSupportSuper"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet"]/geneSets/li[2]/geneSet</xpath>
+                    <value>
+                        <li>UnsuperSpeed</li>
+                        <li>AntisuperSpeed</li>
+                        <li>AntisuperPerception</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/HediffDef[defName="SHG_RandomSupportSuper"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet"]/geneSets/li[3]/geneSet</xpath>
+                    <value>
+                        <li>AntisuperPerception</li>
+                        <li>AntisuperPrecision</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/HediffDef[defName="SHG_RandomSupportSuper"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet"]/geneSets/li[4]/geneSet</xpath>
+                    <value>
+                        <li>AntisuperPerception</li>
+                        <li>AntisuperPrecision</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/HediffDef[defName="SHG_RandomSupportSuper"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet"]/geneSets/li[5]/geneSet</xpath>
+                    <value>
+                        <li>AntisuperPerception</li>
+                        <li>AntisuperPrecision</li>
+                    </value>
+                </li>
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/HediffDef[defName="SHG_RandomSupportSuper"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet"]/geneSets/li[6]/geneSet</xpath>
+                    <value>
+                        <li>AntisuperPerception</li>
+                        <li>AntisuperIntelligence</li>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/HediffDef[defName="SHG_RandomSummonerSuper"]/comps/li[@Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet"]</xpath>
+                    <value>
+                        <alwaysAddedGenes>
+                            <li>SHG_Flaw_SuperRecluse</li>
+                            <li>SHG_Flaw_SuperMoodyAura</li>
+                            <li>UnsuperDurability</li>
+                            <li>UnsuperPersuasion</li>
+                        </alwaysAddedGenes>
+                    </value>
+                </li>
+            </operations>
+        </active>
+    </Operation>
+</Patch>
