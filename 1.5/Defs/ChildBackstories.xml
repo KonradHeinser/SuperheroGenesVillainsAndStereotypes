@@ -22,6 +22,7 @@
             <Melee>3</Melee>
             <Social>-4</Social>
         </skillGains>
+        <spawnCategories><li>FormerVillain</li></spawnCategories>
     </BackstoryDef>
 
     <BackstoryDef ParentName="SHG_VillainChildBackstoryBase">
@@ -51,6 +52,7 @@
         <forcedTraits>
             <TooSmart>0</TooSmart>
         </forcedTraits>
+        <spawnCategories><li>FormerVillain</li></spawnCategories>
     </BackstoryDef>
 
     <BackstoryDef ParentName="SHG_VillainChildBackstoryBase">
@@ -93,6 +95,7 @@
             <Medicine>5</Medicine>
             <Social>-4</Social>
         </skillGains>
+        <spawnCategories><li>FormerVillain</li></spawnCategories>
     </BackstoryDef>
 
     <BackstoryDef ParentName="SHG_VillainChildBackstoryBase">
@@ -105,6 +108,7 @@
             <Melee>2</Melee>
             <Shooting>2</Shooting>
         </skillGains>
+        <spawnCategories><li>FormerVillain</li></spawnCategories>
     </BackstoryDef>
 </Defs>
 
