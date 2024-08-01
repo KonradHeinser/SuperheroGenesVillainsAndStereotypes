@@ -12,6 +12,7 @@
         <title>tragic experiment</title>
         <titleShort>experiment</titleShort>
         <baseDesc>[PAWN_nameDef] volunteered for an experiment that was attempting to give all of the skills of a super-powered being into the head of a baseliner human. Unfortunately, the human brain was not intended to process information at the rate of a super, and everyone in the experiment either died, or became increasingly unstable.</baseDesc>
+        <spawnCategories><li>FormerVillain</li></spawnCategories>
         <skillGains>
             <Shooting>1</Shooting>
             <Melee>1</Melee>
@@ -71,7 +72,7 @@
         <defName>SHG_Villains_ShadowyAssassin</defName>
         <title>shadowy assassin</title>
         <titleShort>assassin</titleShort>
-        <baseDesc>[PAWN_nameDef] was trained by a league of assassins to become a weapon that didn't even need to be nearby to kill a target. This training resulted in [PAWN_objective] having difficulties interacting with others in a less violent way.</baseDesc>
+        <baseDesc>[PAWN_nameDef] was trained by a group of assassins to become a weapon that didn't even need to be nearby to kill a target. This training resulted in [PAWN_objective] having difficulties interacting with others in a less violent way.</baseDesc>
         <workDisables>
             <li>Caring</li>
             <li>Social</li>
@@ -103,6 +104,7 @@
         <title>mad scientist</title>
         <titleShort>scientist</titleShort>
         <baseDesc>[PAWN_nameDef] has an obsession with discovering new things that would be classified as unhealthy. For [PAWN_nameDef], their work is all that matters, and just the idea of sitting still makes them even twitchier.</baseDesc>
+        <spawnCategories><li>FormerVillain</li></spawnCategories>
         <workDisables>
             <li>Caring</li>
             <li>Social</li>
@@ -120,6 +122,7 @@
         <title>vengeful one</title>
         <titleShort>vengeful</titleShort>
         <baseDesc>[PAWN_nameDef] worked with a team of supers, and they worked quite well together despite how different [PAWN_pronoun] was from the rest of them. That all changed when some of the team decided to betray the everyone, leading to [PAWN_nameDef] beginning a quest of neverending vengence against the traitors who escaped. With most of [PAWN_possessive] teamates dead by the hands of those [PAWN_pronoun] thought of as friends, [PAWN_pronoun] vowed to never leave [PAWN_objective]self in a position where this could happen again.</baseDesc>
+        <spawnCategories><li>FormerVillain</li></spawnCategories>
         <skillGains>
             <Shooting>7</Shooting>
             <Melee>7</Melee>
