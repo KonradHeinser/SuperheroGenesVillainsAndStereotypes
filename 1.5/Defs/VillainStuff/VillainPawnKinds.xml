@@ -187,6 +187,7 @@
         <factionLeader>true</factionLeader>
         <combatPower>160</combatPower>
         <apparelTags>
+            <li>SpacerMilitary</li>
             <li>PrestigeCombatGear</li>
         </apparelTags>
         <apparelMoney>10000~12000</apparelMoney>
