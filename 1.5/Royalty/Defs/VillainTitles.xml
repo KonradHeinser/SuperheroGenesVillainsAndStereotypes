@@ -56,6 +56,9 @@
                     <li>RoyalTier2</li>
                 </requiredTags>
                 <allowedTags>
+                    <li>SpacerMilitary</li>
+                    <li>IndustrialMilitaryAdvanced</li>
+                    <li>MedievalMilitary</li>
                     <li>Cape</li>
                     <li>PrestigeCombatGear</li>
                     <li>Psychic</li>
@@ -71,6 +74,9 @@
                     <li>RoyalTier2</li>
                 </requiredTags>
                 <allowedTags>
+                    <li>SpacerMilitary</li>
+                    <li>IndustrialMilitaryAdvanced</li>
+                    <li>MedievalMilitary</li>
                     <li>PrestigeCombatGear</li>
                     <li>Psychic</li>
                     <li>Mechlord</li>
@@ -196,6 +202,9 @@
                     <li>RoyalTier2</li>
                 </requiredTags>
                 <allowedTags>
+                    <li>SpacerMilitary</li>
+                    <li>IndustrialMilitaryAdvanced</li>
+                    <li>MedievalMilitary</li>
                     <li>Cape</li>
                     <li>PrestigeCombatGear</li>
                     <li>Psychic</li>
@@ -211,6 +220,9 @@
                     <li>RoyalTier2</li>
                 </requiredTags>
                 <allowedTags>
+                    <li>SpacerMilitary</li>
+                    <li>IndustrialMilitaryAdvanced</li>
+                    <li>MedievalMilitary</li>
                     <li>PrestigeCombatGear</li>
                     <li>Psychic</li>
                     <li>Mechlord</li>
@@ -365,6 +377,9 @@
                     <li>RoyalTier2</li>
                 </requiredTags>
                 <allowedTags>
+                    <li>SpacerMilitary</li>
+                    <li>IndustrialMilitaryAdvanced</li>
+                    <li>MedievalMilitary</li>
                     <li>Cape</li>
                     <li>PrestigeCombatGear</li>
                     <li>Psychic</li>
@@ -380,6 +395,9 @@
                     <li>RoyalTier2</li>
                 </requiredTags>
                 <allowedTags>
+                    <li>SpacerMilitary</li>
+                    <li>IndustrialMilitaryAdvanced</li>
+                    <li>MedievalMilitary</li>
                     <li>PrestigeCombatGear</li>
                     <li>Psychic</li>
                     <li>Mechlord</li>
@@ -535,6 +553,9 @@
                     <li>RoyalTier2</li>
                 </requiredTags>
                 <allowedTags>
+                    <li>SpacerMilitary</li>
+                    <li>IndustrialMilitaryAdvanced</li>
+                    <li>MedievalMilitary</li>
                     <li>Cape</li>
                     <li>PrestigeCombatGear</li>
                     <li>Psychic</li>
@@ -563,6 +584,9 @@
                     <li>RoyalTier5</li>
                 </requiredTags>
                 <allowedTags>
+                    <li>SpacerMilitary</li>
+                    <li>IndustrialMilitaryAdvanced</li>
+                    <li>MedievalMilitary</li>
                     <li>PrestigeCombatGear</li>
                     <li>Psychic</li>
                     <li>Mechlord</li>
@@ -722,6 +746,9 @@
                     <li>RoyalTier2</li>
                 </requiredTags>
                 <allowedTags>
+                    <li>SpacerMilitary</li>
+                    <li>IndustrialMilitaryAdvanced</li>
+                    <li>MedievalMilitary</li>
                     <li>Cape</li>
                     <li>PrestigeCombatGear</li>
                     <li>Psychic</li>
@@ -736,6 +763,9 @@
                     <li>RoyalTier5</li>
                 </requiredTags>
                 <allowedTags>
+                    <li>SpacerMilitary</li>
+                    <li>IndustrialMilitaryAdvanced</li>
+                    <li>MedievalMilitary</li>
                     <li>Cape</li>
                     <li>PrestigeCombatGear</li>
                     <li>Psychic</li>
@@ -750,6 +780,9 @@
                     <li>RoyalTier6</li>
                 </requiredTags>
                 <allowedTags>
+                    <li>SpacerMilitary</li>
+                    <li>IndustrialMilitaryAdvanced</li>
+                    <li>MedievalMilitary</li>
                     <li>Cape</li>
                     <li>PrestigeCombatGear</li>
                     <li>Psychic</li>
@@ -765,6 +798,9 @@
                     <li>RoyalTier5</li>
                 </requiredTags>
                 <allowedTags>
+                    <li>SpacerMilitary</li>
+                    <li>IndustrialMilitaryAdvanced</li>
+                    <li>MedievalMilitary</li>
                     <li>PrestigeCombatGear</li>
                     <li>Psychic</li>
                     <li>Mechlord</li>
@@ -910,6 +946,9 @@
                     <li>RoyalTier2</li>
                 </requiredTags>
                 <allowedTags>
+                    <li>SpacerMilitary</li>
+                    <li>IndustrialMilitaryAdvanced</li>
+                    <li>MedievalMilitary</li>
                     <li>PrestigeCombatGear</li>
                     <li>Psychic</li>
                     <li>Mechlord</li>
@@ -923,6 +962,9 @@
                     <li>RoyalTier5</li>
                 </requiredTags>
                 <allowedTags>
+                    <li>SpacerMilitary</li>
+                    <li>IndustrialMilitaryAdvanced</li>
+                    <li>MedievalMilitary</li>
                     <li>PrestigeCombatGear</li>
                     <li>Psychic</li>
                     <li>Mechlord</li>
@@ -936,6 +978,9 @@
                     <li>RoyalTier6</li>
                 </requiredTags>
                 <allowedTags>
+                    <li>SpacerMilitary</li>
+                    <li>IndustrialMilitaryAdvanced</li>
+                    <li>MedievalMilitary</li>
                     <li>PrestigeCombatGear</li>
                     <li>Psychic</li>
                     <li>Mechlord</li>
@@ -1068,6 +1113,9 @@
                     <li>RoyalTier6</li>
                 </requiredTags>
                 <allowedTags>
+                    <li>SpacerMilitary</li>
+                    <li>IndustrialMilitaryAdvanced</li>
+                    <li>MedievalMilitary</li>
                     <li>PrestigeCombatGear</li>
                     <li>Psychic</li>
                     <li>Mechlord</li>
@@ -1094,6 +1142,9 @@
                     <li>RoyalTier6</li>
                 </requiredTags>
                 <allowedTags>
+                    <li>SpacerMilitary</li>
+                    <li>IndustrialMilitaryAdvanced</li>
+                    <li>MedievalMilitary</li>
                     <li>PrestigeCombatGear</li>
                     <li>Psychic</li>
                     <li>Mechlord</li>
@@ -1120,6 +1171,9 @@
                     <li>RoyalTier7</li>
                 </requiredTags>
                 <allowedTags>
+                    <li>SpacerMilitary</li>
+                    <li>IndustrialMilitaryAdvanced</li>
+                    <li>MedievalMilitary</li>
                     <li>PrestigeCombatGear</li>
                     <li>Psychic</li>
                     <li>Mechlord</li>
@@ -1145,6 +1199,9 @@
                     <li>RoyalTier7</li>
                 </requiredTags>
                 <allowedTags>
+                    <li>SpacerMilitary</li>
+                    <li>IndustrialMilitaryAdvanced</li>
+                    <li>MedievalMilitary</li>
                     <li>PrestigeCombatGear</li>
                     <li>Psychic</li>
                     <li>Mechlord</li>
