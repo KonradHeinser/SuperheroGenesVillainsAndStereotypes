@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-    <RoyalTitleDef Abstract="True" Name="SHG_VillainTitle" >
+    <RoyalTitleDef Abstract="True" Name="SHG_VillainTitle">
         <tags>
             <li>SHG_VillainTitle</li>
         </tags>
@@ -23,7 +22,7 @@
         <commonality>0</commonality>
     </RoyalTitleDef>
 
-    <!-- ============== Empire titles - Player gettable psycaster ============================= -->
+    <!-- ============== Villain Titles - Low to Medium Tier ============================= -->
 
     <RoyalTitleDef ParentName="SHG_VillainTitle">
         <defName>SHG_VillainTier1</defName>

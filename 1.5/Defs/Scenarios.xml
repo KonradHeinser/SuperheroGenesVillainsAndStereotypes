@@ -147,7 +147,7 @@
 
     <ScenarioDef>
         <defName>SHG_TheVengefulOne</defName>
-        <label>The Vengeful One</label> <!--If you're thinking "is that a reference", yes, yes it is-->
+        <label>The Vengeful One</label> <!--If you're thinking "is that a reference?", yes, yes it is-->
         <description>You thought you guys were a good team, but it seems the others felt differently about you. At first you tried to stay within the cities to clear your name, but it was to late, and after two months of running through the wilds you've run out of supplies. Now you must decide once more, forage some more supplies and continue running, or start working on a new base of operations.\n\nVengeful One's Will is a hediff that makes the pawn almost completely immune to mental breaks. This can be disabled in the Superhero Genes options menu.</description>
         <scenario>
             <summary>Betrayed, naked, alone, and enemies all around. Revenge will be had, but first you may want some pants.</summary>
@@ -192,7 +192,7 @@
                 <!-- Game start dialog -->
                 <li Class="ScenPart_GameStartDialog">
                     <def>GameStartDialog</def>
-                    <text>Their betrayal stung. Both figuratively and literally with all the fire and acid they used to try to remove all trace of your existance. You survived with minimal long term damage thanks to a supply depot you set up that had plenty of food and supplies.\n\nUnfortunately, what you managed to take with you from the depot has long since dried up, and now you must choose once more. Will your quest for vengence start here, or is this just another place to forage more food.\n\nIf you choose to settle here the nearby Villain Gang may take note of you, and if you play your cards right you may be able to use that.</text>
+                    <text>Their betrayal stung. Both figuratively and literally with all the fire and acid they used to try to remove all trace of your existance. You survived with minimal long term damage thanks to a supply depot you set up that had plenty of food and supplies.\n\nUnfortunately, what you managed to take with you from the depot has long since dried up, and now you must choose once more. Will your quest for vengence start here, or is this just another place to forage more food.</text>
                     <closeSound>GameStartSting</closeSound>
                 </li>
             </parts>
@@ -241,7 +241,6 @@
         <defName>SHG_TheVengefulOne</defName>
         <label>vengeful one's will</label>
         <description>This pawn lives on for a singular purpose, to kill those who betrayed them. This focus makes it nigh impossible to break their will, no matter what comes their way.</description>
-		<hediffClass>HediffWithComps</hediffClass>
         <stages>
 			<li>
                 <statFactors>
