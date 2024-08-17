@@ -81,7 +81,7 @@
                     <reason>SHG_VillainStart</reason>
                 </li>
 
-                <!-- Villain Gang becomes less hostile -->
+                <!-- Villain Gang becomes a lot less hostile -->
                 <li Class="QuestNode_ChangeFactionGoodwill">
                     <faction>SuperVillainGang</faction>
                     <change>100</change>
