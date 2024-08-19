@@ -6,8 +6,10 @@
     <SHG_Villains_ModName>Superhero Genes - Villains and Stereotypes</SHG_Villains_ModName>
     <SHG_Villains_ModDescription>Combine enough greed with a group of superheroes, and you may find yourself with a planetary threat. Supervillain gangs create small encampments across the land to act as a base to return to when they get bored of raiding. Many of these camps band together to create one massive nigh-unstoppable Villain Gang, the League of Villains.\n\nWhile the League has no qualms taking the world for their own, they may reward those that commit villainous deeds, especially if those deeds leave leveled settlements in their wake.\n\nSecond mod of the Superhero Genes series.</SHG_Villains_ModDescription>
 
-    <SHG_MedievalVillains>    Medieval Villains (Restart Required)</SHG_MedievalVillains>
+    <SHG_MedievalVillains>    Medieval Villains</SHG_MedievalVillains>
     <SHG_MedievalVillainsDescription>Villains will only use equipment with a technology level of medieval or lower.</SHG_MedievalVillainsDescription>
-    <SHG_VengefulOne>    Vengeful One Hediff (Restart Required)</SHG_VengefulOne>
+    <SHG_VengefulOne>    Vengeful One Hediff</SHG_VengefulOne>
     <SHG_VengefulOneDescription>While enabled, the "The Vengeful One" scenario gives a bonus to the pawn that sets their mental break threshold to always be the lowest possible value. While the hediff shows 0, there is always a small threshold that remains.</SHG_VengefulOneDescription>
+    <SHG_MutationsAnywhere>    Mutations Anywhere</SHG_MutationsAnywhere>
+    <SHG_MutationsAnywhereDescription>Gives all non-custom xenotypes affected by supers everywhere the same chance of having a random mutation as any other type of super.</SHG_MutationsAnywhereDescription>
 </LanguageData>

@@ -214,9 +214,18 @@
                     <mustBeWorldPawn>true</mustBeWorldPawn> <!-- because we want to spawn him -->
                 </li>
 
-                <!-- Empire becomes hostile -->
+                <!-- Empire and The Hero Organization become hostile -->
                 <li Class="QuestNode_ChangeFactionGoodwill">
                     <faction>Empire</faction>
+                    <change>-100</change>
+                    <canSendLetter>false</canSendLetter>
+                    <canSendMessage>false</canSendMessage>
+                    <ensureHostile>true</ensureHostile>
+                    <reason>SHG_VillainEnd</reason>
+                </li>
+
+                <li Class="QuestNode_ChangeFactionGoodwill" MayRequire="SuperheroGenes.Heroes">
+                    <faction>SHG_SuperheroOrganization</faction>
                     <change>-100</change>
                     <canSendLetter>false</canSendLetter>
                     <canSendMessage>false</canSendMessage>
