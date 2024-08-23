@@ -170,10 +170,10 @@
                 <li>QuestHospitalityCommon</li>
             </include>
             <rulesStrings>
-                <li>questDescription->[intro]The [asker_faction_leaderTitle] of [asker_faction_name] has a plan for how to claim this world permanently for [asker_faction_name]. [asker_faction_name] has been collecting biological weapons in each of their settlements, and intend to place them in cities all over the world. What [asker_nameFull] needs from you is a distraction. [asker_pronoun] will stay in the colony for [shuttleDelayTicks_duration] to act as a distraction for the Empire, after which a shuttle will come to pick up everyone in the colony who doesn't want to die a painful death. 
+                <li>questDescription->[intro]The [asker_faction_leaderTitle] of [asker_faction_name] has a plan for how to claim this world permanently. [asker_faction_name] has been collecting biological weapons in each of their settlements, and needs you to help be a distraction. [asker_pronoun] will stay in the colony for [shuttleDelayTicks_duration] to help you distract for the Empire, after which a shuttle will come to pick up everyone in the colony who doesn't want to die a painful death. 
                 \nBecoming a Tier 9 villain is difficult, usually requiring you complete a large number of quests for [asker_faction_name] that earn [asker_faction_royalFavorLabel]. This will likely take years upon years of work, but that delay may help give sufficient time to prepare for the bombardment of refined bovine waste the Empire will be sending your way.
                 \nTo make the bait believable, you must make 5 additional bedrooms befitting a Tier 9 villain. While it is best to keep the moods of your guests high, the [asker_faction_leaderTitle] knows that the ensuing conflict will make life difficult for everyone.
-                \nA lot of raids will come to try to kill the [asker_faction_leaderTitle], and will attack with great intensity. This quest is more than twice as hard as the Royal Ascent quest that the Empire offers, so you should probably have lot of supers and good defenses. In addition to there being more raids than Royal Ascent, your enemy is the Empire, who tend to be much better equipped than some random pirates.
+                \nA lot of raids will come to try to kill the [asker_faction_leaderTitle], and will attack with great intensity. This quest is more than twice as hard as the Royal Ascent quest that the Empire offers, so prepare carefully. In addition to there being more raids than Royal Ascent, your enemy is the Empire, who tend to be better equipped than some random pirates.
                 \nThe [asker_faction_leaderTitle] will bring four other Tier 9 villains to make the bait more enticing and place them under your command. You must house these guards, but the [asker_faction_leaderTitle] will not complain if they are killed or unhappy.
                 \nYou must keep the visitors at [map_definite] and not send them anywhere else. If you fail this quest or migrate, you will have another chance at it later.</li>
 
@@ -237,7 +237,7 @@
                 <li Class="QuestNode_GetFaction">
                     <storeAs>faction</storeAs>
                     <ofPawn>$asker</ofPawn>
-                    <allowEnemy>true</allowEnemy>
+                    <allowEnemy>false</allowEnemy>
                     <allowNeutral>true</allowNeutral>
                     <allowAlly>true</allowAlly>
                 </li>
@@ -283,9 +283,12 @@
                 <!-- Add a home faction to lodgers -->
                 <li Class="QuestNode_ExtraFaction">
                     <pawns>$lodgers</pawns>
-                    <faction>SuperVillainGang</faction>
+                    <factionOf>$asker</factionOf>
                     <factionType>HomeFaction</factionType>
-                    <inSignalRemovePawn>lodgers.RanWild</inSignalRemovePawn>
+                    <inSignalsRemovePawn>
+                        <li>lodgers.RanWild</li>
+                        <li>lodgers.BecameMutant</li>
+                    </inSignalsRemovePawn>
                 </li>
 
                 <!-- Lock their apparel -->
