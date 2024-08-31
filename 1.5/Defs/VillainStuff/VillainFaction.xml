@@ -219,3 +219,14 @@
         </caravanTraderKinds>
     </FactionDef>
 </Defs>
+
+<!-- Saving for misfits faction
+        <backstoryFilters>
+            <li>
+                <categories>
+                    <li>FormerHero</li>
+                    <li>FormerVillain</li>
+                </categories>
+            </li>
+        </backstoryFilters>
+-->
