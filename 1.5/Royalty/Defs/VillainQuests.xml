@@ -147,7 +147,7 @@
         <label>started Armageddon</label>
     </HistoryEventDef>
 
-    <GameConditionDef>
+    <GameConditionDef Name="SHG_ArmageddonClock">
         <defName>SHG_ArmageddonClock</defName>
         <conditionClass>SuperHeroGenesBase.GameCondition_ArmageddonClock</conditionClass>
         <label>armageddon</label>
@@ -185,6 +185,13 @@
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
             <nodes>
+                <li Class="SuperHeroGenesBase.QuestNode_NotAllowedIfOthersPassed">
+                    <quests>
+                        <li MayRequire="SuperheroGenes.Heroes">SHGHero_EndGame_LeagueGathering</li>
+                        <li MayRequire="SuperheroGenes.Heroes">SHGHero_EndGame_StopTheLeague</li>
+                    </quests>
+                </li>
+
                 <li Class="QuestNode_GetMap" />
 
                 <!-- End if map removed before the quest is accepted -->
@@ -360,6 +367,14 @@
                     </node>
                 </li>
 
+                <li Class="SuperHeroGenesBase.QuestNode_FailOtherQuests">
+                    <inSignal>endQuests</inSignal>
+                    <quests>
+                        <li MayRequire="SuperheroGenes.Heroes">SHGHero_EndGame_LeagueGathering</li>
+                        <li MayRequire="SuperheroGenes.Heroes">SHGHero_EndGame_StopTheLeague</li>
+                    </quests>
+                </li>
+
                 <!-- Shuttle -->
                 <li Class="QuestNode_Set">
                     <name>shuttleDelayTicks</name>
@@ -379,6 +394,11 @@
                                     <overrideMass>999999999</overrideMass>
                                 </parms>
                             </li>
+                            <li Class="QuestNode_SendSignals">
+                                <outSignals>
+                                  <li>endQuests</li>
+                                </outSignals>
+                              </li>
                             <li Class="QuestNode_InspectString">
                                 <targets>$asker</targets>
                                 <inspectString TKey="InspectStringDepartShuttle">Should depart on shuttle</inspectString>

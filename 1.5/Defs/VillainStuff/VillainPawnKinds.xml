@@ -4,6 +4,7 @@
         <race>Human</race>
         <defaultFactionType>SuperVillainGang</defaultFactionType>
         <chemicalAddictionChance>0.1</chemicalAddictionChance>
+        <useFactionXenotypes>false</useFactionXenotypes>
         <invNutrition>2.55</invNutrition>
         <itemQuality>Normal</itemQuality>
         <backstoryCryptosleepCommonality>0.08</backstoryCryptosleepCommonality>
