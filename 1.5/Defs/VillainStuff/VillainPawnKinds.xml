@@ -15,6 +15,13 @@
         <biocodeWeaponChance>0.1</biocodeWeaponChance>
         <initialWillRange>3~5</initialWillRange>
         <initialResistanceRange>15~23</initialResistanceRange>
+        <xenotypeSet Inherit="False">
+            <xenotypeChances>
+                <SHG_RandomMundaneSuper>.10</SHG_RandomMundaneSuper>
+                <SHG_RandomSupportSuper>.15</SHG_RandomSupportSuper>
+                <SHG_RandomSummonerSuper>.05</SHG_RandomSummonerSuper>
+            </xenotypeChances>
+        </xenotypeSet>
     </PawnKindDef>
 
     <PawnKindDef ParentName="SHG_VillainBase">
