@@ -197,6 +197,38 @@
 		</modExtensions>
     </GeneDef>
 
+    <GeneDef ParentName="RandomSuperGene" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+        <defName>SHG_RandomPsionist</defName>
+        <label>random psionist</label>
+        <description>Gives a random psionic path and either the moonbound or the sunbound flaw. This does not require the superhero base gene, and instead requires the Psionist gene.\n\nSome genes from the path will not be obtained through this to reduce some of the metabolic balancing that needs done. The main focus when picking these genes was to focus on genes that have similar upgraded variants, or lower variants that are more consistently usable (i.e. the psionic commander doesn't gain Inspire and Encourage because the highest level version (Rally) provides the same benefits, albeit with a more expensive ability).</description>
+        <displayCategory>SHG_XenotypeRandomizer</displayCategory>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <prerequisite>SHG_Archetypes_Psionist</prerequisite>
+        <iconPath>Archetypes/Gene_Psionist</iconPath>
+        <biostatMet>-6</biostatMet>
+        <exclusionTags>
+            <li>SHG_Flaw_BoundPsionist</li>
+            <li>SHG_PsionicCommander</li>
+            <li>SHG_PsionicDebuffer</li>
+            <li>SHG_DimensionalPsionist</li>
+            <li>SHG_PsionicEmpath</li>
+            <li>SHG_PsionicGuardian</li>
+            <li>SHG_PsionicSoldier</li>
+            <li>SHG_PsionicTyrant</li>
+            <li>SHG_RandomPsionist</li>
+        </exclusionTags>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+                <noHediffRemoval>True</noHediffRemoval>
+				<hediffsToApply>
+                    <li><hediff>SHG_RandomPsionist</hediff></li>
+                    <li><hediff>SHG_RandomPsionicFlaw</hediff></li>
+                </hediffsToApply>
+			</li>
+		</modExtensions>
+
+    </GeneDef>
+
     <GeneDef ParentName="SuperMutationsBase">
         <defName>SHG_RandomMutation</defName>
         <label>potential mutation</label>
