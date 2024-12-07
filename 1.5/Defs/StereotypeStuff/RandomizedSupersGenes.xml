@@ -255,14 +255,14 @@
         <description>Gives a random radiomancy path. This does not require the superhero base gene, and instead requires the Radiomancer gene. The easiest way to counter the very large metabolic cost is to take the Overcharged Pocket flaw, though that will increase the risk of things going south fast if the pawn dies.\n\nUnlike the other supreme archetypes, All genes of each path is taken, and Ever Evolving is always gained regardless of the path picked.\n\nDue to the nature of the Radiomancer paths, this gene will not prevent you from taking individual genes from those paths, but in the event that you picked a gene that this attempted to pick, that part of the randomization will be skipped, resulting in fewer genes than expected.</description>
         <displayCategory>SHG_XenotypeRandomizer</displayCategory>
         <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
-        <prerequisite>SHG_Archetypes_Hemomancer</prerequisite>
+        <prerequisite>SHG_Archetypes_Radiomancer</prerequisite>
         <iconPath>Archetypes/Gene_Radiomancer</iconPath>
         <biostatMet>-8</biostatMet>
-        <conflictingGenes>
-            <li>SHG_Radiomancer_EverEvolving</li>
-        </conflictingGenes>
         <modExtensions>
 			<li Class="SuperHeroGenesBase.SHGExtension">
+                <conflictingGenes>
+                    <li>SHG_Radiomancer_EverEvolving</li>
+                </conflictingGenes>
 				<hediffsToApply>
                     <li><hediff>SHG_RandomRadiomancer</hediff></li>
                 </hediffsToApply>
