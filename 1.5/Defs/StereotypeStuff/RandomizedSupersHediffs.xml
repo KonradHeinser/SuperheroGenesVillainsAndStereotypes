@@ -490,6 +490,63 @@
         </comps>
     </HediffDef>
 
+    <HediffDef ParentName="SHG_XenotypeRandomizerHediff">
+        <defName>SHG_RandomHemomancer</defName>       
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet">
+                <alwaysRemovedGenes>
+                    <li>SHG_RandomHemomancer</li>
+                </alwaysRemovedGenes>
+                <geneSets>
+                    <li> <!--Initiate-->
+                        <geneSet>
+                            <li>SHG_Hemomancer_Initiate</li>
+                            <li>SHG_Hemomancer_Priest</li>
+                            <li>SHG_Hemomancer_Praise</li>
+                            <li>SHG_Hemomancer_TheGiftOfBlood</li>
+                            <li>SHG_Hemomancer_ReplenishBlood</li>
+                            <li>SHG_Hemomancer_BloodCloud</li>
+                            <li>SHG_Hemomancer_Hemoclotting</li>
+                        </geneSet>
+                    </li>
+                    <li> <!--Shifter-->
+                        <geneSet>
+                            <li>SHG_Hemomancer_Shifter</li>
+                            <li>SHG_Hemomancer_Morph</li>
+                            <li>SHG_Hemomancer_Chameleon</li>
+                            <li>SHG_Hemomancer_Bear</li>
+                            <li>SHG_Hemomancer_Snake</li>
+                            <li>SHG_Hemomancer_Starfish</li>
+                            <li>SHG_Hemomancer_Turtle</li>
+                        </geneSet>
+                    </li>
+                    <li> <!--Thief-->
+                        <geneSet>
+                            <li>SHG_Hemomancer_Thief</li>
+                            <li>SHG_Hemomancer_Reaper</li>
+                            <li>SHG_Hemomancer_Drain</li>
+                            <li>SHG_Hemomancer_Reap</li>
+                            <li>SHG_Hemomancer_Sow</li>
+                            <li>SHG_Hemomancer_BloodBoil</li>
+                            <li>SHG_Hemomancer_MarkForDeath</li>
+                        </geneSet>
+                    </li>
+                    <li> <!--Warrior-->
+                        <geneSet>
+                            <li>SHG_Hemomancer_Warrior</li>
+                            <li>SHG_Hemomancer_Champion</li>
+                            <li>SHG_Hemomancer_BloodClaws</li>
+                            <li>SHG_Hemomancer_BloodArmor</li>
+                            <li>SHG_Hemomancer_BloodInfusement</li>
+                            <li>SHG_Hemomancer_BloodSpear</li>
+                            <li>SHG_Hemomancer_TrueRegeneration</li>
+                        </geneSet>
+                    </li>
+                </geneSets>
+            </li>
+        </comps>
+    </HediffDef>
+
 
     <HediffDef ParentName="SHG_XenotypeRandomizerHediff">
         <defName>SHG_RandomMutation</defName>       

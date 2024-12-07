@@ -226,7 +226,9 @@
         <techHediffsChance>1</techHediffsChance>
         <xenotypeSet Inherit="False">
             <xenotypeChances>
-                <SHG_RandomMundaneMancer>.20</SHG_RandomMundaneMancer>
+                <SHG_RandomMundaneMancer>.85</SHG_RandomMundaneMancer>
+                <SHG_RandomPsionist MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">0.05</SHG_RandomPsionist>
+                <SHG_RandomHemomancer>0.05</SHG_RandomHemomancer>
             </xenotypeChances>
         </xenotypeSet>
     </PawnKindDef>

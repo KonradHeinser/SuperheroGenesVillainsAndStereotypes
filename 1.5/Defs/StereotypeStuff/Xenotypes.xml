@@ -84,4 +84,33 @@
             <li>SHG_RandomMutation</li>
         </genes>
     </XenotypeDef>
+
+    <XenotypeDef MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+        <defName>SHG_RandomPsionist</defName>
+        <label>psionist</label>
+        <description>While psionist aren't genetically considered supers, their ability to use their innate psychic abilities to accomplish unbelievable feats cause them to be labelled super anyway. While their overall combative power tends to vary a lot, they are nearly unmatched when it comes to their specialty.</description>
+        <inheritable>true</inheritable>
+        <iconPath>RandomPsionist</iconPath>
+        <combatPowerFactor>5</combatPowerFactor>
+        <genes>
+            <li>SHG_Archetypes_Psionist</li>
+            <li>SHG_RandomPsionist</li>
+            <li>Learning_Slow</li>
+        </genes>
+    </XenotypeDef>
+
+    <XenotypeDef>
+        <defName>SHG_RandomHemomancer</defName>
+        <label>hemomancer</label>
+        <description>Hemomancers are the result of a genetic blend between supers and sanguophages. While this blend has lost them many of the innate strengths of the superhero gene, they make up for this with a control over blood that sanguophages could only dream of. The only downside to this is the fact that they also burn through hemogen faster than a sanguophage, and have a constant bloodlust greater than a hussar's.</description>
+        <inheritable>true</inheritable>
+        <iconPath>RandomPsionist</iconPath>
+        <combatPowerFactor>7</combatPowerFactor>
+        <genes>
+            <li>SHG_Archetypes_Hemomancer</li>
+            <li>SHG_RandomHemomancer</li>
+            <li>SHG_Flaw_Bloodthirsty</li>
+        </genes>
+    </XenotypeDef>
+
 </Defs>

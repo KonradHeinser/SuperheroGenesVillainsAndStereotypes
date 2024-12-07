@@ -215,7 +215,6 @@
             <li>SHG_PsionicGuardian</li>
             <li>SHG_PsionicSoldier</li>
             <li>SHG_PsionicTyrant</li>
-            <li>SHG_RandomPsionist</li>
         </exclusionTags>
         <modExtensions>
 			<li Class="SuperHeroGenesBase.SHGExtension">
@@ -226,7 +225,30 @@
                 </hediffsToApply>
 			</li>
 		</modExtensions>
+    </GeneDef>
 
+    <GeneDef ParentName="RandomSuperGene">
+        <defName>SHG_RandomHemomancer</defName>
+        <label>random hemomancer</label>
+        <description>Gives a random hemomancy path. This does not require the superhero base gene, and instead requires the Hemomancer gene.\n\nSome genes from the path will not be obtained through this to reduce some of the metabolic balancing that needs done. The core purpose of the path will still be achievable, but some of the abilities more focused on more niche purposes will not be obtainable through this.\n\nThe easiest way to counter the very large metabolic cost is to take the Bloodthirsty flaw, though the hemogen loss that causes can make things more difficult early on.</description>
+        <displayCategory>SHG_XenotypeRandomizer</displayCategory>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <prerequisite>SHG_Archetypes_Hemomancer</prerequisite>
+        <iconPath>Archetypes/Gene_Hemomancer</iconPath>
+        <biostatMet>-7</biostatMet>
+        <exclusionTags>
+            <li>SHG_HemomancerInitiate</li>
+            <li>SHG_HemomancerShifter</li>
+            <li>SHG_HemomancerThief</li>
+            <li>SHG_HemomancerWarrior</li>
+        </exclusionTags>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply>
+                    <li><hediff>SHG_RandomHemomancer</hediff></li>
+                </hediffsToApply>
+			</li>
+		</modExtensions>
     </GeneDef>
 
     <GeneDef ParentName="SuperMutationsBase">
