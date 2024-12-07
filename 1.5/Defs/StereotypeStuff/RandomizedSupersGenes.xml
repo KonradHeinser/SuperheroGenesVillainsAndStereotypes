@@ -200,12 +200,12 @@
     <GeneDef ParentName="RandomSuperGene" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
         <defName>SHG_RandomPsionist</defName>
         <label>random psionist</label>
-        <description>Gives a random psionic path and either the moonbound or the sunbound flaw. This does not require the superhero base gene, and instead requires the Psionist gene.\n\nSome genes from the path will not be obtained through this to reduce some of the metabolic balancing that needs done. The main focus when picking these genes was to focus on genes that have similar upgraded variants, or lower variants that are more consistently usable (i.e. the psionic commander doesn't gain Inspire and Encourage because the highest level version (Rally) provides the same benefits, albeit with a more expensive ability).</description>
+        <description>Gives a random psionic path. This does not require the superhero base gene, and instead requires the Psionist gene. If you are having issues countering the metabolic efficiency, you can try taking the moonbound or sunbound flaw.\n\nSome genes from the path will not be obtained through this to reduce some of the metabolic balancing that needs done. The main focus when picking these genes was to focus on genes that have similar upgraded variants, or lower variants that are more consistently usable (i.e. the psionic commander doesn't gain Inspire and Encourage because the highest level version (Rally) provides the same benefits, albeit with a more expensive ability).</description>
         <displayCategory>SHG_XenotypeRandomizer</displayCategory>
         <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
         <prerequisite>SHG_Archetypes_Psionist</prerequisite>
         <iconPath>Archetypes/Gene_Psionist</iconPath>
-        <biostatMet>-6</biostatMet>
+        <biostatMet>-8</biostatMet>
         <exclusionTags>
             <li>SHG_Flaw_BoundPsionist</li>
             <li>SHG_PsionicCommander</li>
@@ -218,10 +218,8 @@
         </exclusionTags>
         <modExtensions>
 			<li Class="SuperHeroGenesBase.SHGExtension">
-                <noHediffRemoval>True</noHediffRemoval>
 				<hediffsToApply>
                     <li><hediff>SHG_RandomPsionist</hediff></li>
-                    <li><hediff>SHG_RandomPsionicFlaw</hediff></li>
                 </hediffsToApply>
 			</li>
 		</modExtensions>
@@ -230,7 +228,7 @@
     <GeneDef ParentName="RandomSuperGene">
         <defName>SHG_RandomHemomancer</defName>
         <label>random hemomancer</label>
-        <description>Gives a random hemomancy path. This does not require the superhero base gene, and instead requires the Hemomancer gene.\n\nSome genes from the path will not be obtained through this to reduce some of the metabolic balancing that needs done. The core purpose of the path will still be achievable, but some of the abilities more focused on more niche purposes will not be obtainable through this.\n\nThe easiest way to counter the very large metabolic cost is to take the Bloodthirsty flaw, though the hemogen loss that causes can make things more difficult early on.</description>
+        <description>Gives a random hemomancy path. This does not require the superhero base gene, and instead requires the Hemomancer gene. The easiest way to counter the very large metabolic cost is to take the Bloodthirsty flaw, though the hemogen loss that causes can make things more difficult early on.\n\nSome genes from the path will not be obtained through this to reduce some of the metabolic balancing that needs done. The core purpose of the path will still be achievable, but some of the abilities more focused on more niche purposes will not be obtainable through this.</description>
         <displayCategory>SHG_XenotypeRandomizer</displayCategory>
         <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
         <prerequisite>SHG_Archetypes_Hemomancer</prerequisite>
@@ -246,6 +244,27 @@
 			<li Class="SuperHeroGenesBase.SHGExtension">
 				<hediffsToApply>
                     <li><hediff>SHG_RandomHemomancer</hediff></li>
+                </hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="RandomSuperGene">
+        <defName>SHG_RandomRadiomancer</defName>
+        <label>random radiomancer</label>
+        <description>Gives a random radiomancy path. This does not require the superhero base gene, and instead requires the Radiomancer gene. The easiest way to counter the very large metabolic cost is to take the Overcharged Pocket flaw, though that will increase the risk of things going south fast if the pawn dies.\n\nUnlike the other supreme archetypes, All genes of each path is taken, and Ever Evolving is always gained regardless of the path picked.\n\nDue to the nature of the Radiomancer paths, this gene will not prevent you from taking individual genes from those paths, but in the event that you picked a gene that this attempted to pick, that part of the randomization will be skipped, resulting in fewer genes than expected.</description>
+        <displayCategory>SHG_XenotypeRandomizer</displayCategory>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <prerequisite>SHG_Archetypes_Hemomancer</prerequisite>
+        <iconPath>Archetypes/Gene_Radiomancer</iconPath>
+        <biostatMet>-8</biostatMet>
+        <conflictingGenes>
+            <li>SHG_Radiomancer_EverEvolving</li>
+        </conflictingGenes>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply>
+                    <li><hediff>SHG_RandomRadiomancer</hediff></li>
                 </hediffsToApply>
 			</li>
 		</modExtensions>

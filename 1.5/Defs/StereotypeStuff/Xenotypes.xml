@@ -113,4 +113,32 @@
         </genes>
     </XenotypeDef>
 
+    <XenotypeDef>
+        <defName>SHG_RandomHemomancer</defName>
+        <label>hemomancer</label>
+        <description>Hemomancers are the result of a genetic blend between supers and sanguophages. While this blend has lost them many of the innate strengths of the superhero gene, they make up for this with a control over blood that sanguophages could only dream of. The only downside to this is the fact that they also burn through hemogen faster than a sanguophage, and have a constant bloodlust greater than a hussar's.</description>
+        <inheritable>true</inheritable>
+        <iconPath>RandomHemomancer</iconPath>
+        <combatPowerFactor>7</combatPowerFactor>
+        <genes>
+            <li>SHG_Archetypes_Hemomancer</li>
+            <li>SHG_RandomHemomancer</li>
+            <li>SHG_Flaw_Bloodthirsty</li>
+        </genes>
+    </XenotypeDef>
+
+    <XenotypeDef>
+        <defName>SHG_RandomRadiomancer</defName>
+        <label>radiomancer</label>
+        <description>Radiomancers are a genetic offshoot of supers that exchanged their innate strengths for overwhelmingly destructive power. Their powers range from the overt explosions to more subversive energy drains and body enhancements. In the event of their death, their body releases an explosion that will destroy anything not behind a wall, and in some cases it can even go through the wall.</description>
+        <inheritable>true</inheritable>
+        <iconPath>RandomRadiomancer</iconPath>
+        <combatPowerFactor>10</combatPowerFactor>
+        <genes>
+            <li>SHG_Archetypes_Radiomancer</li>
+            <li>SHG_RandomRadiomancer</li>
+            <li>SHG_Flaw_OverchargedPocket</li>
+        </genes>
+    </XenotypeDef>
+
 </Defs>

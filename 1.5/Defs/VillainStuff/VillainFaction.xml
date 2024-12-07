@@ -38,6 +38,7 @@
                 <SHG_RandomSummonerSuper>.05</SHG_RandomSummonerSuper>
                 <SHG_RandomPsionist MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">0.01</SHG_RandomPsionist>
                 <SHG_RandomHemomancer>0.01</SHG_RandomHemomancer>
+                <SHG_RandomRadiomancer>0.01</SHG_RandomRadiomancer>
             </xenotypeChances>
         </xenotypeSet>
         <allowedCultures><li>Astropolitan</li></allowedCultures>

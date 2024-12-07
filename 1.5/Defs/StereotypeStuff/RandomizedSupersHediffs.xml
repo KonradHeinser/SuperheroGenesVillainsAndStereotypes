@@ -547,6 +547,70 @@
         </comps>
     </HediffDef>
 
+    <HediffDef ParentName="SHG_XenotypeRandomizerHediff">
+        <defName>SHG_RandomRadiomancer</defName>       
+        <comps>
+            <li Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet">
+                <alwaysAddedGenes>
+                    <li>SHG_Radiomancer_EverEvolving</li>
+                </alwaysAddedGenes>
+                <alwaysRemovedGenes>
+                    <li>SHG_RandomRadiomancer</li>
+                </alwaysRemovedGenes>
+                <removeGenesFromOtherLists>False</removeGenesFromOtherLists>
+                <geneSets>
+                    <li> <!--Decay-->
+                        <geneSet>
+                            <li>SHG_Radiomancer_CellularDestabilization</li>
+                            <li>SHG_Radiomancer_DrainEnergy</li>
+                            <li>SHG_Radiomancer_WeakenSkin</li>
+                            <li>SHG_Radiomancer_SapStrength</li>
+                            <li>SHG_Radiomancer_DrainLife</li>
+                            <li>SHG_Radiomancer_SlowSynapses</li>
+                            <li>SHG_Radiomancer_RapidAging</li>
+                            <li>SHG_Radiomancer_DangerousAura</li>
+                        </geneSet>
+                    </li>
+                    <li> <!--Emission-->
+                        <geneSet>
+                            <li>SHG_Radiomancer_ExplosiveBlows</li>
+                            <li>SHG_Radiomancer_InstantRecharge</li>
+                            <li>SHG_Radiomancer_LimitlessPotential</li>
+                            <li>SHG_Radiomancer_NuclearWinter</li>
+                            <li>SHG_Radiomancer_Detonation</li>
+                            <li>SHG_Radiomancer_AshesToAshes</li>
+                            <li>SHG_Radiomancer_DustToDust</li>
+                            <li>SHG_Radiomancer_IAmBecomeDeath</li>
+                        </geneSet>
+                    </li>
+                    <li> <!--Fission-->
+                        <geneSet>
+                            <li>SHG_Radiomancer_RampantRegeneration</li>
+                            <li>SHG_Radiomancer_MiniatureSun</li>
+                            <li>SHG_Radiomancer_ExcitableCells</li>
+                            <li>SHG_Radiomancer_Mutate</li>
+                            <li>SHG_Radiomancer_ReformPart</li>
+                            <li>SHG_Radiomancer_ReverseAging</li>
+                            <li>SHG_Radiomancer_RefocusEnergy</li>
+                        </geneSet>
+                    </li>
+                    <li> <!--Fusion-->
+                        <geneSet>
+                            <li>SHG_Radiomancer_Bioreactor</li>
+                            <li>SHG_Radiomancer_InfusedMuscles</li>
+                            <li>SHG_Radiomancer_EnergizedNeurons</li>
+                            <li>SHG_Radiomancer_EnergyArmor</li>
+                            <li>SHG_Radiomancer_CondenseRadiation</li>
+                            <li>SHG_Radiomancer_SolarRecharging</li>
+                            <li>SHG_Radiomancer_SolarRegeneration</li>
+                            <li>SHG_Radiomancer_UndyingSun</li>
+                        </geneSet>
+                    </li>
+                </geneSets>
+            </li>
+        </comps>
+    </HediffDef>
+
 
     <HediffDef ParentName="SHG_XenotypeRandomizerHediff">
         <defName>SHG_RandomMutation</defName>       
