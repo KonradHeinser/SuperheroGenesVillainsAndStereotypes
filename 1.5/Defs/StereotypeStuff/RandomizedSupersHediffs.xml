@@ -402,7 +402,6 @@
                             <li>SHG_Psionist_Commander</li>
                             <li>SHG_Psionist_CommanderGeneral</li>
                             <li>SHG_Psionist_CommanderParagon</li>
-                            <li>SHG_Psionist_FortifyPosition</li>
                             <li>SHG_Psionist_AssassinSquad</li>
                             <li>SHG_Psionist_MassLevitation</li>
                             <li>SHG_Psionist_MassProtection</li>
@@ -416,7 +415,6 @@
                             <li>SHG_Psionist_DebufferRuiner</li>
                             <li>SHG_Psionist_TunnelVisionAura</li>
                             <li>SHG_Psionist_MolassesAura</li>
-                            <li>SHG_Psionist_EnergyBurnerAura</li>
                             <li>SHG_Psionist_NauseousAura</li>
                             <li>SHG_Psionist_SiphonAura</li>
                         </geneSet>
@@ -429,7 +427,6 @@
                             <li>SHG_Psionist_Ocean</li>
                             <li>SHG_Psionist_ViolentGas</li>
                             <li>SHG_Psionist_IcePlanet</li>
-                            <li>SHG_Psionist_Eldritch</li>
                             <li>SHG_Psionist_Utopia</li>
                         </geneSet>
                     </li>
@@ -438,7 +435,6 @@
                             <li>SHG_Psionist_Empath</li>
                             <li>SHG_Psionist_EmpathPlacater</li>
                             <li>SHG_Psionist_EmpathUnifier</li>
-                            <li>SHG_Psionist_PsionicManipulator</li>
                             <li>SHG_Psionist_DropTheirGuard</li>
                             <li>SHG_Psionist_UniversallyLiked</li>
                             <li>SHG_Psionist_UnshakableTeam</li>
@@ -451,7 +447,6 @@
                             <li>SHG_Psionist_GuardianWarden</li>
                             <li>SHG_Psionist_GuardianProtector</li>
                             <li>SHG_Psionist_Nimble</li>
-                            <li>SHG_Psionist_Industrious</li>
                             <li>SHG_Psionist_ToxicResistance</li>
                             <li>SHG_Psionist_Armor</li>
                             <li>SHG_Psionist_Life</li>

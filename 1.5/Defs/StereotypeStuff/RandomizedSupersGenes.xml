@@ -205,9 +205,8 @@
         <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
         <prerequisite>SHG_Archetypes_Psionist</prerequisite>
         <iconPath>Archetypes/Gene_Psionist</iconPath>
-        <biostatMet>-8</biostatMet>
+        <biostatMet>-7</biostatMet>
         <exclusionTags>
-            <li>SHG_Flaw_BoundPsionist</li>
             <li>SHG_PsionicCommander</li>
             <li>SHG_PsionicDebuffer</li>
             <li>SHG_DimensionalPsionist</li>
