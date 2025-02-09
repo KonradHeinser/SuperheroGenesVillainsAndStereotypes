@@ -94,7 +94,6 @@
                     <li>Map_PlayerHome</li>
                 </allowedTargetTags>
             </li>
-
         </value>
     </Operation>
 </Patch>

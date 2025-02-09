@@ -92,6 +92,10 @@
                 <countRange>5~10</countRange>
             </li>
 
+            <li Class="StockGenerator_Slaves">
+                <countRange>2~5</countRange>
+            </li>
+
             <!-- Techprints -->
             <li Class="StockGenerator_Techprints">
                 <countChances>
@@ -298,6 +302,10 @@
                 <tradeTag>MortarShell</tradeTag>
                 <thingDefCountRange>1~2</thingDefCountRange>
                 <countRange>10~20</countRange>
+            </li>
+
+            <li Class="StockGenerator_Slaves">
+                <countRange>-1~2</countRange>
             </li>
     
             <!-- Drugs -->

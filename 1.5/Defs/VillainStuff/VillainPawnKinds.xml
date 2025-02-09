@@ -29,6 +29,7 @@
         <label>villain laborer</label>
         <combatPower>40</combatPower>
         <maxGenerationAge>50</maxGenerationAge>
+        <titleRequired MayRequire="Ludeon.Rimworld.Royalty">SHG_VillainTier1</titleRequired>
         <styleItemTags>
             <li>
                 <tag>Soldier</tag>
@@ -78,6 +79,7 @@
         <apparelMoney>1000~1500</apparelMoney>
         <apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
         <weaponMoney>330~650</weaponMoney>
+        <titleRequired MayRequire="Ludeon.Rimworld.Royalty">SHG_VillainTier3</titleRequired>
         <weaponTags>
             <li>Gun</li>
         </weaponTags>
@@ -134,6 +136,7 @@
         <label>villain sniper</label>
         <combatPower>100</combatPower>
         <weaponMoney>1000~1250</weaponMoney>
+        <titleRequired MayRequire="Ludeon.Rimworld.Royalty">SHG_VillainTier4</titleRequired>
         <weaponTags Inherit="False">
             <li>SniperRifle</li>
         </weaponTags>
@@ -151,6 +154,7 @@
         <combatPower>85</combatPower>
         <canBeSapper>true</canBeSapper>
         <gearHealthRange>0.7~3.2</gearHealthRange>
+        <titleRequired MayRequire="Ludeon.Rimworld.Royalty">SHG_VillainTier6</titleRequired>
         <apparelTags>
             <li>IndustrialBasic</li>
             <li>IndustrialAdvanced</li>
@@ -186,6 +190,7 @@
         <defName>SHG_VillainTrader</defName>
         <label>villainous trader</label>
         <trader>true</trader>
+        <titleRequired MayRequire="Ludeon.Rimworld.Royalty">SHG_VillainTier3</titleRequired>
     </PawnKindDef>
 
     <PawnKindDef ParentName="SHG_VillainBase" Name="SHG_BossBase">

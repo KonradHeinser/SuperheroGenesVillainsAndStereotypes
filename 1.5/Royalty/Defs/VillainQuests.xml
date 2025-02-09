@@ -37,10 +37,11 @@
         </questNameRules>
         <questDescriptionRules>
         <rulesStrings>
-            <li>questDescription->[asker_nameFull], [asker_titleIndef], has taken note of your colony after intercepting some of the Fallen Empire's communications, and would like to make you an offer that will show if you have what it takes to be a villain. [asker_pronoun] has been hunting the remnants of a platoon, and would like to move the ambush to a place not far from [map_definite], assuming you accept the offer.
-            \n[asker_nameFull] is mostly known for having a strange sense of honor, so [asker_pronoun] won't punish you for refusing to pick sides in this conflict. There is no doubt that the Empire would assume that your lack of intervention against [asker_factionName] means you are aligned with [asker_factionName], which will make the Empire your enemy if you allow the ambush to happen anywhere near your colony.
-            \n[asker_factionName] will also believe the same thing, and will not target you for attacks in the immediate future. This will also grant you [royalFavorReward] [asker_faction_royalFavorLabel], and the more [asker_faction_royalFavorLabel] a pawn accrues, the better permits [asker_factionName] will offer. The chosen pawn will be granted [asker_faction_royalFavorLabel] shortly after the raid arrives.
-            \nThe ambush will occur in about [raidDelayTicks_duration], meaning you will end up seeing some of the platoon remnants to your settlment to raid it for supplies. These remnants would likely include:\n\n[raid/raidPawnKinds]</li>
+            <li>questDescription->[asker_nameFull], [asker_titleIndef], has taken note of your colony after intercepting some of the Fallen Empire's communications, and would like to make you an offer that will show if you have what it takes to be a villain. [asker_pronoun] has been hunting the remnants of an Empire platoon, and would like to move the ambush to a place not far from [map_definite], assuming you accept the offer. 
+
+            \n[asker_nameFull] is mostly known for having a strange sense of honor for a villain, so [asker_pronoun] won't punish you for refusing to pick sides in this conflict, but if you do accept, [asker_pronoun] will request the leaders of [asker_factionName] grant your colony clemency, at least for a while. The accepter will also gain [royalFavorReward] [asker_faction_royalFavorLabel] shortly after the raid arrives. If a pawn climb high enough in the ranks, then [asker_factionName] may be more inclined to help the colony.
+            
+            \nIf the raid is close to your base, then the Empire will assume that you are fully aligned with [asker_factionName], which will make the Empire your enemy. The ambush will occur in about [raidDelayTicks_duration], meaning you will end up seeing some of the platoon remnants attacking your settlment. These remnants will likely consist of:\n\n[raid/raidPawnKinds]</li>
         </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -170,17 +171,19 @@
                 <li>QuestHospitalityCommon</li>
             </include>
             <rulesStrings>
-                <li>questDescription->[intro]The [asker_faction_leaderTitle] of [asker_faction_name] has a plan for how to claim this world permanently. [asker_faction_name] has been collecting biological weapons in each of their settlements, and needs you to help be a distraction. [asker_pronoun] will stay in the colony for [shuttleDelayTicks_duration] to help you distract for the Empire, after which a shuttle will come to pick up everyone in the colony who doesn't want to die a painful death. 
-                \nBecoming a Tier 9 villain is difficult, usually requiring you complete a large number of quests for [asker_faction_name] that earn [asker_faction_royalFavorLabel]. This will likely take years upon years of work, but that delay may help give sufficient time to prepare for the bombardment of refined bovine waste the Empire will be sending your way.
+                <li>questDescription->[intro]The [asker_faction_leaderTitle] of [asker_factionName] has a plan for how to claim this world permanently. [asker_factionName] has been collecting biological weapons in each of their settlements, and needs you to help be a distraction. [asker_pronoun] will stay in the colony with some guards for [shuttleDelayTicks_duration] to help you distract the Empire, after which a shuttle will come to pick up everyone in the colony who doesn't want to die a painful death. 
+
+                \nBecoming a Tier 9 villain is difficult, usually requiring you complete a large number of quests for [asker_factionName] that earn [asker_faction_royalFavorLabel]. This can take years upon years of work, but that delay may help give sufficient time to prepare for the bombardment of refined bovine waste that will probably be coming your way.
+
                 \nTo make the bait believable, you must make 5 additional bedrooms befitting a Tier 9 villain. While it is best to keep the moods of your guests high, the [asker_faction_leaderTitle] knows that the ensuing conflict will make life difficult for everyone.
-                \nA lot of raids will come to try to kill the [asker_faction_leaderTitle], and will attack with great intensity. This quest is more than twice as hard as the Royal Ascent quest that the Empire offers, so prepare carefully. In addition to there being more raids than Royal Ascent, your enemy is the Empire, who tend to be better equipped than some random pirates.
-                \nThe [asker_faction_leaderTitle] will bring four other Tier 9 villains to make the bait more enticing and place them under your command. You must house these guards, but the [asker_faction_leaderTitle] will not complain if they are killed or unhappy.
-                \nYou must keep the visitors at [map_definite] and not send them anywhere else. If you fail this quest or migrate, you will have another chance at it later.</li>
+
+                \nA lot of raids will come to try to kill the [asker_faction_leaderTitle], and will attack with great intensity. This quest is more difficult than the Royal Ascent quest that the Empire offers, so prepare carefully. In addition to there being more raids than Royal Ascent, your enemy is the Empire, who tend to be better equipped than some random pirates.
+
+                \nYou must keep the visitors at [map_definite] and not send them anywhere else. The guards may die freely, but [asker_nameFull] must survive. If you fail this quest or migrate, you will have another chance at it later.</li>
 
 
                 <li>intro(sameQuestsCount==0)->It's time to kickstart this planet's final day!\n\n</li>
-                <li>intro(sameQuestsCount>=1)->You have another chance to help [asker_faction_name] destroy the world.\n\n</li>
-
+                <li>intro(sameQuestsCount>=1)->You have another chance to help [asker_factionName] destroy the world.\n\n</li>
             </rulesStrings>
         </questDescriptionRules>
         <root Class="QuestNode_Sequence">
@@ -339,7 +342,7 @@
                         <arrivingPawns>$lodgers</arrivingPawns>
                         <joinPlayer>true</joinPlayer>
                         <customLetterLabel TKey="LetterLabelAskerArrived">[asker_faction_leaderTitle] arrived</customLetterLabel>
-                        <customLetterText TKey="LetterTextAskerArrived">The [asker_faction_leaderTitle] of [asker_faction_name], has arrived.\n\nNow that the everyone is here, it's time to hope that your defenses will be enough to withstand the Empire's onslaught.</customLetterText>
+                        <customLetterText TKey="LetterTextAskerArrived">The [asker_faction_leaderTitle] of [asker_factionName], has arrived.\n\nNow that the everyone is here, it's time to hope that your defenses will be enough to withstand the Empire's onslaught.</customLetterText>
                         <arrivingPawnsLabelDef TKey="ArrivingPawnsDefiniteLabel">[asker_nameDef]</arrivingPawnsLabelDef>
                     </parms>
                 </li>
@@ -421,7 +424,7 @@
                             <li Class="QuestNode_EndGame">
                                 <inSignal>pickupShipThing.SentWithExtraColonists</inSignal>
                                 <signalListenMode>Always</signalListenMode>
-                                <introText TKey="SHG_VillainEndIntro">You've gone up to the orbital station that the [asker_faction_name] set up.</introText>
+                                <introText TKey="SHG_VillainEndIntro">You've gone up to the orbital station that the [asker_factionName] set up.</introText>
                                 <endingText TKey="SHG_VillainEndOutro">In 24 hours, the world will be engulfed in a transparent gas that will quickly kill everyone on the planet. It won't be a glorious victory, but it will be yours.</endingText>
                             </li>
                         </nodes>
