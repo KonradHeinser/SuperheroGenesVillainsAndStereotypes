@@ -615,7 +615,7 @@
                     <li>SHG_RandomMutation</li>
                 </alwaysRemovedGenes>
                 <geneSets>
-                    <li><geneSet /><weightOfGeneSet>87</weightOfGeneSet></li>
+                    <li><geneSet /><weightOfGeneSet>86</weightOfGeneSet></li>
                     <li><geneSet><li>SHG_DoubleHearted</li></geneSet></li>
                     <li><geneSet><li>SHG_SuperPsychicPotential</li></geneSet></li>
                     <li><geneSet><li>SHG_SuperDenseBones</li></geneSet></li>
@@ -629,6 +629,7 @@
                     <li><geneSet><li>SHG_Technophile</li></geneSet></li>
                     <li><geneSet><li>SHG_Naturalist</li></geneSet></li>
                     <li><geneSet><li>SHG_HALK</li></geneSet></li>
+                    <li><geneSet><li>SHG_UncontrollableMindReading</li></geneSet></li>
                 </geneSets>
             </li>
         </comps>
