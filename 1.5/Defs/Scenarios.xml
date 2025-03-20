@@ -148,7 +148,7 @@
     <ScenarioDef>
         <defName>SHG_TheVengefulOne</defName>
         <label>The Vengeful One</label> <!--If you're thinking "is that a reference?", yes, yes it is-->
-        <description>You thought you guys were a good team, but it seems the others felt differently about you. At first you tried to stay within the cities to clear your name, but it was to late, and after two months of running through the wilds you've run out of supplies. Now you must decide once more, forage some more supplies and continue running, or start working on a new base of operations.\n\nVengeful One's Will is a hediff that makes the pawn almost completely immune to mental breaks. This can be disabled in the Superhero Genes options menu.</description>
+        <description>You thought you guys were a good team, but it seems the others felt differently about you. At first you tried to stay within the cities to clear your name, but it was to late, and after two months of running through the wilds you've run out of supplies. Now you must decide once more, forage some more supplies and continue running, or start working on a new base of operations.\n\nVengeful One's Will is a hediff that makes the pawn almost completely immune to mental breaks. This can be disabled in the Superhero Genes options menu.\n\nThis will make all non-villain factions permanently hostile.\n\nIf you're looking for a single-pawn start that doesn't make everyone hostile, Hero Organization's "Protagonist" scenario gives a single-pawn start with different bonuses and standard faction hostilities.</description>
         <scenario>
             <summary>Betrayed, naked, alone, and enemies all around. Revenge will be had, but first you may want some pants.</summary>
             <playerFaction>
