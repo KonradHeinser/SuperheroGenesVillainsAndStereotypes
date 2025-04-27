@@ -64,20 +64,4 @@
             <xpath>Defs/ScenarioDef[defName="SHG_TheVengefulOne"]/scenario/parts/li[@Class="ScenPart_ForcedHediff"]</xpath>
         </inactive>
     </Operation>
-
-    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
-        <setting>mutationsAnywhere</setting>
-        <active Class="PatchOperationSequence">
-            <operations>
-                <li Class="PatchOperationRemove"> <!--Remove from super xenotypes-->
-                    <xpath>Defs/XenotypeDef/genes/li[text()="SHG_RandomMutation"]</xpath>
-                </li>
-                <li Class="PatchOperationAdd"> <!--Add to all xenotypes-->
-                    <xpath>Defs/XenotypeDef/genes</xpath>
-                    <value><li>SHG_RandomMutation</li></value>
-                </li>
-                <!--If other mods use parents, may need compatibility patches below this point-->
-            </operations>
-        </active>
-    </Operation>
 </Patch>
