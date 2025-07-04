@@ -99,26 +99,6 @@
                 <SHG_RandomMundaneMancer>.20</SHG_RandomMundaneMancer>
             </xenotypeChances>
         </xenotypeSet>
-        <modExtensions>
-            <li Class="CombatExtended.LoadoutPropertiesExtension" MayRequire="ceteam.combatextended">
-			    <primaryMagazineCount>
-				    <min>5</min>
-				    <max>10</max>
-			    </primaryMagazineCount>
-				<sidearms>
-					<li>
-						<generateChance>0.5</generateChance>
-						<sidearmMoney>
-							<min>300</min>
-							<max>500</max>
-						</sidearmMoney>
-						<weaponTags>
-							<li>CE_Sidearm_Melee</li>
-						</weaponTags>
-					</li>
-				</sidearms>
-		    </li>
-        </modExtensions>
     </PawnKindDef>
 
     <PawnKindDef ParentName="SHG_VillainTrooperBase">
