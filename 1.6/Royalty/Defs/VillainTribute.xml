@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <TraderKindDef>
+        <defName>SHG_Villain_TributeCollector</defName>
+        <label>villainous loyalty administrator</label>
+        <requestable>False</requestable>
+        <commonality>1</commonality>
+        <category>TributeCollector</category>
+        <tradeCurrency>Favor</tradeCurrency>
+        <faction>SuperVillainGang</faction>
+        <hideThingsNotWillingToTrade>True</hideThingsNotWillingToTrade>
+        <stockGenerators>
+            <!-- Buying -->
+            <li Class="StockGenerator_BuySlaves" />
+            <li Class="StockGenerator_BuySingleDef">
+                <thingDef>Jade</thingDef>
+            </li>
+            <li Class="StockGenerator_BuySingleDef">
+                <thingDef>Uranium</thingDef>
+            </li>
+            <li Class="StockGenerator_Category" MayRequire="HonorableOrgans.Mod">
+                <categoryDef>BodyPartsNatural</categoryDef>
+            </li>
+        </stockGenerators>
+    </TraderKindDef>
+
+    <IncidentDef>
+        <defName>SHG_Villain_CaravanArrivalTributeCollector</defName>
+        <label>villainous loyalty administrator arrival</label>
+        <targetTags>
+          <li>Map_PlayerHome</li>
+        </targetTags>
+        <workerClass>SuperHeroGenesBase.IncidentWorker_CaravanArrivalBetterTributeCollector</workerClass>
+        <category>FactionArrival</category>
+        <baseChance>0</baseChance> <!-- given by a special storyteller comp -->
+        <requireColonistsPresent>True</requireColonistsPresent>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<faction>SuperVillainGang</faction>
+                <descriptionOverrideA>any prisoners, jade, and uranium</descriptionOverrideA> <!--Specifies what the trader accepts in the letter description-->
+                <descriptionOverrideB>providing resources that further their goal of world domination</descriptionOverrideB> <!--The reason given in the letter for a colonist gaining infamy this way-->
+                <descriptionOverrideC>around once every quadrum</descriptionOverrideC> <!--Specifies how often traders will arrive-->
+			</li>
+		</modExtensions>
+    </IncidentDef>
+</Defs>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <BackstoryDef Abstract="True" Name="SHG_VillainChildBackstoryBase">
+        <slot>Childhood</slot>
+        <spawnCategories><li>Villain</li></spawnCategories>
+        <forcedTraits>
+            <Psychopath>0</Psychopath>
+        </forcedTraits>
+    </BackstoryDef>
+
+    <BackstoryDef ParentName="SHG_VillainChildBackstoryBase">
+        <defName>SHG_Villains_ChildExperiment</defName>
+        <title>child experiment</title>
+        <titleShort>experiment</titleShort>
+        <baseDesc>As a baby, [PAWN_nameDef] was taken from [PAWN_possessive] parents and experimented on in a lab. One thing [PAWN_possessive] captors did not prepare for was how quickly [PAWN_pronoun] picked up new ideas as [PAWN_pronoun] got older. Eventually, [PAWN_nameDef] escaped the facility after a lot of bloodshed, leaving a pile of bodies in [PAWN_possessive] wake.</baseDesc>
+        <requiredWorkTags>
+            <li>Violent</li>
+        </requiredWorkTags>
+        <skillGains>
+            <Medicine>2</Medicine>
+            <Intellectual>5</Intellectual>
+            <Melee>3</Melee>
+            <Social>-4</Social>
+        </skillGains>
+        <spawnCategories><li>FormerVillain</li></spawnCategories>
+    </BackstoryDef>
+
+    <BackstoryDef ParentName="SHG_VillainChildBackstoryBase">
+        <defName>SHG_Villains_AbandonedChild</defName>
+        <title>abandoned child</title>
+        <titleShort>abandoned</titleShort>
+        <baseDesc>As a young child, [PAWN_nameDef]'s parents brought [PAWN_objective] to their work place frequently, a bio-lab on a very dangerous planet. One day while [PAWN_pronoun] was wandering the lab, and exacuation was sounded, and [PAWN_pronoun] was left behind by [PAWN_possessive] parents. Whether through dumb luck or pure rage, [PAWN_pronoun] survived the intitial incident that shut down the lab, and was evacuated after one month of surviving alone. [PAWN_possessive] parents never claimed [PAWN_objective], so [PAWN_pronoun] was put into a foster system.</baseDesc>
+        <requiredWorkTags>
+            <li>Violent</li>
+        </requiredWorkTags>
+        <skillGains>
+            <Plants>2</Plants>
+            <Melee>2</Melee>
+            <Animals>2</Animals>
+        </skillGains>
+    </BackstoryDef>
+
+    <BackstoryDef ParentName="SHG_VillainChildBackstoryBase">
+        <defName>SHG_Villains_ChildGenius</defName>
+        <title>child genius</title>
+        <titleShort>genius</titleShort>
+        <baseDesc>There was something wrong with [PAWN_nameDef]'s brain from birth. [PAWN_pronoun] was always twitchy, and had an obsession with learning new things that resulted in them becoming alientated by [PAWN_possessive] peers.</baseDesc>
+        <skillGains>
+            <Intellectual>10</Intellectual>
+            <Social>-4</Social>
+        </skillGains>
+        <forcedTraits>
+            <TooSmart>0</TooSmart>
+        </forcedTraits>
+        <spawnCategories><li>FormerVillain</li></spawnCategories>
+    </BackstoryDef>
+
+    <BackstoryDef ParentName="SHG_VillainChildBackstoryBase">
+        <defName>SHG_Villains_ChildAssassin</defName>
+        <title>child assassin</title>
+        <titleShort>assassin</titleShort>
+        <baseDesc>[PAWN_nameDef] was raised from birth to be the ultimate killing machine. [PAWN_pronoun] was trained to turn everything around [PAWN_objective] into a weapon, including people.</baseDesc>
+        <skillGains>
+            <Social>4</Social>
+            <Melee>4</Melee>
+            <Shooting>4</Shooting>
+            <Artistic>-6</Artistic>
+        </skillGains>
+    </BackstoryDef>
+
+    <BackstoryDef ParentName="SHG_VillainChildBackstoryBase">
+        <defName>SHG_Villains_DoomsdayBringer</defName>
+        <title>doomsday bringer</title>
+        <titleShort>doom bringer</titleShort>
+        <baseDesc>[PAWN_nameDef]'s parents were told that [PAWN_pronoun] would end up destroying the planet. Unwilling to kill or exile [PAWN_objective], [PAWN_possessive] parents kept [PAWN_objective] hidden, giving [PAWN_objective] toys and crafts to play with. Ultimately, the local community heard about [PAWN_objective], and while on the way to escape on a ship, [PAWN_pronoun] accidentally broke key detecting equipment that caused the colony, and ultimately the planet, to be overrun by insects.</baseDesc>
+        <workDisables>
+            <li>Cooking</li>
+            <li>Caring</li>
+        </workDisables>
+        <skillGains>
+            <Artistic>4</Artistic>
+            <Crafting>4</Crafting>
+            <Melee>4</Melee>
+            <Social>-6</Social>
+        </skillGains>
+    </BackstoryDef>
+
+    <BackstoryDef ParentName="SHG_VillainChildBackstoryBase">
+        <defName>SHG_Villains_MadScientistApprentice</defName>
+        <title>mad scientist's apprentice</title>
+        <titleShort>apprentice</titleShort>
+        <baseDesc>[PAWN_nameDef] spent large amounts of time in [PAWN_possessive] neighbor's lab as an assistant. While there, [PAWN_pronoun] assisted with many unethical experiments, usually on unwilling subjects. When the scientist ended up being arrested, [PAWN_nameDef] decided to start performing [PAWN_possessive] own experiments in secret, experiments that were just as unethical as the ones [PAWN_pronoun] performed as an assistant.</baseDesc>
+        <skillGains>
+            <Intellectual>5</Intellectual>
+            <Medicine>5</Medicine>
+            <Social>-4</Social>
+        </skillGains>
+        <spawnCategories><li>FormerVillain</li></spawnCategories>
+    </BackstoryDef>
+
+    <BackstoryDef ParentName="SHG_VillainChildBackstoryBase">
+        <defName>SHG_Villains_BetrayedFan</defName>
+        <title>betrayed fan</title>
+        <titleShort>betrayed</titleShort>
+        <baseDesc>[PAWN_nameDef] had a hero [PAWN_pronoun] adored. [PAWN_pronoun] knew about every heroic deed their hero did, every power they had, and every team [PAWN_possessive] hero was on. One day though, [PAWN_possessive] hero did something that shattered the illusion of greatness, and [PAWN_pronoun] realized that heroes were just people abusing their powers to gain adoring fans. After realizing this, [PAWN_nameDef] decided to play the villain, to do everything [PAWN_pronoun] could to reveal the hypocracy of heroes.</baseDesc>
+        <skillGains>
+            <Intellectual>2</Intellectual>
+            <Melee>2</Melee>
+            <Shooting>2</Shooting>
+        </skillGains>
+        <spawnCategories><li>FormerVillain</li></spawnCategories>
+    </BackstoryDef>
+</Defs>
+
+
+
+<!-- Legend
+[PAWN_nameDef]
+[PAWN_possessive] His/Her
+[PAWN_pronoun] He/She
+[PAWN_objective] Him/Her
+    -->

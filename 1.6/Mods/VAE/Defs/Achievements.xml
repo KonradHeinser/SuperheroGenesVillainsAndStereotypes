@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase">
+		<defName>SHG_Villains_FeelingSuperhuman</defName>
+		<label>Feeling Superhuman</label>
+		<description>"And as the tables turn, I'm feeling superhuman."\nSuperhuman by Gavin Dunne</description>
+		<tracker Class="AchievementsExpanded.KillTracker">
+			<raceDef>Human</raceDef>
+			<count>10</count>
+			<factionDefs>
+				<li>MinorSuperVillainGang</li>
+				<li>SuperVillainGang</li>
+			</factionDefs>
+		</tracker>
+		<texPath>Base/SuperheroGeneBase</texPath>
+		<points>25</points>
+	</AchievementsExpanded.AchievementDef>
+
+	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase">
+		<defName>SHG_Villains_LeagueDestroyer</defName>
+		<label>League Destroyer</label>
+		<description>Destroy 5 bases belonging to the League of Villains. Your opinion of them is quite apparent.</description>
+		<tracker Class="AchievementsExpanded.SettlementDefeatTracker">
+			<def>SuperVillainGang</def>
+			<count>5</count>
+		</tracker>
+		<texPath>Ideology/HolySupers</texPath>
+		<points>150</points>
+	</AchievementsExpanded.AchievementDef>
+
+	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase">
+		<defName>SHG_Villains_ThoseAreVillains</defName>
+		<label>Those Are Villains</label>
+		<description>See some villains kill ten people. They seem almost barbaric.</description>
+		<tracker Class="AchievementsExpanded.KillTracker">
+			<raceDef>Human</raceDef>
+			<count>10</count>
+			<instigatorFactionDefs>
+				<li>MinorSuperVillainGang</li>
+				<li>SuperVillainGang</li>
+			</instigatorFactionDefs>
+		</tracker>
+		<texPath>Ideology/CorruptSupers</texPath>
+		<points>50</points>
+	</AchievementsExpanded.AchievementDef>
+
+	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase" MayRequire="Ludeon.Rimworld.Royalty">
+		<defName>SHG_Villains_LeagueSympathizer</defName>
+		<label>League Sympathizer</label>
+		<description>The first time you were faced with a choice, you choose the League of Villains.</description>
+		<tracker Class="AchievementsExpanded.QuestTracker">
+			<def>SHG_VillainStart</def>
+			<outcome>Success</outcome>
+			<count>1</count>
+		</tracker>
+		<texPath>VillainStoryTeller</texPath>
+		<points>10</points>
+	</AchievementsExpanded.AchievementDef>
+
+	<AchievementsExpanded.AchievementDef ParentName="SHG_VAEBase" MayRequire="Ludeon.Rimworld.Royalty">
+		<defName>SHG_Villains_IAmBecomeDeath</defName>
+		<label>We Are Become Death</label>
+		<description>The Destroyer of Worlds.</description>
+		<tracker Class="AchievementsExpanded.QuestTracker">
+			<def>SHG_EndGame_ArmageddonClock</def>
+			<outcome>Success</outcome>
+			<count>1</count>
+		</tracker>
+		<texPath>VillainFactionIcon</texPath>
+		<points>100</points>
+	</AchievementsExpanded.AchievementDef>
+</Defs>

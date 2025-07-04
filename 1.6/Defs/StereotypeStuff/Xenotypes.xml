@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <XenotypeDef>
+        <defName>SHG_RandomMundaneSuper</defName>
+        <label>mundane super</label>
+        <description>In terms of combat potential, this is one of the weakest supers out there. These supers tend to work better with their mind than their fists, and about a third of them don't even have any special genes beyond their basic superhero gene.</description>
+        <inheritable>true</inheritable>
+        <iconPath>HeroXenotypeIcon</iconPath>
+        <combatPowerFactor>2</combatPowerFactor>
+        <genes>
+            <li>SuperHeroBase</li>
+            <li>SHG_RandomMundaneSuper</li>
+            <li>SHG_RandomMutation</li>
+        </genes>
+    </XenotypeDef>
+
+    <XenotypeDef>
+        <defName>SHG_RandomSoldierSuper</defName>
+        <label>super soldier</label>
+        <description>Generic super soldier created in mass. Each of them tend to specialize between melee and ranged combat, though if resources are scarce they are often still very deadly when not using their preferred weapons.</description>
+        <inheritable>true</inheritable>
+        <iconPath>Base/SuperheroGeneBase</iconPath>
+        <combatPowerFactor>5</combatPowerFactor>
+        <genes>
+            <li>SuperHeroBase</li>
+            <li>SHG_RandomSoldierSuper</li>
+            <li>SHG_RandomMutation</li>
+        </genes>
+    </XenotypeDef>
+
+    <XenotypeDef>
+        <defName>SHG_RandomMundaneMancer</defName>
+        <label>mandane mancer</label>
+        <description>Usually referred to as just mancers, these people are able to create dangerous substances with ease, from exploding balls of fire to freezing bursts of ice.</description>
+        <inheritable>true</inheritable>
+        <iconPath>MancerIcon</iconPath>
+        <combatPowerFactor>7</combatPowerFactor>
+        <genes>
+            <li>SuperHeroBase</li>
+            <li>SHG_RandomMundaneMancer</li>
+            <li>SHG_RandomMutation</li>
+        </genes>
+    </XenotypeDef>
+
+    <XenotypeDef>
+        <defName>SHG_RandomWarSuper</defName>
+        <label>war super</label>
+        <description>The generic label of "war super" was created to catch all those supers who specialized in combat, but didn't quite fit in with mancers. This label covers a wide range of supers, from pugulists and ninjas to hackers and druids.</description>
+        <inheritable>true</inheritable>
+        <iconPath>WarIcon</iconPath>
+        <combatPowerFactor>7</combatPowerFactor>
+        <genes>
+            <li>SuperHeroBase</li>
+            <li>SHG_RandomWarSuper</li>
+            <li>SHG_RandomMutation</li>
+        </genes>
+    </XenotypeDef>
+
+    <XenotypeDef>
+        <defName>SHG_RandomSupportSuper</defName>
+        <label>support super</label>
+        <description>Support super is a generic term that was created to handle the various supporting archetypes, from the debilitating stunners and anti-heroes to the life saving medics and life bringers.</description>
+        <inheritable>true</inheritable>
+        <iconPath>SupportIcon</iconPath>
+        <combatPowerFactor>5</combatPowerFactor>
+        <genes>
+            <li>SuperHeroBase</li>
+            <li>SHG_RandomSupportSuper</li>
+            <li>SHG_RandomMutation</li>
+        </genes>
+    </XenotypeDef>
+
+    <XenotypeDef>
+        <defName>SHG_RandomSummonerSuper</defName>
+        <label>summoner super</label>
+        <description>Summoners are one of the few supers who are never sent to the battlefield as their powers are much more suited to colony support. These people are capable of creating resources from what appears to be nothing by bringing resources from deep in the planet to the surface, or by infusing a plant with energy that allows them to grow even on stone.</description>
+        <inheritable>true</inheritable>
+        <iconPath>SummonerIcon</iconPath>
+        <combatPowerFactor>1</combatPowerFactor>
+        <canGenerateAsCombatant>false</canGenerateAsCombatant>
+        <genes>
+            <li>SuperHeroBase</li>
+            <li>SHG_RandomSummonerSuper</li>
+            <li>SHG_RandomMutation</li>
+        </genes>
+    </XenotypeDef>
+
+    <XenotypeDef MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+        <defName>SHG_RandomPsionist</defName>
+        <label>psionist</label>
+        <description>While psionist aren't genetically considered supers, their ability to use their innate psychic abilities to accomplish unbelievable feats cause them to be labelled super anyway. While their overall combative power tends to vary a lot, they are nearly unmatched when it comes to their specialty.</description>
+        <inheritable>true</inheritable>
+        <iconPath>RandomPsionist</iconPath>
+        <combatPowerFactor>5</combatPowerFactor>
+        <genes>
+            <li>SHG_Archetypes_Psionist</li>
+            <li>SHG_RandomPsionist</li>
+            <li>Learning_Slow</li>
+        </genes>
+    </XenotypeDef>
+
+    <XenotypeDef>
+        <defName>SHG_RandomHemomancer</defName>
+        <label>hemomancer</label>
+        <description>Hemomancers are the result of a genetic blend between supers and sanguophages. While this blend has lost them many of the innate strengths of the superhero gene, they make up for this with a control over blood that sanguophages could only dream of. The only downside to this is the fact that they also burn through hemogen faster than a sanguophage, and have a constant bloodlust greater than a hussar's.</description>
+        <inheritable>true</inheritable>
+        <iconPath>RandomPsionist</iconPath>
+        <combatPowerFactor>7</combatPowerFactor>
+        <genes>
+            <li>SHG_Archetypes_Hemomancer</li>
+            <li>SHG_RandomHemomancer</li>
+            <li>SHG_Flaw_Bloodthirsty</li>
+        </genes>
+    </XenotypeDef>
+
+    <XenotypeDef>
+        <defName>SHG_RandomRadiomancer</defName>
+        <label>radiomancer</label>
+        <description>Radiomancers are a genetic offshoot of supers that exchanged their innate strengths for overwhelmingly destructive power. Their powers range from the overt explosions to more subversive energy drains and body enhancements. In the event of their death, their body releases an explosion that will destroy anything not behind a wall, and in some cases it can even go through the wall.</description>
+        <inheritable>true</inheritable>
+        <iconPath>RandomRadiomancer</iconPath>
+        <combatPowerFactor>10</combatPowerFactor>
+        <genes>
+            <li>SHG_Archetypes_Radiomancer</li>
+            <li>SHG_RandomRadiomancer</li>
+            <li>SHG_Flaw_OverchargedPocket</li>
+        </genes>
+    </XenotypeDef>
+
+</Defs>

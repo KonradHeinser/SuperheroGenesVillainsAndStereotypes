@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef Name="RandomSuperGene" Abstract="True">
+        <displayCategory>SHG_XenotypeRandomizer</displayCategory>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <prerequisite>SuperHeroBase</prerequisite>
+        <biostatCpx>0</biostatCpx>
+        <customEffectDescriptions>
+            <li>Due to weird inheritance issues, the randomizer cannot be inherited, though the genes created by it can.</li>
+        </customEffectDescriptions>
+        <exclusionTags> <!--These tags are dedicated for randomizer genes-->
+            <li>RandomDurability</li>
+            <li>RandomHealing</li>
+            <li>RandomIntelligence</li>
+            <li>RandomPerception</li>
+            <li>RandomPersuasion</li>
+            <li>RandomPrecision</li>
+            <li>RandomSpeed</li>
+            <li>RandomStrength</li>
+            <li>AG_UnstableMutations</li> <!--These would likely behave very poorly with the randomizers-->
+        </exclusionTags>
+    </GeneDef>
+
+    <GeneDef ParentName="RandomSuperGene">
+        <defName>SHG_RandomMundaneSuper</defName>
+        <label>random mundane super</label>
+        <iconPath>HeroXenotypeIcon</iconPath>
+        <description>Gives random generic super genes. This gives specific super genes, and then some unsuper and antisuper genes to balance the metabolic cost. This creates non-combatant, non-powered supers, with a 1/3 chance of having no effect:\n\n - Generic: Nothing added\n - Brainiac: Intelligence and Perception\n - Influencer: Persuasion and Perception\n\nMost super randomizers stop you from taking any super, unsuper, and antisuper genes. This randomizer does not block any other genes.</description>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_RandomMundaneSuper</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="RandomSuperGene">
+        <defName>SHG_RandomSoldierSuper</defName>
+        <label>random super soldier</label>
+        <description>Gives random generic super genes. This gives specific super genes, and then some unsuper and antisuper genes to balance the metabolic cost. This creates generic soldier supers:\n\n - Deadeye: Precision and Perception\n - Bruiser: Strength and Durability\n - Immortal: Durability and Healing\n - Speedster: Speed and Healing\n\nThis randomizer doesn't block any genes outside of the basic super, unsuper, and antisuper genes.</description>
+        <iconPath>Base/SuperheroGeneBase</iconPath>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_RandomSoldierSuper</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="RandomSuperGene">
+        <defName>SHG_RandomMundaneMancer</defName>
+        <label>random mundane mancer</label>
+        <description>Gives a random mancer archetype, along with a complementary super gene, and some unsuper/antisuper genes to balance out the cost. This will NOT use supreme archetypes(i.e. Hemomancers). This creates the following mancer types, with some additional basic genes:\n\n - Electromancer\n - Petrimancer\n - Pyromancer\n - Cryomancer\n - Caustimancer\n - Toximancer\n - Hydromancer\n\nThis will stop you from taking bolt, blast, and burst genes, along with all archetypes.</description>
+        <iconPath>MancerIcon</iconPath>
+        <exclusionTags> <!--This list includes every exclusion tag that the mancer archetypes use-->
+            <li>SHG_Archetypes</li>
+            <li>Archetypes_ElectromancerEMPBolt</li>
+            <li>Archetypes_ElectromancerLightningBolt</li>
+            <li>Archetypes_ElectromancerEMPBlast</li>
+            <li>Archetypes_ElectromancerLightningBlast</li>
+            <li>Archetypes_ElectromancerEMPBurst</li>
+            <li>Archetypes_ElectromancerLightningBurst</li>
+            <li>Archetypes_PetrimancerPetrificationBolt</li>
+            <li>Archetypes_PetrimancerPetrificationBlast</li>
+            <li>Archetypes_PetrimancerPetrificationBurst</li>
+            <li>Archetypes_PyromancerFireBolt</li>
+            <li>Archetypes_PyromancerFireBlast</li>
+            <li>Archetypes_PyromancerFireBurst</li>
+            <li>Archetypes_CryomancerIceBolt</li>
+            <li>Archetypes_CryomancerIceBlast</li>
+            <li>Archetypes_CryomancerIceBurst</li>
+            <li>Archetypes_CaustimancerAcidBolt</li>
+            <li>Archetypes_CaustimancerAcidBlast</li>
+            <li>Archetypes_CaustimancerAcidBurst</li>
+            <li>Archetypes_ToximancerToxicBolt</li>
+            <li>Archetypes_ToximancerToxicBlast</li>
+            <li>Archetypes_ToximancerToxicBurst</li>
+            <li>Archetypes_HydromancerWaterBolt</li>
+            <li>Archetypes_HydromancerWaterBlast</li>
+            <li>Archetypes_HydromancerWaterBurst</li>
+        </exclusionTags>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_RandomMundaneMancer</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="RandomSuperGene">
+        <defName>SHG_RandomWarSuper</defName>
+        <label>random war super</label>
+        <description>Gives a random mandane non-mancer combat archetype, along with a complementary super gene, and some unsuper/antisuper genes to balance out the cost. The supers created through this gene specialize in either directly killing enemies or turning enemies against each other. This will NOT use supreme archetypes(i.e. Hemomancers and Psionists). This creates the following super types:\n\n - Pugulist\n - Druid\n - Skirmisher\n - Analyzer\n - Hacker\n - Phantom\n - Ninja\n\nThis will stop you from taking any powers attached to one of the archetypes, along with all archetypes.</description>
+        <iconPath>WarIcon</iconPath>
+        <exclusionTags> <!--This list includes every exclusion tag that the non-mancer combat archetypes use-->
+            <li>Archetype_PugilistLeap</li>
+            <li>Archetype_PugilistEndurePain</li>
+            <li>Archetype_DruidCommand</li>
+            <li>Archetype_DruidToxBolt</li>
+            <li>Archetype_SkirmisherLeap</li>
+            <li>Archetype_SkirmisherSeer</li>
+            <li>Archetype_AnalyzerSnapshot</li>
+            <li>Archetype_AnalzerSpike</li>
+            <li>Archetypes_HackerShutdown</li>
+            <li>Archetypes_HackerHackMech</li>
+            <li>Archetypes_HackerInvisibility</li>
+            <li>Archetype_PhantomFlight</li>
+            <li>Archetype_PhantomInvisibility</li>
+            <li>Archetypes_NinjaHeroicLeap</li>
+            <li>Archetypes_NinjaSmokeBomb</li>
+            <li>Archetypes_NinjaToxicBlast</li>
+        </exclusionTags>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_RandomWarSuper</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="RandomSuperGene">
+        <defName>SHG_RandomSupportSuper</defName>
+        <label>random support super</label>
+        <description>Gives a random mandane non-mancer support archetype, along with a complementary super gene, and some unsuper/antisuper genes to balance out the cost. The supers created through this gene specialize in healing and buffing allies, or debuffing enemies. This will NOT use supreme archetypes(i.e. Hemomancers and Psionists). This creates the following super types:\n\n - Medic\n - Life Bringer\n - Porter\n - Anti-hero\n - Firefighter\n - Stunner\n\nThis will stop you from taking any powers attached to one of the archetypes, along with all archetypes.</description>
+        <iconPath>SupportIcon</iconPath>
+        <exclusionTags> <!--This list includes every exclusion tag that the non-mancer support archetypes use-->
+            <li>Archetype_MedicSeal</li>
+            <li>Archetype_MedicHeal</li>
+            <li>Archetype_LifeBringerSeal</li>
+            <li>Archetype_LifeBringerHeal</li>
+            <li>Archetype_LifeBringerRevive</li>
+            <li>Archetype_PorterBlink</li>
+            <li>Archetype_PorterTeleport</li>
+            <li>Archetype_PorterGate</li>
+            <li>Archetype_PorterRift</li>
+            <li>Archetypes_AntiheroDurability</li>
+            <li>Archetypes_AntiheroHealing</li>
+            <li>Archetypes_AntiheroIntelligence</li>
+            <li>Archetypes_AntiheroPerception</li>
+            <li>Archetypes_AntiheroPersuasion</li>
+            <li>Archetypes_AntiheroPrecision</li>
+            <li>Archetypes_AntiheroSpeed</li>
+            <li>Archetypes_AntiheroStrength</li>
+            <li>Archetypes_FirefighterWaterBolt</li>
+            <li>Archetypes_FirefighterWaterBlast</li>
+            <li>Archetypes_FirefighterWaterBurst</li>
+            <li>Archetypes_FirefighterFoamBolt</li>
+            <li>Archetypes_FirefighterFoamBlast</li>
+            <li>Archetypes_FirefighterFoamBurst</li>
+            <li>Archetype_StunnerAttraction</li>
+            <li>Archetype_StunnerNarcissus</li>
+            <li>Archetype_StunnerDistraction</li>
+            <li>Archetype_StunnerUntouchable</li>
+        </exclusionTags>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_RandomSupportSuper</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="RandomSuperGene">
+        <defName>SHG_RandomSummonerSuper</defName>
+        <label>random summoner super</label>
+        <description>Gives a random summoner archetype. Unlike most of the randomizers, this does not add basic super genes to alter the cost, and once the gene is selected, this pawn receive an archetype that is different from the cost of this gene. The metabolic efficiency will likely be a -2 instead of the current cost of this gene, but does have a chance to be 1 point higher than what this gene costs. The supers created through this gene specialize in creating resources from nothing. This will NOT use supreme archetypes(i.e. Hemomancers and Psionists). This creates the following super types:\n\n - Biomancer\n - Farmer\n - Chemist\n - Geomancer\n - Ferromancer\n - Midas\n\nThis will stop you from taking any powers attached to one of the archetypes, along with all archetypes.</description>
+        <iconPath>SummonerIcon</iconPath>
+        <biostatMet>-3</biostatMet>
+        <exclusionTags Inherit="False">
+            <li>AG_UnstableMutations</li>
+            <li>Archetype_BiomancerAnima</li>
+            <li>Archetype_BiomancerPolux</li>
+            <li>Archetype_BiomancerGlowPod</li>
+            <li>Archetype_BiomancerGauranlen</li>
+            <li>Archetype_BiomancerWood</li>
+            <li>Archetype_FarmerCorn</li>
+            <li>Archetype_FarmerDevilstrand</li>
+            <li>Archetype_FarmerNutrifungus</li>
+            <li>Archetype_FarmerToxipotato</li>
+            <li>Archetype_ChemistHealroot</li>
+            <li>Archetype_ChemistHops</li>
+            <li>Archetype_ChemistSmokeleaf</li>
+            <li>Archetype_ChemistPsychoid</li>
+            <li>Archetype_GeomancerStone</li>
+            <li>Archetype_GeomancerComponentIndustrial</li>
+            <li>Archetype_GeomancerComponentSpacer</li>
+            <li>Archetype_GeomancerChunkSkip</li>
+            <li>Archetype_FerromancerPlasteel</li>
+            <li>Archetype_FerromancerUranium</li>
+            <li>Archetype_FerromancerSteel</li>
+            <li>Archetype_FerromancerAdmantium</li>
+            <li>Archetype_FerromancerAuramite</li>
+            <li>Archetype_FerromancerAdmantium</li>
+            <li>Archetype_MidasSilver</li>
+            <li>Archetype_MidasGold</li>
+            <li>Archetype_MidasJade</li>
+        </exclusionTags>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_RandomSummonerSuper</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="RandomSuperGene" MayRequireAnyOf="Ludeon.RimWorld.Royalty,SHG.PsionicResourceGene">
+        <defName>SHG_RandomPsionist</defName>
+        <label>random psionist</label>
+        <description>Gives a random psionic path. This does not require the superhero base gene, and instead requires the Psionist gene. If you are having issues countering the metabolic efficiency, you can try taking the moonbound or sunbound flaw.\n\nSome genes from the path will not be obtained through this to reduce some of the metabolic balancing that needs done. The main focus when picking these genes was to focus on genes that have similar upgraded variants, or lower variants that are more consistently usable (i.e. the psionic commander doesn't gain Inspire and Encourage because the highest level version (Rally) provides the same benefits, albeit with a more expensive ability).</description>
+        <displayCategory>SHG_XenotypeRandomizer</displayCategory>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <prerequisite>SHG_Archetypes_Psionist</prerequisite>
+        <iconPath>Archetypes/Gene_Psionist</iconPath>
+        <biostatMet>-7</biostatMet>
+        <exclusionTags>
+            <li>SHG_PsionicCommander</li>
+            <li>SHG_PsionicDebuffer</li>
+            <li>SHG_DimensionalPsionist</li>
+            <li>SHG_PsionicEmpath</li>
+            <li>SHG_PsionicGuardian</li>
+            <li>SHG_PsionicSoldier</li>
+            <li>SHG_PsionicTyrant</li>
+        </exclusionTags>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply>
+                    <li><hediff>SHG_RandomPsionist</hediff></li>
+                </hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="RandomSuperGene">
+        <defName>SHG_RandomHemomancer</defName>
+        <label>random hemomancer</label>
+        <description>Gives a random hemomancy path. This does not require the superhero base gene, and instead requires the Hemomancer gene. The easiest way to counter the very large metabolic cost is to take the Bloodthirsty flaw, though the hemogen loss that causes can make things more difficult early on.\n\nSome genes from the path will not be obtained through this to reduce some of the metabolic balancing that needs done. The core purpose of the path will still be achievable, but some of the abilities more focused on more niche purposes will not be obtainable through this.</description>
+        <displayCategory>SHG_XenotypeRandomizer</displayCategory>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <prerequisite>SHG_Archetypes_Hemomancer</prerequisite>
+        <iconPath>Archetypes/Gene_Hemomancer</iconPath>
+        <biostatMet>-7</biostatMet>
+        <exclusionTags>
+            <li>SHG_HemomancerInitiate</li>
+            <li>SHG_HemomancerShifter</li>
+            <li>SHG_HemomancerThief</li>
+            <li>SHG_HemomancerWarrior</li>
+        </exclusionTags>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply>
+                    <li><hediff>SHG_RandomHemomancer</hediff></li>
+                </hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="RandomSuperGene">
+        <defName>SHG_RandomRadiomancer</defName>
+        <label>random radiomancer</label>
+        <description>Gives a random radiomancy path. This does not require the superhero base gene, and instead requires the Radiomancer gene. The easiest way to counter the very large metabolic cost is to take the Overcharged Pocket flaw, though that will increase the risk of things going south fast if the pawn dies.\n\nUnlike the other supreme archetypes, All genes of each path is taken, and Ever Evolving is always gained regardless of the path picked.\n\nDue to the nature of the Radiomancer paths, this gene will not prevent you from taking individual genes from those paths, but in the event that you picked a gene that this attempted to pick, that part of the randomization will be skipped, resulting in fewer genes than expected.</description>
+        <displayCategory>SHG_XenotypeRandomizer</displayCategory>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <prerequisite>SHG_Archetypes_Radiomancer</prerequisite>
+        <iconPath>Archetypes/Gene_Radiomancer</iconPath>
+        <biostatMet>-8</biostatMet>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+                <conflictingGenes>
+                    <li>SHG_Radiomancer_EverEvolving</li>
+                </conflictingGenes>
+				<hediffsToApply>
+                    <li><hediff>SHG_RandomRadiomancer</hediff></li>
+                </hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
+    <GeneDef ParentName="SuperMutationsBase">
+        <defName>SHG_RandomMutation</defName>
+        <label>potential mutation</label>
+        <description>Gives a chance for the super to have a random mutation. Each mutation has a 1% chance to be active, leaving an 87% chance that this gene will do absolutely nothing.</description>
+        <displayCategory>SHG_XenotypeRandomizer</displayCategory>
+        <geneClass>SuperHeroGenesBase.HediffAdder</geneClass>
+        <iconPath>MutationIcon</iconPath>
+        <customEffectDescriptions>
+            <li>Due to weird inheritance issues, the randomizer cannot be inherited, though the gene created by it can.</li>
+            <li>Because the chances of each mutation are low, this is only incompatible with the other mutations, and not any extraneous genes individual mutations are incompatible with. This may result in some genes being disabled after a mutation is selected.</li>
+        </customEffectDescriptions>
+        <modExtensions>
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply><li><hediff>SHG_RandomMutation</hediff></li></hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+</Defs>
