@@ -485,12 +485,23 @@
         </comps>
     </HediffDef>
 
+    <GeneDef ParentName="SHGRandomHemomancer">
+        <defName>SHG_RandomHemomancerXenotype</defName>
+        <modExtensions Inherit="False">
+			<li Class="SuperHeroGenesBase.SHGExtension">
+				<hediffsToApply>
+                    <li><hediff>SHG_RandomHemomancerXenotype</hediff></li>
+                </hediffsToApply>
+			</li>
+		</modExtensions>
+    </GeneDef>
+
     <HediffDef ParentName="SHG_XenotypeRandomizerHediff">
         <defName>SHG_RandomHemomancerXenotype</defName> <!--Separate due to the initiate stuff being needed for all types of hemomancers-->
         <comps>
             <li Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet">
                 <alwaysRemovedGenes>
-                    <li>SHG_RandomHemomancer</li>
+                    <li>SHG_RandomHemomancerXenotype</li>
                 </alwaysRemovedGenes>
                 <geneSets>
                     <li> <!--Initiate-->

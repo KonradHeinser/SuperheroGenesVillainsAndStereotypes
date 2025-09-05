@@ -224,7 +224,7 @@
 		</modExtensions>
     </GeneDef>
 
-    <GeneDef ParentName="RandomSuperGene">
+    <GeneDef ParentName="RandomSuperGene" Name="SHGRandomHemomancer">
         <defName>SHG_RandomHemomancer</defName>
         <label>random hemomancer</label>
         <description>Gives a random hemomancy path. This does not require the superhero base gene, and instead requires the Hemomancer gene. The easiest way to counter the very large metabolic cost is to take the Bloodthirsty flaw, though the hemogen loss that causes can make things more difficult early on.\n\nSome genes from the path will not be obtained through this to reduce some of the metabolic balancing that needs done. The core purpose of the path will still be achievable, but some of the abilities more focused on more niche purposes will not be obtainable through this.</description>

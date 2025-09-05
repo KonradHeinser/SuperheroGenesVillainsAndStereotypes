@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/EBSGFramework.EBSGRecorder</xpath>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/EBSGFramework.EBSGRecorder[defName="EBSG_Recorder"]/hiddenGenes</xpath>
+            <value>
+                <li>SHG_RandomHemomancerXenotype</li>
+            </value>
+        </match>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/GeneDef[defName="SHG_RandomHemomancerXenotype"]/modExtensions</xpath>
+            <value>
+                <li Class="VEF.Genes.GeneExtension" MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">
+                    <hideGene>True</hideGene>
+                </li>
+            </value>
+        </nomatch>
+    </Operation>
+</Patch>

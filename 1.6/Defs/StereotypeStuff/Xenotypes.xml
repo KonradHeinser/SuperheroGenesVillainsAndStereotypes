@@ -104,7 +104,7 @@
         <label>hemomancer</label>
         <description>Hemomancers are the result of a genetic blend between supers and sanguophages. While this blend has lost them many of the innate strengths of the superhero gene, they make up for this with a control over blood that sanguophages could only dream of. The only downside to this is the fact that they also burn through hemogen faster than a sanguophage, and have a constant bloodlust greater than a hussar's.</description>
         <inheritable>true</inheritable>
-        <iconPath>RandomPsionist</iconPath>
+        <iconPath>RandomHemomancer</iconPath>
         <combatPowerFactor>7</combatPowerFactor>
         <genes>
             <li>Hemogenic</li>
