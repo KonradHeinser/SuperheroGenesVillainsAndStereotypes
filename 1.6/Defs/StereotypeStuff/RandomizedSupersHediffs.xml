@@ -486,7 +486,7 @@
     </HediffDef>
 
     <HediffDef ParentName="SHG_XenotypeRandomizerHediff">
-        <defName>SHG_RandomHemomancerXenotype</defName> <!--Separate due to the initiate stuff being needed-->
+        <defName>SHG_RandomHemomancerXenotype</defName> <!--Separate due to the initiate stuff being needed for all types of hemomancers-->
         <comps>
             <li Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet">
                 <alwaysRemovedGenes>
