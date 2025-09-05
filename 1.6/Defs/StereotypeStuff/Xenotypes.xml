@@ -107,8 +107,12 @@
         <iconPath>RandomPsionist</iconPath>
         <combatPowerFactor>7</combatPowerFactor>
         <genes>
+            <li>Hemogenic</li>
+            <li>HemogenDrain</li>
             <li>SHG_Archetypes_Hemomancer</li>
-            <li>SHG_RandomHemomancer</li>
+            <li>SHG_Hemomancer_Initiate</li>
+            <li>SHG_Hemomancer_Praise</li> <!--Counter hemogen loss from bloodthirsty for all-->
+            <li>SHG_RandomHemomancerXenotype</li>
             <li>SHG_Flaw_Bloodthirsty</li>
         </genes>
     </XenotypeDef>
