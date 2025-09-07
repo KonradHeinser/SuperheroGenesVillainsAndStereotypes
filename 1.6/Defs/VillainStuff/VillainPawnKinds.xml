@@ -30,6 +30,20 @@
         <combatPower>40</combatPower>
         <maxGenerationAge>50</maxGenerationAge>
         <titleRequired MayRequire="Ludeon.Rimworld.Royalty">SHG_VillainTier1</titleRequired>
+        <skills>
+            <li>
+                <skill>Construction</skill>
+                <range>8~10</range>
+            </li>
+            <li>
+                <skill>Crafting</skill>
+                <range>8~10</range>
+            </li>
+            <li>
+                <skill>Mining</skill>
+                <range>8~10</range>
+            </li>
+        </skills>
         <styleItemTags>
             <li>
                 <tag>Soldier</tag>
