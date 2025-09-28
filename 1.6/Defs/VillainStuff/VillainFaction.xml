@@ -127,43 +127,6 @@
             <li MayRequire="Ludeon.RimWorld.Ideology">Charity_Important</li>
             <li MayRequire="Ludeon.RimWorld.Ideology">Charity_Worthwhile</li>
         </disallowedPrecepts>
-        <pawnGroupMakers>
-            <li>
-                <kindDef>Combat</kindDef>
-                <options>
-                    <SHG_VillainSlasher>7</SHG_VillainSlasher>
-                    <SHG_VillainTrooper>10</SHG_VillainTrooper>
-                    <SHG_VillainSniper>10</SHG_VillainSniper>
-                    <SHG_VillainBoss>1</SHG_VillainBoss>
-                </options>
-            </li>
-            <li>
-                <kindDef>Trader</kindDef>
-                <traders>
-                    <SHG_VillainTrader>1</SHG_VillainTrader>
-                </traders>
-                <carriers>
-                    <Muffalo>6</Muffalo>
-                    <Dromedary>5</Dromedary>
-                    <Alpaca>2</Alpaca>
-                    <Elephant>1</Elephant>
-                </carriers>
-                <guards>
-                    <SHG_VillainSlasher>7</SHG_VillainSlasher>
-                    <SHG_VillainTrooper>10</SHG_VillainTrooper>
-                    <SHG_VillainSniper>10</SHG_VillainSniper>
-                </guards>
-            </li>
-            <li>
-                <kindDef>Settlement</kindDef>
-                <options>
-                    <SHG_VillainSlasher>7</SHG_VillainSlasher>
-                    <SHG_VillainTrooper>10</SHG_VillainTrooper>
-                    <SHG_VillainSniper>10</SHG_VillainSniper>
-                    <SHG_VillainBoss>1</SHG_VillainBoss>
-                </options>
-            </li>
-        </pawnGroupMakers>
     </FactionDef>
 
     <FactionDef ParentName="VillainFactionBase">
@@ -182,6 +145,43 @@
         <caravanTraderKinds>
             <li>SHG_MinorVillainCaravan</li>
         </caravanTraderKinds>
+        <pawnGroupMakers>
+            <li>
+                <kindDef>Combat</kindDef>
+                <options>
+                    <SHG_MinorVillainSlasher>7</SHG_MinorVillainSlasher>
+                    <SHG_MinorVillainTrooper>10</SHG_MinorVillainTrooper>
+                    <SHG_MinorVillainSniper>10</SHG_MinorVillainSniper>
+                    <SHG_MinorVillainBoss>1</SHG_MinorVillainBoss>
+                </options>
+            </li>
+            <li>
+                <kindDef>Trader</kindDef>
+                <traders>
+                    <SHG_MinorVillainTrader>1</SHG_MinorVillainTrader>
+                </traders>
+                <carriers>
+                    <Muffalo>6</Muffalo>
+                    <Dromedary>5</Dromedary>
+                    <Alpaca>2</Alpaca>
+                    <Elephant>1</Elephant>
+                </carriers>
+                <guards>
+                    <SHG_MinorVillainSlasher>7</SHG_MinorVillainSlasher>
+                    <SHG_MinorVillainTrooper>10</SHG_MinorVillainTrooper>
+                    <SHG_MinorVillainSniper>10</SHG_MinorVillainSniper>
+                </guards>
+            </li>
+            <li>
+                <kindDef>Settlement</kindDef>
+                <options>
+                    <SHG_MinorVillainSlasher>7</SHG_MinorVillainSlasher>
+                    <SHG_MinorVillainTrooper>10</SHG_MinorVillainTrooper>
+                    <SHG_MinorVillainSniper>10</SHG_MinorVillainSniper>
+                    <SHG_MinorVillainBoss>1</SHG_MinorVillainBoss>
+                </options>
+            </li>
+        </pawnGroupMakers>
     </FactionDef>
 
     <FactionDef ParentName="VillainFactionBase">
@@ -219,5 +219,42 @@
         <caravanTraderKinds>
             <li>SHG_VillainCaravan</li>
         </caravanTraderKinds>
+        <pawnGroupMakers>
+            <li>
+                <kindDef>Combat</kindDef>
+                <options>
+                    <SHG_VillainSlasher>7</SHG_VillainSlasher>
+                    <SHG_VillainTrooper>10</SHG_VillainTrooper>
+                    <SHG_VillainSniper>10</SHG_VillainSniper>
+                    <SHG_VillainBoss>1</SHG_VillainBoss>
+                </options>
+            </li>
+            <li>
+                <kindDef>Trader</kindDef>
+                <traders>
+                    <SHG_VillainTrader>1</SHG_VillainTrader>
+                </traders>
+                <carriers>
+                    <Muffalo>6</Muffalo>
+                    <Dromedary>5</Dromedary>
+                    <Alpaca>2</Alpaca>
+                    <Elephant>1</Elephant>
+                </carriers>
+                <guards>
+                    <SHG_VillainSlasher>7</SHG_VillainSlasher>
+                    <SHG_VillainTrooper>10</SHG_VillainTrooper>
+                    <SHG_VillainSniper>10</SHG_VillainSniper>
+                </guards>
+            </li>
+            <li>
+                <kindDef>Settlement</kindDef>
+                <options>
+                    <SHG_VillainSlasher>7</SHG_VillainSlasher>
+                    <SHG_VillainTrooper>10</SHG_VillainTrooper>
+                    <SHG_VillainSniper>10</SHG_VillainSniper>
+                    <SHG_VillainBoss>1</SHG_VillainBoss>
+                </options>
+            </li>
+        </pawnGroupMakers>
     </FactionDef>
 </Defs>
