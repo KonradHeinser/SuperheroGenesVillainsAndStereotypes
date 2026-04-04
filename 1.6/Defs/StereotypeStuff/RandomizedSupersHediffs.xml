@@ -389,7 +389,7 @@
         </comps>
     </HediffDef>
 
-    <HediffDef ParentName="SHG_XenotypeRandomizerHediff">
+    <HediffDef ParentName="SHG_XenotypeRandomizerHediff" MayRequire="Ludeon.Rimworld.Royalty">
         <defName>SHG_RandomPsionist</defName>       
         <comps>
             <li Class="SuperHeroGenesBase.HediffCompProperties_GainRandomGeneSet">
