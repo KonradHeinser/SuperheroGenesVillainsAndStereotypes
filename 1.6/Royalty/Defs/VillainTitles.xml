@@ -26,8 +26,8 @@
 
     <RoyalTitleDef ParentName="SHG_VillainTitle">
         <defName>SHG_VillainTier1</defName>
-        <label>tier 1 villain</label>
-        <description>Tier 1 villains are barely worth noting by most organizations. These are often the generic troopers that the League uses as cannon fodder.</description>
+        <label>irritant</label>
+        <description>Irritants are barely worth noting by most organizations. These are often the generic troopers that the League uses as cannon fodder.</description>
         <seniority>100</seniority>
         <favorCost>3</favorCost>
         <changeHeirQuestPoints>1000</changeHeirQuestPoints>
@@ -35,8 +35,8 @@
 
     <RoyalTitleDef ParentName="SHG_VillainTitle">
         <defName>SHG_VillainTier2</defName>
-        <label>tier 2 villain</label>
-        <description>Tier 2 villains are little better than Tier 1 in the League's eyes. Small gangs of Tier 1 villains may be lead by a Tier 2, but they have little to offer beyond that.</description>
+        <label>street threat</label>
+        <description>These villains are little better than those in the tier below them, and when not being sent off as cannon fodder in some war they can be found roaming streets of random cities.</description>
         <seniority>200</seniority>
         <favorCost>6</favorCost>
         <minExpectation>Moderate</minExpectation>
@@ -172,8 +172,8 @@
 
     <RoyalTitleDef ParentName="SHG_VillainTitle">
         <defName>SHG_VillainTier3</defName>
-        <label>tier 3 villain</label>
-        <description>Tier 3 villains have made enough of a name for themselves to receive support from the league to not just start small raids, but take part in raids against larger settlements. While they are still relegated to leading small squads, the League is beginning to take note of their achievements.</description>
+        <label>organized menace</label>
+        <description>Organized menaces have made enough of a name for themselves to receive support from the league to not just start small raids, but take part in raids against larger settlements. While they are still relegated to leading small squads, the League is beginning to take note of their achievements.</description>
         <seniority>300</seniority>
         <favorCost>10</favorCost>
         <minExpectation>High</minExpectation>
@@ -341,8 +341,8 @@
 
     <RoyalTitleDef ParentName="SHG_VillainTitle">
         <defName>SHG_VillainTier4</defName>
-        <label>tier 4 villain</label>
-        <description>Tier 4 villains have finally surpassed the small-time villain limitations. Now they aren't just some small gang to send on tasks, but a trusted ally that may be able to receive small gangs to them for support in battle.</description>
+        <label>crime lord</label>
+        <description>Crime lords have finally surpassed the small-time villain limitations. Now they aren't just some small gang to send on tasks, but a trusted ally that may be able to receive small gangs to them for support in battle.</description>
         <seniority>400</seniority>
         <favorCost>15</favorCost>
         <minExpectation>SkyHigh</minExpectation>
@@ -518,8 +518,8 @@
 
     <RoyalTitleDef ParentName="SHG_VillainTitle">
         <defName>SHG_VillainTier5</defName>
-        <label>tier 5 villain</label>
-        <description>Tier 5 villains have firmly entrenched their position as a notable villain, and the League is willing to provide even more support to the villain's plans in hopes that a new high tier villain is in the making.</description>
+        <label>city threat</label>
+        <description>City threats have firmly entrenched their position as a notable villain, and the League is willing to provide even more support to the villain's plans in hopes that a new high tier villain is in the making.</description>
         <seniority>500</seniority>
         <favorCost>21</favorCost>
         <minExpectation>Noble</minExpectation>
@@ -710,8 +710,8 @@
 
     <RoyalTitleDef ParentName="SHG_VillainTitle">
         <defName>SHG_VillainTier6</defName>
-        <label>tier 6 villain</label>
-        <description>Tier 6 villains are often recognized by the path of destruction they left behind them on their rise. Should they be so inclined, they can call on multiple of the League's orbital railguns at the same time, create a salvo of destruction that further consolidates their status as an agent of death.</description>
+        <label>national threat</label>
+        <description>National threats are often recognized by the path of destruction they left behind them on their rise. Should they be so inclined, they may even call on multiple of the League's orbital railguns at the same time, create a salvo of destruction that further consolidates their status as an agent of death.</description>
         <seniority>600</seniority>
         <favorCost>28</favorCost>
         <minExpectation>Royal</minExpectation>
@@ -1096,8 +1096,8 @@
 
     <RoyalTitleDef ParentName="SHG_VillainTitleHighTier">
         <defName>SHG_VillainTier7</defName>
-        <label>tier 7 villain</label>
-        <description>An individual often spends years of their life accruing enough infamy to reach this status, but now that they have reached it there is no question in anyone's mind. This is the first high rank of high tier villain, and the League often spares no expense supporting them.</description>
+        <label>global threat</label>
+        <description>An individual often spends years of their life accruing enough infamy to reach this status, but now that they have reached it there is no question in anyone's mind that their desire for power and destruction is a threat to entire civilizations. This is the first high rank of high tier villain, and the League often spares no expense supporting them.</description>
         <seniority>700</seniority>
         <commonality>0.6</commonality>
         <recruitmentResistanceOffset>125</recruitmentResistanceOffset>
@@ -1125,8 +1125,8 @@
 
     <RoyalTitleDef ParentName="SHG_VillainTitleHighTier">
         <defName>SHG_VillainTier8</defName>
-        <label>tier 8 villain</label>
-        <description>Tier 8 villains often gain their status by leveling multiple settlements for resources. Many leaders become nervous when a tier 8 villain is nearby, and usually try to increase the number of soldier they have nearby to ward against invasion.</description>
+        <label>planetary catastrophe</label>
+        <description>Planetary catastrophes often gain their status by leveling countless settlements for resources. Many leaders become nervous when a planetary catastrophe is nearby, and usually try to increase the number of soldiers they have nearby to ward against invasion, often to little avail.</description>
         <seniority>800</seniority>
         <commonality>0.3</commonality>
         <recruitmentResistanceOffset>150</recruitmentResistanceOffset>
@@ -1154,8 +1154,8 @@
 
     <RoyalTitleDef ParentName="SHG_VillainTitleHighTier">
         <defName>SHG_VillainTier9</defName>
-        <label>tier 9 villain</label>
-        <description>The highest tier a villain can be assigned, often limited to those commonly believed to be planetary threats. By this point entire armies may be raised to kill them, and the League of Villains allow the pawn to tap into the entire orbital network to use their strongest ability, Targeted Armageddon.</description>
+        <label>existential threat</label>
+        <description>The highest tier a villain can be assigned, often limited to those able to enact plans to wipe out entire planets before moving on to another. By this point entire armies may be raised to kill them, and the League of Villains will allow them to tap into the entire orbital network to wipe out everything they don't want to waste their time destroying manually.</description>
         <seniority>900</seniority>
         <commonality>0.1</commonality>
         <recruitmentResistanceOffset>200</recruitmentResistanceOffset>
