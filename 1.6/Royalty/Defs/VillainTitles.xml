@@ -36,7 +36,7 @@
     <RoyalTitleDef ParentName="SHG_VillainTitle">
         <defName>SHG_VillainTier2</defName>
         <label>street threat</label>
-        <description>These villains are little better than those in the tier below them, and when not being sent off as cannon fodder in some war they can be found roaming streets of random cities.</description>
+        <description>These villains are little better than those in the tier below them, and when not being sent off as cannon fodder in some war they can be found roaming streets of random cities, causing trouble wherever they can.</description>
         <seniority>200</seniority>
         <favorCost>6</favorCost>
         <minExpectation>Moderate</minExpectation>
@@ -1155,7 +1155,7 @@
     <RoyalTitleDef ParentName="SHG_VillainTitleHighTier">
         <defName>SHG_VillainTier9</defName>
         <label>existential threat</label>
-        <description>The highest tier a villain can be assigned, often limited to those able to enact plans to wipe out entire planets before moving on to another. By this point entire armies may be raised to kill them, and the League of Villains will allow them to tap into the entire orbital network to wipe out everything they don't want to waste their time destroying manually.</description>
+        <description>The highest tier a villain can be assigned, often limited to those able to enact plans to wipe out entire planets before moving on to another. By this point entire armies may be raised to kill them, and the League of Villains will allow them to tap into the entire orbital network to wipe out everything they don't want to waste their time destroying personally.</description>
         <seniority>900</seniority>
         <commonality>0.1</commonality>
         <recruitmentResistanceOffset>200</recruitmentResistanceOffset>

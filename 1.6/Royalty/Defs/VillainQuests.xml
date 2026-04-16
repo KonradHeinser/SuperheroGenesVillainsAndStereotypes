@@ -152,7 +152,7 @@
         <defName>SHG_ArmageddonClock</defName>
         <conditionClass>SuperHeroGenesBase.GameCondition_ArmageddonClock</conditionClass>
         <label>armageddon</label>
-        <description>The clock is set, and when it goes off nothing will survive. The world will be flooded with a gas that kills all non-supers and greatly weakens any supers still on the planet. When the League of Villains land their fleet, they shall claim this world as their own.</description>
+        <description>The clock is set, and when it goes off nothing will survive. The world will be flooded with a gas that kills all non-supers and greatly weakens any supers still on the planet. When the League of Villains land their fleet, they shall claim this world as their own, and wipe out all remaining resistance with ease.</description>
         <letterText>The clock is ticking, and anyone still on the planet in 24 hours will die.</letterText>
         <letterDef>NegativeEvent</letterDef>
     </GameConditionDef>
