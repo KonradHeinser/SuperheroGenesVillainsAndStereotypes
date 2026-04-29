@@ -96,4 +96,12 @@
             </li>
         </value>
     </Operation>
+
+    <Operation Class="SuperHeroGenesBase.PatchOperationSetting">
+        <setting>dontBlowUpTheWorld</setting>
+        <active Class="PatchOperationRemove">
+            <xpath>Defs/QuestScriptDef[starts-with(defName,"SHG")]/root/nodes/li/node[@Class="QuestNode_Sequence"]/nodes/li[@Class="QuestNode_GameCondition" and contains(gameCondition,"_ArmageddonClock")]</xpath>
+        </active>
+    </Operation>
+
 </Patch>

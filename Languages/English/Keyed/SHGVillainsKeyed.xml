@@ -10,4 +10,6 @@
     <SHG_MedievalVillainsDescription>Villains will only use equipment with a technology level of medieval or lower.</SHG_MedievalVillainsDescription>
     <SHG_VengefulOne>    Vengeful One Hediff</SHG_VengefulOne>
     <SHG_VengefulOneDescription>While enabled, the "The Vengeful One" scenario gives a bonus to the pawn that sets their mental break threshold to always be the lowest possible value. While the hediff shows 0, there is always a small threshold that remains.</SHG_VengefulOneDescription>
+    <SHG_DontBlowUpTheWorld>    Don't Blow Up the World (Probably need new game)</SHG_DontBlowUpTheWorld>
+    <SHG_DontBlowUpTheWorldDescription>Makes it so the end game quest added by this mod (Armageddon Clock) does not cause the world to end after 1 day anymore.\n\nIf you have the Hero Organization Mod, failing those quests will no longer cause the world to end, though it may be a while until you have a chance to try again.</SHG_DontBlowUpTheWorldDescription>
 </LanguageData>
